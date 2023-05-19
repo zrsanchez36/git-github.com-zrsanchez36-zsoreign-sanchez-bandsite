@@ -1,3 +1,58 @@
+$colors: (
+    bandSite__black: #323232, /*Primary text color for dark on light bg*/
+    cta__text--col: #AFAFAF,/*Seconday text color. Inactive CTA text color.*/
+    cta__text--active: #FFFFFF,/*Primary text color for light on dark bg. Light bg color. Active CTA text color.*/
+    cta__hover: #000000,/*CTA hover state*/
+    divider__line: #E1E1E1,/*Divider line. Form field outline.*/
+    bg__alt--col: #FAFAFA,/*Primary text color for light on dark bg. Light bg color. Active CTA text color.*/
+
+);
+
+
 * {
     font-family: 'Avenir Next';
+    font-size: 16px;
+}
+
+.navsection {
+    background-color: map-get($colors, bandSite__black );
+    color: map-get($colors, cta__text--active );
+}
+
+@media screen and (max-width: 767px){ /*767px*/
+    .navsection__title {
+        margin: auto;
+        width: 50%;
+        padding: 0.625rem; /*10px*/
+        text-align: center;
+    }
+    
+    .navsection__menu--container {
+        display: flex;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .nav__text--container {
+        width: 50vw;
+    }
+
+    .nav__text--container h2 {
+        font-size: 1.5rem;/*24px*/
+        line-height: 2rem;/*36px*/
+    }
+    h1 h2{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+    h3 {/*subheader*/
+        font-size: 0.875rem ;/*14px*/
+        line-height: 1.375rem;/*22px*/
+        font-weight: Demi 600;
+    }
+    body p {
+        font-size: 0.813rem; /*13px*/
+        line-height: 1.125rem;/*18px*/
+    }
 }

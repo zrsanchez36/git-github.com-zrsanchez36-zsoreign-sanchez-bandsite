@@ -1,0 +1,44 @@
+* {
+  font-family: "Avenir Next";
+  font-size: 16px;
+}
+
+.navsection {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) { /*767px*/
+  .navsection__title {
+    margin: auto;
+    width: 50%;
+    padding: 0.625rem; /*10px*/
+    text-align: center;
+  }
+  .navsection__menu--container {
+    display: flex;
+    width: 100vw;
+    text-align: center;
+  }
+  .nav__text--container {
+    width: 50vw;
+  }
+  .nav__text--container h2 {
+    font-size: 1.5rem; /*24px*/
+    line-height: 2rem; /*36px*/
+  }
+  h1 h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  h3 { /*subheader*/
+    font-size: 0.875rem; /*14px*/
+    line-height: 1.375rem; /*22px*/
+    font-weight: Demi 600;
+  }
+  body p {
+    font-size: 0.813rem; /*13px*/
+    line-height: 1.125rem; /*18px*/
+  }
+}/*# sourceMappingURL=bio.css.map */
