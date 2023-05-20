@@ -55,4 +55,11 @@ $colors: (
         font-size: 0.813rem; /*13px*/
         line-height: 1.125rem;/*18px*/
     }
+
+    nav a.active {
+        text-decoration-thickness: .3rem; /* 3.2px */
+        text-underline-offset: 1rem;
+        border-color: #DB7A4E;
+        text-decoration-color: map-get($colors, cta__text--active);
+    }
 }
