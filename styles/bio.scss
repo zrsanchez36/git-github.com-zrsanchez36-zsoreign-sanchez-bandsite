@@ -11,7 +11,7 @@ $colors: (
 
 * {
     font-family: 'Avenir';
-    
+    font-size: 16px;
 }
 
 body {
@@ -40,6 +40,7 @@ body {
 
     .nav__text--container {
         width: 50vw;
+        padding: 0;
     }
 
     .nav__text--container h2 {
@@ -69,13 +70,15 @@ body {
     }
 
     nav a.active {
-        text-decoration-thickness: .3rem; /* 3.2px */
-        text-underline-offset: 1rem;
-        border-color: #DB7A4E;
-        text-decoration-color: map-get($colors, cta__text--active);
-        border-bottom: 50px solid white;
-        padding: 0 0 16px;
-        border-bottom-width: 30px;
+        text-decoration: none;
+        display: inline-block;
+        border: -1rem solid map-get($colors , bandSite__black);
+        padding-bottom: 5%;
+        padding-left: 35%;
+        padding-right: 32%;
+        border-bottom: .3rem solid map-get($colors , cta__text--active );
+        color: map-get($colors , cta__text--active );
+       
     }
 
     footer {
