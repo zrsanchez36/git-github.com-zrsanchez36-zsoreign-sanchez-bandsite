@@ -21,10 +21,13 @@ body {
 .navsection {
     background-color: map-get($colors, bandSite__black );
     color: map-get($colors, cta__text--active );
+    width: 100vw;
 }
 
 
-@media screen and (max-width: 767px){ /*767px*/
+/* MOBILE BREAKPOINT */
+
+@media screen and (min-width: 360px) and (max-width: 767px){ /*767px*/
     .navsection__title {
         margin: auto;
         width: 100%;
@@ -86,11 +89,40 @@ body {
     }
     /*labels and buttons
     text size: 10px | line height 20px | text weight bold 700*/
+
+
+ /* HERO SECTION */
+
+    .hero__section {
+        width: 101vw;
+    }
+    .hero__img--container {
+        position: relative;
+        text-align: center;
+        color: map-get($colors , cta__text--active );
+    }
+
+    .hero__img--container h1 {
+        position: absolute;
+        top: 50%;
+        left: 23vh;
+        transform: translate(-50%, -50%);
+        font-size: 3.75rem; /* 60px */
+        line-height: 4.25rem; /* 68px */ 
+        font-weight: 600;
+    }
+
+    /* HERO SECTION */
+
 }
+
+/* MOBILE BREAKPOINT */
+
+
 
 /* Tablet breakpoint*/
 @media (min-width: 768px) and (max-width: 1280px) {
-
+    /* Navigation*/
     nav {
         width: 100%;
     }
@@ -123,11 +155,36 @@ body {
         color: map-get($colors , cta__text--active );
     }
 
+    /* Navigation*/
+
+    /* HERO SECTION */
+    .hero__img--container {
+        position: relative;
+        text-align: center;
+        color: map-get($colors , cta__text--active );
+    }
+
+    .hero__img--container h1 {
+        position: absolute;
+        top: 50%;
+        left: 23vh;
+        transform: translate(-50%, -50%);
+        font-size: 3.75rem; /* 60px */
+        line-height: 4.25rem; /* 68px */ 
+        font-weight: 600;
+    }
+
+    /* HERO SECTION */
+
+
 }
+/*TABLET BREAKPOINT */
 
 
-/* Desktop Breakpoint*/
+/* DESKTOP BREAKPOINT*/
 @media (min-width: 1280px) {
+    
+    /* Navigation */
     nav {
         width: 100%;
     }
@@ -137,8 +194,47 @@ body {
     }
     
     .navsection__title {
-        padding-left: 72px;
+        padding: 32px;
+        margin-left: 120px;
         justify-content: center;
         display: inline-block;
+        margin-right: 40px;
     }
+
+    .nav__text--container {
+        display: inline-block;
+        padding: 1rem; /*16px */
+        justify-content: center;
+    }
+
+    nav a.active {
+        text-decoration: underline;
+        display: inline-block;
+        text-underline-offset: 2.25rem; /*36px */
+        text-decoration-color: map-get($colors , cta__text--active );
+        text-decoration-thickness: 0.313rem; /*5px */
+        color: map-get($colors , cta__text--active );
+    }
+
+    /* Navigation */
+
+    /* HERO SECTION */
+    .hero__img--container {
+        position: relative;
+        text-align: center;
+        color: map-get($colors , cta__text--active );
+    }
+
+    .hero__img--container h1 {
+        position: absolute;
+        top: 50%;
+        left: 50vh;
+        transform: translate(-50%, -50%);
+        font-size: 3.75rem; /* 60px */
+        line-height: 2rem;
+        font-weight: 600;
+    }
+
+    /* HERO SECTION */
+
 }
