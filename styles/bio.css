@@ -64,6 +64,9 @@ body {
     color: #FFFFFF;
     font-weight: 700;
   }
+  nav a.inactive {
+    color: #AFAFAF;
+  }
   footer {
     font-size: 0.813rem; /*13px*/
     line-height: 1.125rem; /*18px*/
@@ -72,12 +75,19 @@ body {
   text size: 10px | line height 20px | text weight bold 700*/
   /* HERO SECTION */
   .hero__section {
-    width: 101vw;
+    width: 100vw;
+    background-color: #323232;
+    opacity: 50%;
   }
   .hero__img--container {
     position: relative;
     text-align: center;
     color: #FFFFFF;
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    height: 55vw;
+    width: 100vw;
+    overflow: hidden;
   }
   .hero__img--container h1 {
     position: absolute;
@@ -118,6 +128,11 @@ body {
     font-weight: 400;
   }
   /*ABOUT SECTION */
+  /* Photo Gallery */
+  .gallery__section {
+    background-color: #AFAFAF;
+  }
+  /* Photo Gallery */
 }
 /* MOBILE BREAKPOINT */
 /* Tablet breakpoint*/
@@ -150,12 +165,25 @@ body {
     text-decoration-thickness: 0.313rem; /*5px */
     color: #FFFFFF;
   }
+  nav a.inactive {
+    color: #AFAFAF;
+  }
   /* Navigation*/
   /* HERO SECTION */
+  .hero__section {
+    width: 100vw;
+    background-color: #323232;
+    opacity: 50%;
+  }
   .hero__img--container {
     position: relative;
     text-align: center;
     color: #FFFFFF;
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    height: 55vw;
+    width: 100vw;
+    overflow: hidden;
   }
   .hero__img--container h1 {
     position: absolute;
@@ -198,17 +226,30 @@ body {
     text-decoration-thickness: 0.313rem; /*5px */
     color: #FFFFFF;
   }
+  nav a.inactive {
+    color: #AFAFAF;
+  }
   /* Navigation */
   /* HERO SECTION */
+  .hero__section {
+    width: 100vw;
+    background-color: #323232;
+    opacity: 50%;
+  }
   .hero__img--container {
     position: relative;
     text-align: center;
     color: #FFFFFF;
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    height: 55vw;
+    width: 100vw;
+    overflow: hidden;
   }
   .hero__img--container h1 {
     position: absolute;
-    top: 50%;
-    left: 50vh;
+    top: 47%;
+    left: 35vh;
     transform: translate(-50%, -50%);
     font-size: 3.75rem; /* 60px */
     line-height: 2rem;

@@ -11,7 +11,7 @@ $colors: (
 
 * {
     font-family: 'Avenir Next';
-    font-size: 16px;
+     font-size: 16px;
 }
 
 body {
@@ -84,6 +84,10 @@ body {
        
     }
 
+    nav a.inactive {
+        color: map-get($colors , cta__text--col );
+    }
+
     footer {
         font-size: 0.813rem; /*13px*/
         line-height: 1.125rem;/*18px*/
@@ -95,12 +99,19 @@ body {
  /* HERO SECTION */
 
     .hero__section {
-        width: 101vw;
+        width: 100vw;
+        background-color: #323232;
+        opacity: 50%;
     }
     .hero__img--container {
         position: relative;
         text-align: center;
         color: map-get($colors , cta__text--active );
+        background-image: url(../assets/Images/hero-bio.jpg);
+        background-size:cover;
+        height: 55vw;
+        width: 100vw;
+        overflow: hidden;
     }
 
     .hero__img--container h1 {
@@ -111,6 +122,7 @@ body {
         font-size: 1.5rem; /* 24px */
         line-height: 2rem; /* 32px */ 
         font-weight: 700;
+        
     }
 
     /* HERO SECTION */
@@ -151,6 +163,16 @@ body {
         font-weight: 400;
     }
     /*ABOUT SECTION */
+
+
+    /* Photo Gallery */
+
+    .gallery__section {
+        background-color: map-get($colors, cta__text--col );
+    }
+
+    /* Photo Gallery */
+
 }
 
 /* MOBILE BREAKPOINT */
@@ -192,13 +214,29 @@ body {
         color: map-get($colors , cta__text--active );
     }
 
+    nav a.inactive {
+        color: map-get($colors , cta__text--col );
+    }
+
     /* Navigation*/
 
     /* HERO SECTION */
+
+    .hero__section {
+        width: 100vw;
+        background-color: #323232;
+        opacity: 50%;
+    }
+
     .hero__img--container {
         position: relative;
         text-align: center;
         color: map-get($colors , cta__text--active );
+        background-image: url(../assets/Images/hero-bio.jpg);
+        background-size:cover;
+        height: 55vw;
+        width: 100vw;
+        overflow: hidden;
     }
 
     .hero__img--container h1 {
@@ -253,19 +291,35 @@ body {
         color: map-get($colors , cta__text--active );
     }
 
+
+    nav a.inactive {
+        color: map-get($colors , cta__text--col );
+    }
+
     /* Navigation */
 
     /* HERO SECTION */
+    .hero__section {
+        width: 100vw;
+        background-color: #323232;
+        opacity: 50%;
+    }
+    
     .hero__img--container {
         position: relative;
         text-align: center;
         color: map-get($colors , cta__text--active );
+        background-image: url(../assets/Images/hero-bio.jpg);
+        background-size:cover;
+        height: 55vw;
+        width: 100vw;
+        overflow: hidden;
     }
 
     .hero__img--container h1 {
         position: absolute;
-        top: 50%;
-        left: 50vh;
+        top: 47%;
+        left: 35vh;
         transform: translate(-50%, -50%);
         font-size: 3.75rem; /* 60px */
         line-height: 2rem;
