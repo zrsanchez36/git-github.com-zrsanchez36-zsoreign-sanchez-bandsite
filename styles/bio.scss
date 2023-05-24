@@ -242,7 +242,7 @@ body {
     .hero__img--container h1 {
         position: absolute;
         top: 50%;
-        left: 23vh;
+        left: 34vh;
         transform: translate(-50%, -50%);
         font-size: 3.75rem; /* 60px */
         line-height: 4.25rem; /* 68px */ 
@@ -250,13 +250,70 @@ body {
     }
 
     /* HERO SECTION */
+    
+    
+    /*ABOUT SECTION */
+
+    .about__section h1 {
+        color: map-get($colors, bandSite__black );
+        font-size: 3.75rem; /* 60px */
+        line-height: 4.25rem; /* 32px */ 
+        font-weight: 700;
+        
+    }
+
+    .about__section {
+        padding: 3rem;
+    }
+    .musician__image--container {
+        padding-top: 1rem;
+        padding: 3rem;
+    }
+
+    .about__section--text h3 {
+        font-size: 1.20rem; /*19.2px*/
+        line-height: 1.375rem; /*22px */
+        font-weight:600;
+    }
+
+    .about__section--text h4 {
+        font-size: 0.875rem;
+        line-height: 1.375rem; /*22px */
+        font-weight:600;
+    }
+
+
+    .about__section--text p {
+        font-size: 0.813rem; /*12px*/
+        line-height: 1.125rem; /*1 8px */
+        font-weight: 400;
+    }
+    /*ABOUT SECTION */
+
+
+    /* Photo Gallery */
+
+    .gallery__section {
+        background-color: map-get($colors, cta__text--col );
+    }
+
+    /* Photo Gallery */
 
 
 }
 /*TABLET BREAKPOINT */
 
 
+
+
+
+
+
+
 /* DESKTOP BREAKPOINT*/
+
+
+
 @media (min-width: 1280px) {
     
     /* Navigation */
@@ -327,5 +384,9 @@ body {
     }
 
     /* HERO SECTION */
+
+
+
+
 
 }
