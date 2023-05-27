@@ -1,5 +1,5 @@
 * {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   font-size: 16px;
 }
 
@@ -208,16 +208,23 @@ body {
     padding: 3rem;
   }
   .musician__image--container {
-    padding-top: 2.25rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    display: block;
+    background-image: url(../assets/Images/band.jpg);
+    background-size: cover;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    width: 80%;
+    height: 26.375rem; /* 422px */
   }
   .about__section--text h2 {
-    font-size: 2.25rem; /*36px*/
+    font-size: 1.5rem; /*36px*/
     line-height: 2.75rem; /*44px */
     font-weight: 700;
     padding-left: 3rem;
     padding-right: 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
   .about__section--text h3 {
     font-size: 1.5rem; /*24px*/
@@ -327,29 +334,33 @@ body {
     background-size: cover;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 3rem;
     width: 70%;
-    height: 700px;
-    padding-top: 3rem;
+    height: 34.375rem; /* 550px */
   }
   .about__section--text h2 {
-    font-size: 2.25rem; /*36px*/
-    line-height: 2.75rem; /*44px */
+    font-size: 1.5rem; /*24px*/
+    line-height: 2rem; /*32px */
     font-weight: 700;
     padding-left: 3rem;
-    padding-right: 28rem;
+    padding-right: 3rem;
+    margin-left: 8rem;
+    margin-right: 13rem;
   }
   .about__section--text h3 {
-    font-size: 1.5rem; /*24px*/
+    font-size: 0.875rem; /*14px*/
     line-height: 2rem; /*32px */
     font-weight: 600;
     margin: 0;
     padding-left: 3rem; /*36px*/
+    margin-left: 8rem;
   }
   .about__section--text h4 {
     padding-left: 3rem; /* 48px */
-    font-size: 2rem;
+    font-size: 1.5rem; /* 24px */
     line-height: 2.75rem; /*44px */
     margin-bottom: 0;
+    margin-left: 8rem;
   }
   .about__section--text p {
     font-size: 0.875rem; /*14px*/
@@ -358,8 +369,10 @@ body {
   }
   .about__body--container {
     display: flex;
-    padding-left: 2.25rem; /*36px*/
-    padding-right: 2.25rem; /*36px*/
+    padding-left: 2rem; /*36px*/
+    padding-right: 3rem; /*36px*/
+    margin-left: 8rem;
+    margin-right: 7rem;
   }
   .about__body--paragraph {
     margin: 1rem;
