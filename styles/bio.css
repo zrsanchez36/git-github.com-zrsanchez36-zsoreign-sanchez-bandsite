@@ -322,12 +322,14 @@ body {
     padding: 3rem;
   }
   .musician__image--container {
+    display: block;
     background-image: url(../assets/Images/band.jpg);
-    width: 100vh;
-    height: 55vh;
     background-size: cover;
-    margin-right: 0;
-    align-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    height: 700px;
+    padding-top: 3rem;
   }
   .about__section--text h2 {
     font-size: 2.25rem; /*36px*/

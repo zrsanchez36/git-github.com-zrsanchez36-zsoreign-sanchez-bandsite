@@ -427,13 +427,14 @@ body {
     }
     
     .musician__image--container {
-        //padding: 3rem; /*48px*/
+        display: block;
         background-image: url(../assets/Images/band.jpg);
-        width: 100vh;
-        height: 55vh;
         background-size: cover;
-        margin-right: 0;
-        align-self: center;
+        margin-right: auto;
+        margin-left:auto;
+        width: 70%;
+        height: 700px;
+        padding-top: 3rem;
 
     }
 
