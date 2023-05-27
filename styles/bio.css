@@ -351,7 +351,6 @@ body {
     font-size: 0.875rem; /*14px*/
     line-height: 2rem; /*32px */
     font-weight: 600;
-    margin: 0;
     padding-left: 3rem; /*36px*/
     margin-left: 8rem;
   }
@@ -361,6 +360,7 @@ body {
     line-height: 2.75rem; /*44px */
     margin-bottom: 0;
     margin-left: 8rem;
+    margin-left: 3rem;
   }
   .about__section--text p {
     font-size: 0.875rem; /*14px*/
