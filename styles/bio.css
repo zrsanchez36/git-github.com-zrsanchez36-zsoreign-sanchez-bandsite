@@ -230,21 +230,28 @@ body {
     font-size: 1.5rem; /*24px*/
     line-height: 2rem; /*32px */
     font-weight: 600;
-    margin: 0;
     padding-left: 3rem; /*36px*/
+    margin-left: 2rem;
   }
   .about__section--text h4 {
-    padding-left: 48px;
+    padding-left: 3rem;
+    margin-left: 2.25rem; /* 2.25 */
+    margin-bottom: 0;
+    font-size: 2.25rem; /* 36px */
+    line-height: 2rem;
+    font-weight: 700;
   }
   .about__section--text p {
     font-size: 0.875rem; /*14px*/
     line-height: 1.375rem; /* 22px */
     font-weight: 400;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .about__body--container {
     display: flex;
-    padding-left: 2.25rem; /*36px*/
-    padding-right: 2.25rem; /*36px*/
+    padding-left: 3rem; /*36px*/
+    padding-right: 3rem; /*36px*/
   }
   .about__body--paragraph {
     margin: 1rem;
@@ -320,10 +327,11 @@ body {
   /*ABOUT SECTION */
   .about__section h1 {
     color: #323232;
-    font-size: 3.75rem; /* 60px */
-    line-height: 4.25rem; /* 32px */
+    font-size: 2.25rem; /* 60px */
+    line-height: 2.75rem; /* 32px */
     font-weight: 700;
-    margin: 0;
+    padding-left: 3rem;
+    margin-left: 4rem;
   }
   .about__section {
     padding: 3rem;
@@ -336,7 +344,7 @@ body {
     margin-left: auto;
     margin-top: 3rem;
     width: 70%;
-    height: 34.375rem; /* 550px */
+    height: 38.375rem; /* 550px */
   }
   .about__section--text h2 {
     font-size: 1.5rem; /*24px*/
@@ -344,23 +352,23 @@ body {
     font-weight: 700;
     padding-left: 3rem;
     padding-right: 3rem;
-    margin-left: 8rem;
-    margin-right: 13rem;
+    margin-left: 10rem;
+    margin-right: 25rem;
+    margin-top: 2rem;
   }
   .about__section--text h3 {
     font-size: 0.875rem; /*14px*/
     line-height: 2rem; /*32px */
     font-weight: 600;
     padding-left: 3rem; /*36px*/
-    margin-left: 8rem;
+    margin-left: 10rem;
   }
   .about__section--text h4 {
     padding-left: 3rem; /* 48px */
     font-size: 1.5rem; /* 24px */
     line-height: 2.75rem; /*44px */
     margin-bottom: 0;
-    margin-left: 8rem;
-    margin-left: 3rem;
+    margin-left: 10rem;
   }
   .about__section--text p {
     font-size: 0.875rem; /*14px*/
@@ -371,11 +379,29 @@ body {
     display: flex;
     padding-left: 2rem; /*36px*/
     padding-right: 3rem; /*36px*/
-    margin-left: 8rem;
-    margin-right: 7rem;
+    margin-left: 10rem;
+    margin-right: 9rem;
   }
   .about__body--paragraph {
     margin: 1rem;
   }
   /*ABOUT SECTION */
+  /* Gallery Section */
+  .gallery__section {
+    background-color: #AFAFAF;
+  }
+  .gallery__container {
+    display: flex;
+    max-width: 75rem;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .gallery__container img {
+    width: 18.75rem;
+    height: 12.5rem;
+    padding: 1rem;
+  }
+  /*gallery Section */
 }/*# sourceMappingURL=bio.css.map */
