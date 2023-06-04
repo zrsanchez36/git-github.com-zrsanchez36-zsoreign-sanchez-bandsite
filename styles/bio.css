@@ -1,11 +1,12 @@
 * {
   font-family: "Avenir Next", sans-serif;
   font-size: 16px;
-  margin: 0;
 }
 
 body {
   margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .navsection {
@@ -210,7 +211,7 @@ body {
 /* MOBILE BREAKPOINT */
 /*---------------------------------------------------------------------------------------- */
 /* Tablet breakpoint*/
-@media (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   /* Navigation*/
   nav {
     width: 100%;
@@ -363,6 +364,30 @@ body {
   /* Footer Section */
   .footer__container {
     display: flex;
+    width: 100%;
+    background-color: #323232;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .footer__container h1 {
+    color: #FFFFFF;
+    font-size: 2.25rem; /*60px*/
+    line-height: 2.75rem; /*44px */
+    font-weight: 700;
+    padding: 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .footer__socialicons {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .footer__socialicons img {
+    width: 2rem;
+    height: 2rem;
   }
   /*Footer Section */
 }
