@@ -117,7 +117,7 @@ body {
     .hero__img--container h1 {
         position: absolute;
         top: 50%;
-        left: 17vh;
+        left: 17svh;
         transform: translate(-50%, -50%);
         font-size: 1.5rem; /* 24px */
         line-height: 2rem; /* 32px */ 
@@ -189,9 +189,17 @@ body {
     }
     
     .gallery__title {
-        padding:3rem;
         background-color: map-get($colors, cta__text--col );
     }
+
+
+    .gallery__title h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding: 1.2rem;
+    }
+
 
     .gallery__container {
         display: flex;
@@ -217,19 +225,52 @@ body {
 
 
     /* Footer Section */
-    .footer__section {
+    .footer__container {
         background-color: map-get($colors, bandSite__black );
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
     }
 
-    .footer__section h1 {
+    .footer__container h1 {
         color:#FFFFFF;
         font-size: 1.5rem; /*24px */
         line-height: 2rem;
         font-weight: 700;
-        padding: 1.5rem;
-
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
+    
+    .footer__socialicons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    
+    .footer__socialicons img {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    
+    .footer__container h3 {
+        color:#FFFFFF;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+
+    .footer__container P {
+        color: #FFFFFF;
+    }
+
+    
+    .footer__logo--container {
+        margin-top: 3rem;
+    }
+   
     /* Footer Section */
 
 }
@@ -238,7 +279,23 @@ body {
 
 
 
+
+
+
+
+
+
+
 /*---------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
 
 
 
@@ -305,7 +362,7 @@ body {
     .hero__img--container h1 {
         position: absolute;
         top: 50%;
-        left: 34vh;
+        left: 22dvh;
         transform: translate(-50%, -50%);
         font-size: 3.75rem; /* 60px */
         line-height: 4.25rem; /* 68px */ 
