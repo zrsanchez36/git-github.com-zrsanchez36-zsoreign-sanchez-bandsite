@@ -11,11 +11,11 @@ $colors: (
 
 * {
     font-family: 'Avenir Next', sans-serif;
-     font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-    margin: 0%;
+    margin: 0;
 }
 
 .navsection {
@@ -455,7 +455,8 @@ body {
         display: flex;
         background-color: map-get($colors, cta__text--col );
         justify-content: center;
-       // place-items: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
        
     }
     
@@ -466,16 +467,18 @@ body {
 
     .gallery__container {
         display: flex;
-        max-width: 75rem;
+        max-width: 16rem;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        gap: 1rem;
+        gap: .25rem;
     }
 
     .gallery__container img {
-        width: 22rem;
-        height: 12.5rem;
+        width: 18rem;
+        height: 10rem;
+        object-fit: cover;
+        object-position:bottom;
     }
 
 
@@ -488,16 +491,50 @@ body {
 
 
 
-    /* Photo Gallery */
+    /* Footer Section */
+
+    .footer__container {
+        display: flex;
+    }
 
 
+
+    /*Footer Section */
 }
 /*TABLET BREAKPOINT */
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
