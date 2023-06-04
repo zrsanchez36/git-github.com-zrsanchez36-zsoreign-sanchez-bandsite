@@ -1,6 +1,7 @@
 * {
   font-family: "Avenir Next", sans-serif;
   font-size: 16px;
+  margin: 0;
 }
 
 body {
@@ -340,25 +341,23 @@ body {
   .gallery__title {
     padding: 3rem;
     background-color: #AFAFAF;
+    margin: 0;
   }
   .gallery__container {
     display: flex;
-    max-width: 16rem;
+    max-width: 80rem;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 0.25rem;
+    gap: 1.25rem;
   }
   .gallery__container img {
-    width: 18rem;
-    height: 10rem;
+    width: 16rem;
+    height: 11rem;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: bottom;
        object-position: bottom;
-  }
-  .img__container {
-    display: inline-block;
   }
   /*gallery Section */
   /* Footer Section */
