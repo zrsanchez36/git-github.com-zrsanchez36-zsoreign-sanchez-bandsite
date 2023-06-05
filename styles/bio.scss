@@ -582,36 +582,48 @@ body {
         width: 18rem;
     }
 
+    .footer__title--extended {
+        order: 5;
+        color: #FFFFFF;
+        padding-left: 3rem;
+        width: 18rem;
+    }
     .footer__paragraph{
-        order:5;
+        order:6;
         width: 18rem;
         text-align: left;
         padding-left: 3rem;
     }
 
+    .footer__paragraph--extended {
+        order:7;
+        width: 18rem;
+        text-align: left;
+        padding-left: 3rem;
+    }
 
     .footer__email1 {
-        order: 6;
+        order: 8;
         width: 18rem;
         text-align: left;
         padding-left: 3rem;
     }
 
     .footer__email2 {
-        order: 7;
+        order: 9;
         width: 18rem;
         text-align: left;
         padding-left: 3rem;
     }
 
     .footer__email3 {
-        order: 8;
+        order: 10;
         width: 18rem;
         text-align: left;
         padding-left: 3rem;
     }
     .footer_copyright {
-        order:9;
+        order:11;
         color: #FFFFFF;
         width: 28rem;
         text-align: left;
@@ -915,36 +927,51 @@ body {
         width: 17rem;
     }
 
+
+    .footer__title--extended {
+        order: 5;
+        color: #FFFFFF;
+        padding-left: 3rem;
+        width: 36rem;
+    }
+
     .footer__paragraph{
-        order:5;
+        order:6;
         width: 17rem;
+        text-align: left;
+        padding-left: 3rem;
+    }
+
+    .footer__paragraph--extended{
+        order:7;
+        width: 27rem;
         text-align: left;
         padding-left: 3rem;
     }
 
 
     .footer__email1 {
-        order: 6;
+        order: 8;
         width: 18rem;
         text-align: left;
         padding-left: 3rem;
     }
 
     .footer__email2 {
-        order: 7;
+        order: 9;
         width: 18rem;
         text-align: left;
-        padding-left: 3rem;
+        padding-left: 2rem;
     }
 
     .footer__email3 {
-        order: 8;
+        order: 10;
         width: 18rem;
         text-align: left;
-        padding-left: 3rem;
+        padding-left: 2rem;
     }
     .footer_copyright {
-        order:9;
+        order:11;
         color: #FFFFFF;
         width: 28rem;
         text-align: left;
