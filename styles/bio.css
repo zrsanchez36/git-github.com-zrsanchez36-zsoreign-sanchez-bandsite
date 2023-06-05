@@ -158,14 +158,14 @@ body {
   /* Photo Gallery */
   .gallery__section {
     display: flex;
-    background-color: #AFAFAF;
+    background-color: #FAFAFA;
     justify-content: center;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 1.5rem;
   }
   .gallery__title {
-    background-color: #AFAFAF;
+    background-color: #FAFAFA;
   }
   .gallery__title h1 {
     font-size: 1.5rem;
@@ -352,14 +352,14 @@ body {
   /* Photo Gallery */
   .gallery__section {
     display: flex;
-    background-color: #AFAFAF;
+    background-color: #FAFAFA;
     justify-content: center;
     padding-left: 3rem;
     padding-right: 3rem;
   }
   .gallery__title {
     padding: 3rem;
-    background-color: #AFAFAF;
+    background-color: #FAFAFA;
     margin: 0;
   }
   .gallery__container {
@@ -590,13 +590,13 @@ body {
   /* Gallery Section */
   .gallery__section {
     display: flex;
-    background-color: #AFAFAF;
+    background-color: #FAFAFA;
     justify-content: center;
     padding-bottom: 3rem;
   }
   .gallery__title {
     padding: 3rem;
-    background-color: #AFAFAF;
+    background-color: #FAFAFA;
   }
   .gallery__container {
     display: flex;
@@ -633,20 +633,23 @@ body {
     line-height: 2.75rem; /*44px */
     font-weight: 700;
     padding-top: 3rem;
-    padding-left: 2rem;
-    padding-right: 3.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     order: 0;
-    width: 18rem; /* 340 px */
-    height: 1rem; /* 148px */
+    width: 20rem; /* 340 px */
+    height: 4rem; /* 148px */
     text-align: center;
+  }
+  .footer__container h3 {
+    margin: 0.25rem;
   }
   .footer__socialicons {
     display: flex;
-    padding-top: 4.75rem;
+    padding-top: 5rem;
     padding-bottom: 4.75rem;
-    padding-right: 4.75rem;
+    padding-right: 5.75rem;
     order: 1;
-    width: 20rem;
+    width: 38rem;
     align-items: center;
   }
   .footer__socialicons img {
@@ -656,21 +659,22 @@ body {
   }
   .footer__logo--container {
     order: 3;
-    margin-right: 3rem;
     width: 8rem;
     height: 2rem;
     margin-top: 5rem;
     margin-left: 3rem;
+    justify-content: right;
+    margin-bottom: 5rem;
   }
   .footer__title {
     order: 4;
     color: #FFFFFF;
     padding-left: 3rem;
-    width: 18rem;
+    width: 17rem;
   }
   .footer__paragraph {
     order: 5;
-    width: 18rem;
+    width: 17rem;
     text-align: left;
     padding-left: 3rem;
   }
