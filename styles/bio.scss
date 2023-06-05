@@ -673,7 +673,7 @@ body {
 
 
 
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
     
     /* Navigation */
     nav {
@@ -871,6 +871,7 @@ body {
         flex-wrap: wrap;
         justify-content: flex-start;
         color: #FFFFFF;
+        padding-right: 1rem;
         
     }
 
@@ -918,7 +919,6 @@ body {
         margin-top: 5rem;
         margin-left: 3rem;
         justify-content: right;
-        margin-bottom: 5rem;
     }
 
     .footer__title {
@@ -948,6 +948,7 @@ body {
         width: 27rem;
         text-align: left;
         padding-left: 3rem;
+        margin-right: 5rem;
     }
 
 

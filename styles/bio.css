@@ -480,7 +480,7 @@ body {
 /*TABLET BREAKPOINT */
 /*----------------------------------------------------------------------------------------*/
 /* DESKTOP BREAKPOINT*/
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   /* Navigation */
   nav {
     width: 100%;
@@ -639,6 +639,7 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     color: #FFFFFF;
+    padding-right: 1rem;
   }
   .footer__container h1 {
     color: #FFFFFF;
@@ -677,7 +678,6 @@ body {
     margin-top: 5rem;
     margin-left: 3rem;
     justify-content: right;
-    margin-bottom: 5rem;
   }
   .footer__title {
     order: 4;
@@ -702,6 +702,7 @@ body {
     width: 27rem;
     text-align: left;
     padding-left: 3rem;
+    margin-right: 5rem;
   }
   .footer__email1 {
     order: 8;
