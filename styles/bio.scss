@@ -492,6 +492,7 @@ body {
         justify-content: center;
         padding-left: 3rem;
         padding-right: 3rem;
+        padding-bottom: 3rem;
        
     }
     
@@ -511,7 +512,7 @@ body {
     }
 
     .gallery__container img {
-        width: 16rem;
+        width: 20rem;
         height: 11rem;
         object-fit: cover;
         object-position:bottom;

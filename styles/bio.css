@@ -356,6 +356,7 @@ body {
     justify-content: center;
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-bottom: 3rem;
   }
   .gallery__title {
     padding: 3rem;
@@ -371,7 +372,7 @@ body {
     gap: 1.25rem;
   }
   .gallery__container img {
-    width: 16rem;
+    width: 20rem;
     height: 11rem;
     -o-object-fit: cover;
        object-fit: cover;
