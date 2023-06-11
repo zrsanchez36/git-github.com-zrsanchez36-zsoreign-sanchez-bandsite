@@ -1,17 +1,13 @@
-$colors: (
-    bandSite__black: #323232, /*Primary text color for dark on light bg*/
-    cta__text--col: #AFAFAF,/*Seconday text color. Inactive CTA text color.*/
-    cta__text--active: #FFFFFF,/*Primary text color for light on dark bg. Light bg color. Active CTA text color.*/
-    cta__hover: #000000,/*CTA hover state*/
-    divider__line: #E1E1E1,/*Divider line. Form field outline.*/
-    bg__alt--col: #FAFAFA,/*Primary text color for light on dark bg. Light bg color. Active CTA text color.*/
 
-);
+
+@use 'partials/_desktopBreakpoint';
+@use 'partials/_tabletBreakpoint';
+@use 'partials/_variables';
 
 @font-face {
     font-family: 'avenir_next_lt_probold';
-    src: url('/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2') format('woff2'),
-         url('/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff') format('woff');
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff') format('woff');
     font-weight:bold;
     font-style:normal;
 
@@ -22,8 +18,8 @@ $colors: (
 
 @font-face {
     font-family: 'avenir_next_lt_prodemi';
-    src: url('/assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2') format('woff2'),
-         url('/assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff') format('woff');
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff') format('woff');
     font-weight:600;
     font-style: normal;
 
@@ -34,8 +30,8 @@ $colors: (
 
 @font-face {
     font-family: 'avenir_next_lt_proregular';
-    src: url('/assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2') format('woff2'),
-         url('/assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff') format('woff');
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -258,6 +254,39 @@ body {
 
     /* Photo Gallery */
 
+/*------------------------------------------------------------------------------------------------------------------------ */
+
+
+    /*Comment Section */
+
+    .comment_section {
+        display: flex;
+    }
+
+    .user__icon {
+        margin:0rem;
+        padding: 0rem;
+        box-sizing: border-box;
+    }
+
+    .user__icon img {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1rem solid #FFFFFF;
+
+    }
+
+
+
+    /*Comment Section */
+
+
+
+
+
 
     /* Footer Section */
     .footer__container {
@@ -334,650 +363,14 @@ body {
 
 
 
-/* Tablet breakpoint*/
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-    /* Navigation*/
-    nav {
-        width: 100%;
-    }
-    
-    .navsection {
-        display: flex;
-    }
-    
-    .navsection__title {
-        padding: 24px;
-        justify-content: center;
-        display: inline-block;
-    }
-    
-    .nav__text--container {
-        display: inline-block;
-        padding-left: 1rem; /*16px */
-        padding-right: 3.5rem; /*56px */
-        margin: 0%;
-        justify-content: center;
-        padding-top: .5rem;
-    }
 
-    nav a.active {
-        text-decoration: underline;
-        display: inline-block;
-        text-underline-offset: 1.75rem; /*28px */
-        text-decoration-color: map-get($colors , cta__text--active );
-        text-decoration-thickness: 0.313rem; /*5px */
-        color: map-get($colors , cta__text--active );
-    }
 
-    nav a.inactive {
-        color: map-get($colors , cta__text--col );
-    }
 
-    /* Navigation*/
 
-    /* HERO SECTION */
 
-    .hero__section {
-        width: 100vw;
-        background-color: #323232;
-        opacity: 50%;
-    }
 
-    .hero__img--container {
-        position: relative;
-        text-align: center;
-        color: map-get($colors , cta__text--active );
-        background-image: url(../assets/Images/hero-bio.jpg);
-        background-size:cover;
-        height: 55vw;
-        width: 100vw;
-        overflow: hidden;
-    }
 
-    .hero__img--container h1 {
-        position: absolute;
-        top: 50%;
-        left: 22dvh;
-        transform: translate(-50%, -50%);
-        font-size: 3.75rem; /* 60px */
-        line-height: 4.25rem; /* 68px */ 
-        font-weight: 600;
-    }
 
-    /* HERO SECTION */
-    
-    
-    /*ABOUT SECTION */
 
-    .about__section h1, .gallery__title h1 {
-        color: map-get($colors, bandSite__black );
-        font-size: 3.75rem; /* 60px */
-        line-height: 4.25rem; /* 32px */ 
-        font-weight: 700;
-        margin: 0;
-        
-    }
 
-    .about__section {
-        padding: 3rem;
-    }
-    
-    
-    .musician__image--container {
-        display: block;
-        background-image: url(../assets/Images/band.jpg);
-        background-size: cover;
-        margin-right: auto;
-        margin-left:auto;
-        margin-top: 3rem;
-        width: 80%;
-        height: 26.375rem;/* 422px */
 
-    }
-
-    
-    .about__section--text h2 {
-        font-size: 1.5rem; /*36px*/
-        line-height: 2.75rem; /*44px */
-        font-weight:700;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-
-    .about__section--text h3 {
-        font-size: 1.5rem; /*24px*/
-        line-height: 2rem; /*32px */
-        font-weight:600;
-        padding-left: 3rem; /*36px*/
-        margin-left: 2rem;
-    }
-
-    .about__section--text h4 {
-        padding-left: 3rem;
-        margin-left: 
-        2.25rem; /* 2.25 */
-        margin-bottom: 0;
-        font-size: 2.25rem; /* 36px */
-        line-height: 2rem;
-        font-weight:700;
-    }
-
-    .about__section--text p {
-        font-size: 1.5rem; /*14px*/
-        line-height: 2rem; /* 22px */
-        font-weight: 400;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .about__body--container {
-        display: flex;
-        padding-left: 3rem; /*36px*/
-        padding-right: 3rem; /*36px*/
-    }
-
-    .about__body--paragraph {
-        margin: 1rem;
-    }
-    /*ABOUT SECTION */
-
-
-    /* Photo Gallery */
-
-    .gallery__section {
-        display: flex;
-        background-color: #FAFAFA;
-        justify-content: center;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-bottom: 3rem;
-       
-    }
-    
-    .gallery__title {
-        padding: 3rem;
-        background-color: #FAFAFA;
-        margin: 0;
-    }
-
-    .gallery__container {
-        display: flex;
-        max-width: 80rem;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 1.25rem;
-    }
-
-    .gallery__container img {
-        width: 20rem;
-        height: 11rem;
-        object-fit: cover;
-        object-position:bottom;
-    }
-
-    /*gallery Section */
-
-                                                       
-    /* Footer Section */
-
-    .footer__container {
-        display: flex;
-        width: 100%;
-        background-color: map-get($colors, bandSite__black );
-        padding-left: 3rem;
-        padding-bottom: 1rem;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        color: #FFFFFF;
-        
-    }
-
-    .footer__container h1 {
-        color: #FFFFFF;
-        font-size: 2.75rem; /*60px*/
-        line-height: 2.75rem; /*44px */
-        font-weight:700;
-        padding-top: 3rem;
-        padding-left: 2rem;
-        padding-right: 3.25rem;
-        order: 0;
-        width: 18rem; /* 340 px */
-        height: 1rem; /* 148px */
-        text-align: center;
-        
-    }
-
-    .footer__socialicons { 
-        display: flex;
-       
-        padding-top: 4.75rem;
-        padding-bottom: 4.75rem;
-        padding-right: 4.75rem;
-        order: 1;
-        width: 20rem;
-        align-items: center;
-    }
-
-    .footer__socialicons img {
-        align-items: center;
-        width: 4rem;
-        height: 2rem;
-    }
-
-    .footer__logo--container{
-        order: 3;
-        margin-right: 3rem;
-        width: 8rem;
-        height: 2rem;
-        margin-top: 5rem;
-        margin-left: 3rem;
-    }
-
-    .footer__title {
-        order:4;
-        color: #FFFFFF;
-        padding-left: 3rem;
-        width: 18rem;
-    }
-
-    .footer__title--extended {
-        order: 5;
-        color: #FFFFFF;
-        padding-left: 3rem;
-        width: 18rem;
-    }
-    .footer__paragraph{
-        order:6;
-        width: 18rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-    .footer__paragraph--extended {
-        order:7;
-        width: 18rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-    .footer__email1 {
-        order: 8;
-        width: 18rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-    .footer__email2 {
-        order: 9;
-        width: 18rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-    .footer__email3 {
-        order: 10;
-        width: 18rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-    .footer_copyright {
-        order:11;
-        color: #FFFFFF;
-        width: 28rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-    /*Footer Section */
-}
-/*TABLET BREAKPOINT */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* DESKTOP BREAKPOINT*/
-
-
-
-@media (min-width: 1280px) {
-    
-    /* Navigation */
-    nav {
-        width: 100%;
-    }
-
-    .navsection {
-        display: flex;
-    }
-    
-    .navsection__title {
-        padding: 32px;
-        margin-left: 120px;
-        justify-content: center;
-        display: inline-block;
-        margin-right: 40px;
-    }
-
-    .nav__text--container {
-        display: inline-block;
-        padding: 1rem; /*16px */
-        justify-content: center;
-    }
-
-    nav a.active {
-        text-decoration: underline;
-        display: inline-block;
-        text-underline-offset: 2.25rem; /*36px */
-        text-decoration-color: map-get($colors , cta__text--active );
-        text-decoration-thickness: 0.313rem; /*5px */
-        color: map-get($colors , cta__text--active );
-    }
-
-
-    nav a.inactive {
-        color: map-get($colors , cta__text--col );
-    }
-
-    /* Navigation */
-
-    /* HERO SECTION */
-    .hero__section {
-        width: 100vw;
-        background-color: #323232;
-        opacity: 50%;
-    }
-    
-    .hero__img--container {
-        position: relative;
-        text-align: center;
-        color: map-get($colors , cta__text--active );
-        background-image: url(../assets/Images/hero-bio.jpg);
-        background-size:cover;
-        height: 55vw;
-        width: 100vw;
-        overflow: hidden;
-    }
-
-    .hero__img--container h1 {
-        position: absolute;
-        top: 47%;
-        left: 35vh;
-        transform: translate(-50%, -50%);
-        font-size: 3.75rem; /* 60px */
-        line-height: 2rem;
-        font-weight: 600;
-    }
-
-    /* HERO SECTION */
-
-
-
-     /*ABOUT SECTION */
-
-     .about__section h1, .gallery__title h1 {
-        color: map-get($colors, bandSite__black );
-        font-size:  2.25rem; /* 60px */
-        line-height: 2.75rem; /* 32px */ 
-        font-weight: 700;
-        padding-left: 3rem;
-        margin-left: 4rem;
-    }
-
-    .about__section {
-        padding: 3rem;
-    }
-    
-    .musician__image--container {
-        display: block;
-        background-image: url(../assets/Images/band.jpg);
-        background-size: cover;
-        margin-right: auto;
-        margin-left:auto;
-        margin-top: 3rem;
-        width: 68vw;
-        height: 60vh/* 550px */
-
-    }
-
-    .about__section--text h2 {
-        font-size: 1.5rem; /*24px*/
-        line-height: 2rem; /*32px */
-        font-weight:700;
-        padding-left: 2.5vw;
-        padding-right: 2.5vw;
-        margin-left: 9.5vw;
-        margin-right: 28vw;
-        margin-top: 2rem;
-    } 
-
-    .about__section--text h3 {
-        font-size: 0.875rem; /*14px*/
-        line-height: 2rem; /*32px */
-        font-weight:600;
-        padding-left: 2.5vw; /*36px*/
-        margin-left: 9vw;
-    }
-
-    .about__section--text h4 {
-        padding-left: 3rem; /* 48px */
-        font-size: 1.5rem; /* 24px */
-        line-height: 2.75rem; /*44px */
-        margin-bottom: 0;
-        margin-left: 10rem;
-    }
-
-    .about__section--text p {
-        font-size: 0.875rem; /*14px*/
-        line-height: 1.375rem; /* 22px */
-        font-weight: 400;
-    }
-
-    .about__body--container {
-        display: flex;
-        padding-left: 2rem; /*36px*/
-        padding-right: 3rem; /*36px*/
-        margin-left: 10rem;
-        margin-right: 9rem;
-    }
-
-    .about__body--paragraph {
-        margin: 1rem;
-    }
-    /*ABOUT SECTION */
-
-
-    /* Gallery Section */
-
-    .gallery__section {
-        display: flex;
-        background-color: #FAFAFA;
-        justify-content: center;
-        padding-bottom: 3rem;
-       
-    }
-    
-    .gallery__title {
-        padding:3rem;
-        background-color: #FAFAFA;
-    }
-
-    .gallery__container {
-        display: flex;
-        max-width: 75rem;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 1rem;
-    }
-
-    .gallery__container img {
-        width: 23rem;
-        height: 12.5rem;
-    }
-
-
-    .img__container {
-        display: inline-block;
-        width: 23rem;
-        height: 12.5rem;
-    }
-    /*gallery Section */
-
-
-
-
-    /*footer section */
-
-    .footer__container {
-        display: flex;
-        width: 100%;
-        background-color: map-get($colors, bandSite__black );
-        padding-left: 3rem;
-        padding-bottom: 1rem;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        color: #FFFFFF;
-        
-    }
-
-    .footer__container h1 {
-        color: #FFFFFF;
-        font-size: 2.75rem; /*60px*/
-        line-height: 2.75rem; /*44px */
-        font-weight:700;
-        padding-top: 3rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        order: 0;
-        width: 20rem; /* 340 px */
-        height: 4rem; /* 148px */
-        text-align: center;
-        
-        
-    }
-
-
-    .footer__container h3 {
-        margin: .25rem;
-    }
-
-    .footer__socialicons { 
-        display: flex;
-        padding-top: 5rem;
-        padding-bottom: 4.75rem;
-        padding-right: 5.75rem;
-        order: 1;
-        width: 38rem;
-        align-items: center;
-    }
-
-    .footer__socialicons img {
-        align-items: center;
-        width: 4rem;
-        height: 2rem;
-    }
-
-    .footer__logo--container{
-        order: 3;
-        width: 8rem;
-        height: 2rem;
-        margin-top: 5rem;
-        margin-left: 3rem;
-        justify-content: right;
-        margin-bottom: 5rem;
-    }
-
-    .footer__title {
-        order:4;
-        color: #FFFFFF;
-        padding-left: 3rem;
-        width: 17rem;
-    }
-
-
-    .footer__title--extended {
-        order: 5;
-        color: #FFFFFF;
-        padding-left: 3rem;
-        width: 36rem;
-    }
-
-    .footer__paragraph{
-        order:6;
-        width: 17rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-    .footer__paragraph--extended{
-        order:7;
-        width: 27rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-
-    .footer__email1 {
-        order: 8;
-        width: 18rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-    .footer__email2 {
-        order: 9;
-        width: 18rem;
-        text-align: left;
-        padding-left: 2rem;
-    }
-
-    .footer__email3 {
-        order: 10;
-        width: 18rem;
-        text-align: left;
-        padding-left: 2rem;
-    }
-    .footer_copyright {
-        order:11;
-        color: #FFFFFF;
-        width: 28rem;
-        text-align: left;
-        padding-left: 3rem;
-    }
-
-
-}
