@@ -1,4 +1,4 @@
-@use '_variables';
+@use 'variables' as *;
 
 
 
@@ -72,6 +72,12 @@
         font-size: 3.75rem; /* 60px */
         line-height: 4.25rem; /* 68px */ 
         font-weight: 600;
+    }
+
+    .hero__opaque--filter {
+        position: absolute ;
+        background-color: #323232;
+        opacity: 50%;
     }
 
     /* HERO SECTION */

@@ -1,7 +1,5 @@
-@use '_variables';
+@use './variables' as *;
 
-
-/* DESKTOP BREAKPOINT*/
 
 
 
@@ -49,8 +47,6 @@
     /* HERO SECTION */
     .hero__section {
         width: 100vw;
-        background-color: #323232;
-        opacity: 50%;
     }
     
     .hero__img--container {
@@ -72,6 +68,12 @@
         font-size: 3.75rem; /* 60px */
         line-height: 2rem;
         font-weight: 600;
+    }
+
+    .hero__opaque--filter {
+        position: absolute ;
+        background-color: #323232;
+        opacity: 50%;
     }
 
     /* HERO SECTION */

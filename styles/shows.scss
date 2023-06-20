@@ -1,0 +1,58 @@
+
+@use './partials/desktopBreakpoint' as *;
+@use './partials/tabletBreakpoint' as *;
+@use './partials/variables' as *;
+
+@font-face {
+    font-family: 'avenir_next_lt_probold';
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff') format('woff');
+    font-weight:bold;
+    font-style:normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_next_lt_prodemi';
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff') format('woff');
+    font-weight:600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_next_lt_proregular';
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    font-family:  'avenir_next_lt_proregular', sans-serif;
+    font-size: 16px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.navsection {
+    background-color: map-get($colors, bandSite__black );
+    color: map-get($colors, cta__text--active );
+    width: 100vw;
+}
+
+
+/* MOBILE BREAKPOINT */
