@@ -1,4 +1,4 @@
-@media (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   /* Navigation */
   nav {
     width: 100%;
@@ -542,7 +542,7 @@ body {
 }
 
 /* MOBILE BREAKPOINT */
-@media screen and (min-width: 360px) and (max-width: 767px) { /*767px*/
+@media screen and (max-width: 767px) { /*767px*/
   .navsection__title {
     margin: auto;
     width: 100%;
@@ -556,7 +556,12 @@ body {
   }
   .nav__text--container {
     width: 50vw;
-    padding: 0;
+    text-align: center;
+  }
+  .nav__text--container2 {
+    width: 50vw;
+    height: 4vh;
+    text-align: center;
   }
   .nav__text--container h2 {
     font-size: 1.5rem; /*24px*/
@@ -586,14 +591,15 @@ body {
     text-decoration: none;
     display: inline-block;
     border: -1rem solid #323232;
-    padding-left: 39%;
-    padding-right: 39%;
+    padding-left: 28%;
+    padding-right: 38%;
     border-bottom: 0.3rem solid #FFFFFF;
     color: #FFFFFF;
     font-weight: 700;
   }
   nav a.inactive {
     color: #AFAFAF;
+    text-decoration: none;
   }
   footer {
     font-size: 0.813rem; /*13px*/

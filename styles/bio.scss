@@ -58,7 +58,7 @@ body {
 
 /* MOBILE BREAKPOINT */
 
-@media screen and (min-width: 360px) and (max-width: 767px){ /*767px*/
+@media screen and (max-width: 767px){ /*767px*/
     .navsection__title {
         margin: auto;
         width: 100%;
@@ -74,7 +74,13 @@ body {
 
     .nav__text--container {
         width: 50vw;
-        padding: 0;
+        text-align: center;
+    }
+
+    .nav__text--container2 {
+        width: 50vw;
+        height: 4vh;
+        text-align: center;
     }
 
     .nav__text--container h2 {
@@ -107,8 +113,8 @@ body {
         text-decoration: none;
         display: inline-block;
         border: -1rem solid map-get($colors ,  bandSite__black);
-        padding-left: 39%;
-        padding-right: 39%;
+        padding-left: 28%;
+        padding-right: 38%;
         border-bottom: .3rem solid map-get($colors , cta__text--active );
         color: map-get($colors , cta__text--active );
         font-weight: 700;
@@ -117,6 +123,7 @@ body {
 
     nav a.inactive {
         color: map-get($colors , cta__text--col );
+        text-decoration: none;
     }
 
     footer {
