@@ -721,8 +721,41 @@ body {
     margin: 0rem;
     padding-top: 1.5rem;
   }
+  .comment__section--container {
+    display: flex;
+    flex-direction: row;
+    width: 26rem;
+  }
   .user__icon--container {
-    flex-wrap: wrap;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 3rem;
+  }
+  .form__section--container {
+    display: flex;
+    flex-direction: column;
+  }
+  .form__name--container {
+    width: 100%;
+  }
+  .form__section--title1 {
+    width: 3rem;
+    height: 3rem;
+    padding-left: 1rem;
+  }
+  .form__username {
+    height: 3rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 0.25rem; /*4px*/
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .form__comment--area {
+    border-radius: 0.25rem;
+    width: 100%;
+    margin: 0.75rem;
   }
   .user__icon {
     height: 3rem;
