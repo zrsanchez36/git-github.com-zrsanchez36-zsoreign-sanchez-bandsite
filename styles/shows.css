@@ -664,6 +664,7 @@ body {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     flex-direction: column;
+    border-bottom: 0.3rem solid #AFAFAF;
   }
   .shows__section h1 {
     font-size: 1.5rem;
@@ -691,6 +692,26 @@ body {
     font-weight: 600;
     margin: 0;
   }
+  .dom__shows--container {
+    border-bottom: 0.3rem solid #AFAFAF;
+  }
+  .dom__table {
+    margin: 0;
+    width: 100%;
+  }
+  .dom__table--row {
+    width: 100%;
+  }
+  .shows__button {
+    align-self: center;
+    background-color: #323232;
+    color: #FFFFFF;
+    height: 2.5rem; /*40px*/
+    width: 100%;
+    border-radius: 0.25rem; /*4px*/
+    border: none;
+  }
+  /*shows section*/
   .footer__container {
     background-color: #323232;
     padding-left: 1.5rem;
