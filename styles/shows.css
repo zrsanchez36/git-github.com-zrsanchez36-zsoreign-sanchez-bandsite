@@ -660,7 +660,6 @@ body {
   /*Shows Section */
   .shows__section {
     display: flex;
-    padding: 1rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     flex-direction: column;
@@ -671,6 +670,7 @@ body {
     line-height: 2rem;
     font-weight: 700;
     padding-bottom: 1rem;
+    padding-left: 1rem;
   }
   .shows__section h3 {
     font-size: 0.875rem; /*13px*/
@@ -692,15 +692,13 @@ body {
     font-weight: 600;
     margin: 0;
   }
-  .dom__shows--container {
-    border-bottom: 0.3rem solid #AFAFAF;
+  .shows__container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  .dom__table {
-    margin: 0;
-    width: 100%;
-  }
-  .dom__table--row {
-    width: 100%;
+  .outerDiv {
+    border-bottom: 0.063rem solid #AFAFAF;
+    padding-bottom: 1rem;
   }
   .shows__button {
     align-self: center;
