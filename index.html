@@ -81,22 +81,25 @@
                             <div class="img__container"><img src="assets/Images/Photo-gallery-9.jpg" alt="Confetti fallong"></div>
                         </div>
                 </div>
-                <section class="comment__section">
+                <section class="comment__section" id="commentDOMSection">
                     <h1>Join the Conversation</h1>
 
                     <div class="comment__section--container">
-                        <div class= "user__icon--container">
-                            <img class="user__icon" src="/assets/3.0 - Assets/Images/Mohan-muruge.jpg">
+                        <div class="add__comment">
+                            <div class= "user__icon--container">
+                                <img class="user__icon" src="/assets/3.0 - Assets/Images/Mohan-muruge.jpg">
+                            </div>
+                            <div class="form__section--container">
+                                <p>NAME</p>
+                                <form class="comment__form" id="comment_form" action="./scripts/index-page.js">
+                                    <input id="user__name" class="form__username" type="text" placeholder="Enter your name" required>
+                                <p>COMMENT</p>
+                                    <textarea id="comment__box" class="form__comment" rows="10" placeholder="Add a new comment" required></textarea>
+                                    <input id="submit__button" type="submit" value="COMMENT"></input>
+                                </form>
+                            </div>
                         </div>
-                        <div class="form__section--container">
-                            <p>NAME</p>
-                            <form class="comment__form" action="./scripts/index-page.js">
-                                <input id="user__name" class="form__username" type="text" placeholder="Enter your name">
-                            <p>COMMENT</p>
-                                <textarea id="comment__box" class="form__comment" rows="10" placeholder="Add a new comment"></textarea>
-                                <button type="submit">COMMENT</button>
-                            </form>
-                        </div>
+                        <div class="comment__card" id="commentCard"></div>
                     </div>
                 </section>
             <footer class="footer__container">

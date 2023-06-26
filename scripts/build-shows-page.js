@@ -1,113 +1,4 @@
-// const showSectionContainer = document.createElement('div');
-// const showContainer = document.getElementById('show__section--selector');
-// const showH1 = document.createElement('h1');
-// const dateText = document.createElement('p');
-// let dateVal = document.createElement('h3');
-// const venueText = document.createElement('p');
-// let venueVal = document.createElement('h4');
-// const locationText = document.createElement('p');
-// let locationVal = document.createElement('h4');
-// const ticketButton = document.createElement('button');
 
-// //ADD CLASS//
-// showSectionContainer.classList.add('dom__shows--container');
-// ticketButton.classList.add('dom__ticket--button');
-
-
-
-// showContainer.appendChild(showSectionContainer);
-// showSectionContainer.appendChild(showH1);
-// showSectionContainer.appendChild(dateText);
-// showSectionContainer.appendChild(dateVal);
-// showSectionContainer.appendChild(venueText);
-// showSectionContainer.appendChild(venueVal);
-// showSectionContainer.appendChild(locationText);
-// showSectionContainer.appendChild(locationVal);
-// showSectionContainer.appendChild(ticketButton)
-
-
-// showH1.textContent = 'SHOWS';
-// dateText.textContent = 'DATE';
-// dateVal.textContent = 'Mon Sept 06 2021';
-// venueText.textContent = 'VENUE';
-// venueVal.textContent = 'Ronald Lane'
-// locationText.textContent = 'LOCATION';
-// locationVal.textContent = 'San Francisco, CA';
-// ticketButton.textContent = 'BUY TICKETS';
-
-
-
-
-// document.addEventListener('DOMContentLoaded', init);
-
- 
-
-// function createShows1() {
-//     //Create Div For shows section
-//     const showSectionContainer = document.createElement('div');
-//     showSectionContainer.classList.add('dom__shows--container');
-    
-//     const showContainer = document.getElementById('show__section--selector');
-//     showContainer.appendChild(showSectionContainer);
-//     //Create Div for showws section
-
-//     //Create H1 with shows"
-//     const showH1 = document.createElement('h1');
-//     showSectionContainer.appendChild(showH1);
-//     showH1.textContent = 'SHOWS';
-
-//     //Create Table
-
-//     const table = document.createElement('table');
-//     table.setAttribute('id', 'dom__table--identifier');
-//     table.classList.add('dom__table');
-//     showSectionContainer.appendChild(table);
-
-//     // Create Table row
-//     const tableRow = table.insertRow(0);
-//     tableRow.classList.add('dom__table--row');
-//     table.appendChild(tableRow);
-
-
-//     //Create Date as child of  table row
-//     const dateText = document.createElement('p');
-//     tableRow.appendChild(dateText);
-//     dateText.textContent = 'DATE';
-//     let dateVal = document.createElement('h3');
-//     tableRow.appendChild(dateVal);
-//     dateVal.textContent = dateArr[0]
-
-//     //Venue
-//     const venueText = document.createElement('p');
-//     tableRow.appendChild(venueText);
-//     venueText.textContent = 'VENUE';
-//     let venueVal = document.createElement('h4');
-//     tableRow.appendChild(venueVal);
-//     venueVal.textContent = venuArr[0];
-
-
-//     //LOCATION
-//     const locationText = document.createElement('p');
-//     tableRow.appendChild(locationText);
-//     locationText.textContent = 'LOCATION';
-//     let locationVal = document.createElement('h4');
-//     tableRow.appendChild(locationVal);
-//     locationVal.textContent = 'San Francisco, CA';
-    
-    
-//     //button
-//     const ticketButton = document.createElement('button');
-//     //ticketButton.classList.add('dom__ticket--button')
-//     ticketButton.setAttribute('id', 'dom__ticket--button');
-//     ticketButton.textContent = 'BUY TICKETS';
-//     ticketButton.classList.add('shows__button'); 
-//     tableRow.appendChild(ticketButton);
-//     const selectBtn = document.getElementById('dom__ticket--button');
-
-    
-
-
-// }
 
 
 // function init() {
@@ -126,7 +17,7 @@
 // }
 
 
-function buildCard(P, H3, P2, H4, P3, H42) {
+function buildShows(P, H3, P2, H4, P3, H42) {
     const outerDiv = document.createElement("div");
     outerDiv.classList.add('outerDiv');
   
@@ -180,12 +71,12 @@ function buildCard(P, H3, P2, H4, P3, H42) {
   
   const cards = document.querySelector(".shows__container");
   
-  const card1 = buildCard("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA");
-  const card2 = buildCard("DATE", "Tue Sept 21 2021", "VENUE", "Pier 3 East", "LOCATION", "San Francisco, CA");
-  const card3 = buildCard("DATE", "Fri Oct 15 2021", "VENUE", "View Lounge", "LOCATION", "San Francisco, CA");
-  const card4 = buildCard("DATE", "Sat Nov 06 2021", "VENUE", "Hyatt Agency", "LOCATION", "San Francisco, CA");
-  const card5 = buildCard("DATE", "Fri Nov 26 2021", "VENUE", "Moscow Center", "LOCATION", "San Francisco, CA");
-  const card6 = buildCard("DATE", "Wed Dec 15 2021", "VENUE", "Press Club", "LOCATION", "San Francisco, CA");
+  const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA");
+  const card2 = buildShows("DATE", "Tue Sept 21 2021", "VENUE", "Pier 3 East", "LOCATION", "San Francisco, CA");
+  const card3 = buildShows("DATE", "Fri Oct 15 2021", "VENUE", "View Lounge", "LOCATION", "San Francisco, CA");
+  const card4 = buildShows("DATE", "Sat Nov 06 2021", "VENUE", "Hyatt Agency", "LOCATION", "San Francisco, CA");
+  const card5 = buildShows("DATE", "Fri Nov 26 2021", "VENUE", "Moscow Center", "LOCATION", "San Francisco, CA");
+  const card6 = buildShows("DATE", "Wed Dec 15 2021", "VENUE", "Press Club", "LOCATION", "San Francisco, CA");
   
   
   cards.appendChild(card1);
