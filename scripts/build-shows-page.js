@@ -92,7 +92,6 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
   
     
     const ticketButton = document.createElement('button');
-    ticketButton.classList.add('dom__ticket--button');
     ticketButton.setAttribute('id', 'dom__ticket--button');
     ticketButton.textContent = 'BUY TICKETS';
     ticketButton.classList.add('shows__button');
@@ -127,13 +126,39 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
   
   };
 
+  buildShowCards();
 
   
   window.buildShows2 = function() {
-    const tableDiv
+
+    //create table div
+    const tableDiv = document.createElement('div');
+    tableDiv.classList.add('table__container');
+    const showContainer = document.getElementById('show__section--selector');
+    showContainer.appendChild(tableDiv);
+
+    
+    //create diom table and give it class and ID
+    const showTable = document.createElement('table');
+    showTable.classList.add('show__table');
+    showTable.setAttribute('id', 'tableDom');
+    tableDiv.appendChild(showTable);
+
+    //CREATE TR1 (heading row)  make them children of the able and row
+
+    const row1 = document.createElement('tr');
+    row1.classList.add('table__row--headings');
+    row1.setAttribute('id', 'rowHeadings');
+    showTable.appendChild(row1);
+
+    const dateHeading = document.createElement('p');
+    const venueHeading = document.createElement('p');
+    const locationHeading = document.createElement('p');
+
 
   }
 
+  buildShows2();
 
 
 // function map(array, callback) {
