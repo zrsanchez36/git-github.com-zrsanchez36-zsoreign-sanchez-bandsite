@@ -1,23 +1,58 @@
 
+let showObj1 = {
+  date: 'Mon Sept 06 2021',
+  venue: 'Ronald Lane' ,
+  location: 'San Francisco, CA'
+};
 
+let showObj2 = {
+  date: 'Tue Sept 21 2021',
+  venue: 'Pier 3 East',
+  location: 'San Francisco, CA'
+};
 
-// function init() {
-//     let query = window.matchMedia('(max-width: 767px)');
+let showObj3 = {
+  date: 'Fri Oct 15 2021',
+  venue: 'View Lounge',
+  location: 'San Francisco, CA'
+};
+
+let showObj4 = {
+  date: 'Mon Sat Nov 06 2021',
+  venue: 'Hyatt Agency',
+  location: 'San Francisco, CA'
+};
+
+let showObj5 = {
+  date: 'Fri Nov 26 2021',
+  venue: 'Moscow Center',
+  location:'San Francisco, CA'
+};
+
+let showObj6 = {
+  date: 'Wed Dec 15 2021',
+  venue: 'Press Club',
+  location: 'San Francisco, CA'
+};
+
+function init() {
+    let query = window.matchMedia('(max-width: 767px)');
     
-//     if(query.matches) {
-//         //if page is wider than 767px
-//         createShows1();
-//     }
+    if(query.matches) {
+        //if page is wider than 767px
+        buildShows();
+        buildShowCards();
+    }
 
-//     else{
-//         //if the page is narrower than 768px
+    else({
+        //if the page is narrower than 768px
         
-//         createShows1();
-//     }
-// }
+        buildShows2();
+    }
+}
 
 
-function buildShows(P, H3, P2, H4, P3, H42) {
+window.buildShows = function(P, H3, P2, H4, P3, H42) {
     const outerDiv = document.createElement("div");
     outerDiv.classList.add('outerDiv');
   
@@ -67,8 +102,10 @@ function buildShows(P, H3, P2, H4, P3, H42) {
 
 
     return outerDiv;
-  }
+  };
   
+
+  window.buildShowCards = function() {
   const cards = document.querySelector(".shows__container");
   
   const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA");
@@ -85,6 +122,14 @@ function buildShows(P, H3, P2, H4, P3, H42) {
   cards.appendChild(card4);
   cards.appendChild(card5);
   cards.appendChild(card6);
+  
+  return buildShowCards;
+  
+  };
+
+buildShowCards();
+
+
 
 // function map(array, callback) {
 //     let newArr = []
