@@ -13,22 +13,34 @@
     
     .navsection {
         display: flex;
+        flex-direction: row;
     }
     
     .navsection__title {
         padding: 24px;
         justify-content: center;
-        display: inline-block;
     }
     
+
+    .navsection__menu--container {
+        display: flex;
+        flex-direction: row;
+    }
+
     .nav__text--container {
-        display: inline-block;
         padding-left: 1rem; /*16px */
         padding-right: 3.5rem; /*56px */
-        margin: 0%;
         justify-content: center;
         padding-top: .5rem;
     }
+
+    .nav__text--container2 {
+        justify-content: center;
+        padding-top: .5rem;
+        border-bottom: .3rem solid map-get($colors , cta__text--active );
+    }
+    
+
 
     nav a.active {
         text-decoration: underline;
@@ -41,6 +53,7 @@
 
     nav a.inactive {
         color: map-get($colors , cta__text--col );
+        text-decoration: none;
     }
 
     /* Navigation*/
@@ -49,152 +62,84 @@
 
     .hero__section {
         width: 100vw;
-        background-color: #323232;
-        opacity: 50%;
     }
 
     .hero__img--container {
         position: relative;
-        text-align: center;
         color: map-get($colors , cta__text--active );
-        background-image: url(../assets/Images/hero-bio.jpg);
+        background-image: url(../assets/Images/hero-shows.jpg);
         background-size:cover;
-        height: 55vw;
+        height: 60vh;
         width: 100vw;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
     .hero__img--container h1 {
         position: absolute;
-        top: 50%;
-        left: 22dvh;
-        transform: translate(-50%, -50%);
+        top: 20%;
+        padding-left: 3rem;
+        //transform: translate(-50%, -50%);
         font-size: 3.75rem; /* 60px */
         line-height: 4.25rem; /* 68px */ 
-        font-weight: 600;
+        font-weight: 700;
+        text-align: left;
+        order: 1;
     }
+
+    .hero__img--container h3 {
+        position: absolute;
+        top: 10%;
+        padding-left: 3rem;
+        font-size: 1.5rem;/*24px*/
+        line-height: 2.75rem;
+        font-weight: 600;
+        order:0
+    }
+
+    
 
     .hero__opaque--filter {
         position: absolute ;
         background-color: #323232;
         opacity: 50%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .soundcloud__container {
+        width: 90%;
+        height:20%;
+        position: absolute;
+        top: 60%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        
+    }
+
+    .soundcloud__container iframe {
+        width: 50%;
     }
 
     /* HERO SECTION */
     
-    
-    /*ABOUT SECTION */
+    /* SHOWS Section */
 
-    .about__section h1, .gallery__title h1 {
-        color: map-get($colors, bandSite__black );
+    .shows__section {
+        display: flex;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: .3rem solid map-get($colors , cta__text--col );
+    }
+
+    .shows__section h1 {
         font-size: 3.75rem; /* 60px */
-        line-height: 4.25rem; /* 32px */ 
+        line-height: 4.25rem; /* 68px */ 
         font-weight: 700;
-        margin: 0;
-        
     }
 
-    .about__section {
-        padding: 3rem;
-    }
-    
-    
-    .musician__image--container {
-        display: block;
-        background-image: url(../assets/Images/band.jpg);
-        background-size: cover;
-        margin-right: auto;
-        margin-left:auto;
-        margin-top: 3rem;
-        width: 80%;
-        height: 26.375rem;/* 422px */
 
-    }
-
-    
-    .about__section--text h2 {
-        font-size: 1.5rem; /*36px*/
-        line-height: 2.75rem; /*44px */
-        font-weight:700;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-
-    .about__section--text h3 {
-        font-size: 1.5rem; /*24px*/
-        line-height: 2rem; /*32px */
-        font-weight:600;
-        padding-left: 3rem; /*36px*/
-        margin-left: 2rem;
-    }
-
-    .about__section--text h4 {
-        padding-left: 3rem;
-        margin-left: 
-        2.25rem; /* 2.25 */
-        margin-bottom: 0;
-        font-size: 2.25rem; /* 36px */
-        line-height: 2rem;
-        font-weight:700;
-    }
-
-    .about__section--text p {
-        font-size: 1.5rem; /*14px*/
-        line-height: 2rem; /* 22px */
-        font-weight: 400;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .about__body--container {
-        display: flex;
-        padding-left: 3rem; /*36px*/
-        padding-right: 3rem; /*36px*/
-    }
-
-    .about__body--paragraph {
-        margin: 1rem;
-    }
-    /*ABOUT SECTION */
-
-
-    /* Photo Gallery */
-
-    .gallery__section {
-        display: flex;
-        background-color: #FAFAFA;
-        justify-content: center;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-bottom: 3rem;
-       
-    }
-    
-    .gallery__title {
-        padding: 3rem;
-        background-color: #FAFAFA;
-        margin: 0;
-    }
-
-    .gallery__container {
-        display: flex;
-        max-width: 80rem;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 1.25rem;
-    }
-
-    .gallery__container img {
-        width: 20rem;
-        height: 11rem;
-        object-fit: cover;
-        object-position:bottom;
-    }
-
-    /*gallery Section */
 
                                                        
     /* Footer Section */

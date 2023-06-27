@@ -44,7 +44,7 @@ function init() {
         buildShowCards();
     }
 
-    else({
+    else{
         //if the page is narrower than 768px
         
         buildShows2();
@@ -127,7 +127,12 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
   
   };
 
-buildShowCards();
+
+  
+  window.buildShows2 = function() {
+    const tableDiv
+
+  }
 
 
 
