@@ -1,3 +1,7 @@
+const selectBtn = document.getElementById('dom__ticket--button'); 
+
+
+
 
 let showObj1 = {
   date: 'Mon Sept 06 2021',
@@ -34,6 +38,46 @@ let showObj6 = {
   venue: 'Press Club',
   location: 'San Francisco, CA'
 };
+
+
+//ronald lane show data(0bj1)
+const showLocation = showObj1.location;
+const rlDate = showObj1.date;
+const rlVenue = showObj1.venue;
+
+//e show data(0bj2)
+
+const p3Date = showObj2.date;
+const p3Venue = showObj2.venue;
+
+
+// show data(0bj3)
+
+const vLDate = showObj3.date;
+const vLVenue = showObj3.venue;
+
+
+// show data(0bj4)
+
+const hAaDate = showObj4.date;
+const hAVenue = showObj4.venue;
+
+
+// show data(0bj5)
+
+const mClDate = showObj5.date;
+const mCVenue = showObj5.venue;
+
+
+// show data(0bj6)
+
+const pCDate = showObj6.date;
+const pCVenue = showObj6.venue;
+
+
+    
+
+
 
 function init() {
     let query = window.matchMedia('(max-width: 767px)');
@@ -96,7 +140,7 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
     ticketButton.textContent = 'BUY TICKETS';
     ticketButton.classList.add('shows__button');
     innerDiv.appendChild(ticketButton);
-    const selectBtn = document.getElementById('dom__ticket--button'); 
+    
 
 
 
@@ -126,10 +170,10 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
   
   };
 
-  buildShowCards();
+  // buildShowCards();
 
   
-  window.buildShows2 = function() {
+  window.buildShows2 = function(showObj1, showObj2, showObj3, showObj4, showObj5, showObj6) {
 
     //create table div
     const tableDiv = document.createElement('div');
@@ -156,6 +200,26 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
     const locationHeading = document.createElement('p');
 
 
+    dateHeading.innerText ='DATE';
+    venueHeading.innerText = 'VENUE';
+    locationHeading.innerText = 'LOCATION';
+
+    row1.appendChild(dateHeading);
+    row1.appendChild(venueHeading);
+    row1.appendChild(locationHeading);
+
+
+    //create table row 2 with table data
+    const row2 = document.createElement('tr');
+    row2.classList.add('table__data--row');
+    row2.setAttribute('id','dataRow');
+    showTable.appendChild(row2);
+
+    const rlDateDom = document.create
+    
+    
+    console.log(rlDate, rlVenue);
+   
   }
 
   buildShows2();
