@@ -1,102 +1,152 @@
-const selectBtn = document.getElementById('dom__ticket--button'); 
+//Variable declaration------------------------------------------------------------------------------------
+                                                                                                      // |
+                                                                                                      // |
+//Create ticket button                                                                                // |
+const ticketButton = document.createElement('button');                                                   
+ticketButton.setAttribute('id', 'dom__ticket--button');
+ticketButton.textContent = 'BUY TICKETS';
+ticketButton.classList.add('shows__button');
+const buyButton = "<button class='ticket__button'>BUY TICKETS</button>";
 
 
 
 
-let showObj1 = {
+
+
+
+
+
+
+//showContainer.appendChild(ticketButton);
+
+                                                                                                      //  |
+                                                                                                      //  |
+//Variable declaration -----------------------------------------------------------------------------------|
+
+
+
+let showArray = [{
   date: 'Mon Sept 06 2021',
   venue: 'Ronald Lane' ,
-  location: 'San Francisco, CA'
-};
+  location: 'San Francisco, CA',
+  button : buyButton
+},
 
-let showObj2 = {
+{
   date: 'Tue Sept 21 2021',
   venue: 'Pier 3 East',
-  location: 'San Francisco, CA'
-};
+  location: 'San Francisco, CA',
+  button : buyButton
+},
 
-let showObj3 = {
+{
   date: 'Fri Oct 15 2021',
   venue: 'View Lounge',
-  location: 'San Francisco, CA'
-};
+  location: 'San Francisco, CA',
+  button : buyButton
+},
 
-let showObj4 = {
+{
   date: 'Mon Sat Nov 06 2021',
   venue: 'Hyatt Agency',
-  location: 'San Francisco, CA'
-};
+  location: 'San Francisco, CA',
+  button : buyButton
+},
 
-let showObj5 = {
+{
   date: 'Fri Nov 26 2021',
   venue: 'Moscow Center',
-  location:'San Francisco, CA'
-};
+  location:'San Francisco, CA',
+  button : buyButton
+},
 
-let showObj6 = {
+{
   date: 'Wed Dec 15 2021',
   venue: 'Press Club',
-  location: 'San Francisco, CA'
-};
+  location: 'San Francisco, CA',
+  button : buyButton
+},
+]
 
 
-//ronald lane show data(0bj1)
-const showLocation = showObj1.location;
-const rlDate = showObj1.date;
-const rlVenue = showObj1.venue;
+// //ronald lane show data(0bj1)
+// const showLocation = showObj1.location;
+// const rlDate = showObj1.date;
+// const rlVenue = showObj1.venue;
 
-//e show data(0bj2)
+// //e show data(0bj2)
 
-const p3Date = showObj2.date;
-const p3Venue = showObj2.venue;
-
-
-// show data(0bj3)
-
-const vLDate = showObj3.date;
-const vLVenue = showObj3.venue;
+// const p3Date = showObj2.date;
+// const p3Venue = showObj2.venue;
 
 
-// show data(0bj4)
+// // show data(0bj3)
 
-const hAaDate = showObj4.date;
-const hAVenue = showObj4.venue;
-
-
-// show data(0bj5)
-
-const mClDate = showObj5.date;
-const mCVenue = showObj5.venue;
+// const vLDate = showObj3.date;
+// const vLVenue = showObj3.venue;
 
 
-// show data(0bj6)
+// // show data(0bj4)
 
-const pCDate = showObj6.date;
-const pCVenue = showObj6.venue;
+// const hAaDate = showObj4.date;
+// const hAVenue = showObj4.venue;
+
+
+// // show data(0bj5)
+
+// const mClDate = showObj5.date;
+// const mCVenue = showObj5.venue;
+
+
+// // show data(0bj6)
+
+// const pCDate = showObj6.date;
+// const pCVenue = showObj6.venue;
 
 
     
 
 
 
-function init() {
-    let query = window.matchMedia('(max-width: 767px)');
-    
-    if(query.matches) {
-        //if page is wider than 767px
-        buildShows();
+
+  const query = window.matchMedia('(max-width: 767px)');
+  // const handler = function(ev){ //..
+  // } 
+
+  const handler = function pageInitialize(e) { 
+    if(e.matches) {
+        //if page 767px or less
+       //buildTable(showArray);
         buildShowCards();
+        // buildShowCards();
     }
 
     else{
-        //if the page is narrower than 768px
+        //if the page is more 768px
+        buildTable(showArray);
+        //
         
-        buildShows2();
+         
     }
+  }
+
+
+
+  if (query?.addEventListener) {
+    query.addEventListener('change', handler);
+  } else {
+    query.addEventListener(handler);
 }
 
 
-window.buildShows = function(P, H3, P2, H4, P3, H42) {
+ 
+ 
+ 
+
+  //query.addEventListner('change', (pageInitialize));
+
+
+function buildShows (P, H3, P2, H4, P3, H42) {
     const outerDiv = document.createElement("div");
     outerDiv.classList.add('outerDiv');
   
@@ -135,10 +185,6 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
     outerDiv.appendChild(innerDiv);
   
     
-    const ticketButton = document.createElement('button');
-    ticketButton.setAttribute('id', 'dom__ticket--button');
-    ticketButton.textContent = 'BUY TICKETS';
-    ticketButton.classList.add('shows__button');
     innerDiv.appendChild(ticketButton);
     
 
@@ -148,7 +194,7 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
   };
   
 
-  window.buildShowCards = function() {
+function  buildShowCards() {
   const cards = document.querySelector(".shows__container");
   
   const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA");
@@ -167,67 +213,81 @@ window.buildShows = function(P, H3, P2, H4, P3, H42) {
   cards.appendChild(card6);
   
   return buildShowCards;
-  
   };
 
-  // buildShowCards();
+  
+  
+
 
   
-  window.buildShows2 = function(showObj1, showObj2, showObj3, showObj4, showObj5, showObj6) {
+ function buildTable(data) {
 
-    //create table div
-    const tableDiv = document.createElement('div');
-    tableDiv.classList.add('table__container');
-    const showContainer = document.getElementById('show__section--selector');
-    showContainer.appendChild(tableDiv);
 
+  //create table div
+  const tableDiv = document.createElement('div');
+  tableDiv.classList.add('table__container');
+  const showContainer = document.getElementById('show__section--selector');
+  showContainer.appendChild(tableDiv);
+
+
+  //create diom table and give it class and ID
+  const showTable = document.createElement('table');
+  showTable.classList.add('show__table');
+  showTable.setAttribute('id', 'tableDom');
+  tableDiv.appendChild(showTable);
+
+//CREATE TR1 (heading row)  make them children of the able and row
+
+  const row1 = document.createElement('tr');
+  row1.classList.add('table__row--headings');
+  row1.setAttribute('id', 'rowHeadings');
+  showTable.appendChild(row1);
+
+  const dateHeading = document.createElement('th');
+  const venueHeading = document.createElement('th');
+  const locationHeading = document.createElement('th');
+
+
+  const tableBodyDom = document.createElement('tbody');
+  tableBodyDom.setAttribute('id', 'showTableBodyDOM');
+  tableBodyDom.classList.add('show__table');
+  showTable.appendChild(tableBodyDom);
+
+  const tableBody = document.getElementById('showTableBodyDOM');
+  dateHeading.innerText ='DATE';
+  venueHeading.innerText = 'VENUE';
+  locationHeading.innerText = 'LOCATION';
+
+  row1.appendChild(dateHeading);
+  row1.appendChild(venueHeading);
+  row1.appendChild(locationHeading);
+
+
+
+
+    // //create table row 2 with table data
+    // const row2 = document.createElement('tr');
+    // row2.classList.add('table__data--row');
+    // row2.setAttribute('id','dataRow');
+    // showTable.appendChild(row2);
+
+
+
+    // const row2Date = document.createElement('td')
     
-    //create diom table and give it class and ID
-    const showTable = document.createElement('table');
-    showTable.classList.add('show__table');
-    showTable.setAttribute('id', 'tableDom');
-    tableDiv.appendChild(showTable);
-
-    //CREATE TR1 (heading row)  make them children of the able and row
-
-    const row1 = document.createElement('tr');
-    row1.classList.add('table__row--headings');
-    row1.setAttribute('id', 'rowHeadings');
-    showTable.appendChild(row1);
-
-    const dateHeading = document.createElement('p');
-    const venueHeading = document.createElement('p');
-    const locationHeading = document.createElement('p');
-
-
-    dateHeading.innerText ='DATE';
-    venueHeading.innerText = 'VENUE';
-    locationHeading.innerText = 'LOCATION';
-
-    row1.appendChild(dateHeading);
-    row1.appendChild(venueHeading);
-    row1.appendChild(locationHeading);
-
-
-    //create table row 2 with table data
-    const row2 = document.createElement('tr');
-    row2.classList.add('table__data--row');
-    row2.setAttribute('id','dataRow');
-    showTable.appendChild(row2);
-
-    const rlDateDom = document.create
+   for (var i = 0; i < data.length; i++){
     
-    
-    console.log(rlDate, rlVenue);
-   
+    const row = ` <tr class= "table__row" id="dataRows">
+                        <td class"table__data--date" id="tableDataDate">${data[i].date}</td>
+                        <td class"table__data--venue" id="tableDataVenue">${data[i].venue}</td>
+                        <td class="table__data--location" id="tableDataLocation">${data[i].location}</td>
+                        <td>${data[i].button}</td>
+                  </tr>`
+
+                  tableBody.innerHTML += row;
+   }
+   return buildTable;
   }
 
-  buildShows2();
 
 
-// function map(array, callback) {
-//     let newArr = []
-//     for (elem of array)
-// }
-//let dateArr = ['Mon Sept 06 2021', 'Tue Sept 21 2021', 'Fri Oct 15 2021', 'Sat Nov 06 2021', 'Fri Nov 26 2021, Wed Dec 15 2021'];
-//let venuArr = ['Ronald Lane', 'Pier 3 East', 'View Lounge', 'Hyatt Agency', 'Moscow Center', 'Press Club', ];
