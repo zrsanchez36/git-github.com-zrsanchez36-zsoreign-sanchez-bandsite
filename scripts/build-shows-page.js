@@ -9,8 +9,8 @@ ticketButton.classList.add('shows__button');
 const buyButton = "<button class='ticket__button'>BUY TICKETS</button>";
 
 
-
-
+const showContainer = document.getElementById('show__section--selector');
+const cards = document.querySelector(".shows__container");
 
 
 
@@ -118,11 +118,14 @@ let showArray = [{
         //if page 767px or less
        //buildTable(showArray);
         buildShowCards();
+        return;
         // buildShowCards();
     }
 
     else{
         //if the page is more 768px
+        //return buildShowCards();
+        showContainer.removeChild(cards);
         buildTable(showArray);
         //
         
@@ -161,7 +164,7 @@ function buildShows (P, H3, P2, H4, P3, H42) {
     const locationVal = document.createElement("h4");
     // const p = document.createElement("p");
   
-    const showContainer = document.getElementById('show__section--selector');
+    //const showContainer = document.getElementById('show__section--selector');
     showContainer.appendChild(outerDiv);
 
 
@@ -195,7 +198,7 @@ function buildShows (P, H3, P2, H4, P3, H42) {
   
 
 function  buildShowCards() {
-  const cards = document.querySelector(".shows__container");
+  //const cards = document.querySelector(".shows__container");
   
   const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA");
   const card2 = buildShows("DATE", "Tue Sept 21 2021", "VENUE", "Pier 3 East", "LOCATION", "San Francisco, CA");
@@ -278,8 +281,8 @@ function  buildShowCards() {
    for (var i = 0; i < data.length; i++){
     
     const row = ` <tr class= "table__row" id="dataRows">
-                        <td class"table__data--date" id="tableDataDate">${data[i].date}</td>
-                        <td class"table__data--venue" id="tableDataVenue">${data[i].venue}</td>
+                        <td class="table__data--date" id="tableDataDate">${data[i].date}</td>
+                        <td class="table__data--venue" id="tableDataVenue">${data[i].venue}</td>
                         <td class="table__data--location" id="tableDataLocation">${data[i].location}</td>
                         <td>${data[i].button}</td>
                   </tr>`

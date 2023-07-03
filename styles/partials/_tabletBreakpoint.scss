@@ -128,9 +128,20 @@
 
     .shows__section {
         display: flex;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: .3rem solid map-get($colors , cta__text--col );
+        padding: 3rem;
+        //border-bottom: .3rem solid map-get($colors , cta__text--col );
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .table__container {
+        width: 100%;
+    }
+
+    .show__table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
     }
 
     .shows__section h1 {
@@ -139,7 +150,28 @@
         font-weight: 700;
     }
 
+    .table__container th {
+        font-size: .875rem; /*14px*/
+        line-height: 1.375rem;
+        font-weight: 600;
+        text-align: left;
+        color: map-get($colors ,cta__text--col);
+    }
 
+    .show__table tr {
+        padding: 1rem;
+    }
+
+    .table__row {
+        border-bottom: 2px solid map-get($colors , divider__line);
+        padding-bottom: 1rem;
+    }
+ 
+    .table__data--date {
+        font-size: .875rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
 
                                                        
     /* Footer Section */
