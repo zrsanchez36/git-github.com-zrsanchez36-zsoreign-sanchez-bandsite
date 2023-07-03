@@ -296,12 +296,54 @@ body {
     .user__icon--container {
       flex-wrap: wrap;
     }
+
+    .comment__form {
+        border-bottom-color: map-get($colors, divider__line);
+        border-bottom: 1px solid;
+        padding-bottom: 1rem;;
+    }
     
     .user__icon {
         height: 3rem;
         width: 3rem;
         border-radius: 50%;
     }
+
+
+    .saved__comment--container {
+        display: flex ;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+    }
+    
+    .user__icon--blank {
+        background-color: #E1E1E1;
+        opacity: 50%;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        
+    }
+
+    .comment__creator {
+        width: 7rem;
+        margin: 0;
+    }
+
+    .date__text {
+        flex: 2 1 auto;
+        justify-self: right;
+        text-align: right;
+        width: 2rem;
+        height: 2rem;
+        color: map-get($colors, cta__text--col);
+        font-size: 0.813rem; /*13px*/
+    }
+
+        // .comment_text {
+
+        // }
 
     // .form__comment {
     //    margin: 2rem; 
