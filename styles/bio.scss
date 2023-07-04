@@ -290,17 +290,30 @@ body {
 
     .comment__section p {
         margin: 0rem;
-        padding-top: 1.5rem;
     }
 
-    .user__icon--container {
-      flex-wrap: wrap;
+    .comment__section--container {
+        display: flex;
+        flex-direction: row;
     }
+//    .user__icon--container {
+//     width: 3rem;
+//     margin: 0px;
+    
+//     }
+
+    .form__username {
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 4px;
+        margin: 0.75rem;
+    }
+
 
     .comment__form {
-        border-bottom-color: map-get($colors, divider__line);
-        border-bottom: 1px solid;
-        padding-bottom: 1rem;;
+        // border-bottom-color: map-get($colors, divider__line);
+        border-bottom: 1px solid map-get($colors, divider__line);
+        padding-bottom: 1rem;
     }
     
     .user__icon {
@@ -313,7 +326,7 @@ body {
     .saved__comment--container {
         display: flex ;
         flex-wrap: wrap;
-        gap: 1rem;
+        border-bottom: 1px solid map-get($colors, divider__line);
         
     }
     
@@ -323,12 +336,19 @@ body {
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;
+        margin-top: 2rem;
         
     }
 
     .comment__creator {
         width: 7rem;
         margin: 0;
+        padding-top: 2rem;
+        padding-left: .75rem;
+    }
+
+    .comment__text {
+        padding-left: 3rem;
     }
 
     .date__text {
@@ -339,8 +359,10 @@ body {
         height: 2rem;
         color: map-get($colors, cta__text--col);
         font-size: 0.813rem; /*13px*/
+        padding-top: 2rem;
     }
 
+    
         // .comment_text {
 
         // }
