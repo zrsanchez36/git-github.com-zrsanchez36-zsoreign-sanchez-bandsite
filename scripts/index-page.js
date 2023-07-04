@@ -1,4 +1,7 @@
 const form = document.getElementById('postComment');
+const submittedCommentsContainer = document.createElement('div');
+submittedCommentsContainer.setAttribute('id', 'commentHolder');
+submittedCommentsContainer.classList.add('submitted__comment--dom');
 
 let defaultComment1 = {
     name: 'Connor Walton',
@@ -41,6 +44,7 @@ form.addEventListener('submit', e => {
     //console.log(month,'/',day,'/',year );
     let cmmtDate = currentMonth.toString() + '/'+ currentDay.toString() + '/' + currentYear.toString();
     const dateTextDom = document.createElement('p');
+    dateTextDom.classList.add('date__text');
     dateTextDom.innerText = cmmtDate;
     console.log(cmmtDate);
 
@@ -57,6 +61,7 @@ form.addEventListener('submit', e => {
     const userComment = document.getElementById('commentBox').value;
 
     const userCommentDom = document.createElement('p');
+    userCommentDom.classList.add('comment__text');
     userCommentDom.innerText = userComment;
 
     console.log(newUser,userComment);
@@ -72,11 +77,12 @@ form.addEventListener('submit', e => {
 
 
     const textBox = document.createElement('h3');
+    textBox.classList.add('comment__creator');
     const commentWrapper = document.createElement('div');
     commentWrapper.classList.add('saved__comment--container');
     
     textBox.innerHTML = newUser;
-    const commentSectionParent = document.getElementById('postCommentContainer');
+    const commentSectionParent = document.getElementById('commentHolder');
     commentSectionParent.appendChild(commentWrapper);
     commentWrapper.append(circleContainer, textBox, dateTextDom, userCommentDom);
     
@@ -89,8 +95,10 @@ function displayComment() {
         //Create comment section div
         const commentSectionParent = document.getElementById('commentDOMSection');
         const savedCommtDiv = document.createElement('div');
+
         savedCommtDiv.classList.add('saved__comment--container');
-        commentSectionParent.appendChild(savedCommtDiv);
+        commentSectionParent.appendChild(submittedCommentsContainer);
+        submittedCommentsContainer.appendChild(savedCommtDiv);
 
         let circleContainer = document.createElement('div');
         circleContainer.classList.add('user__icon--blank'); //Blank user icon constructor
