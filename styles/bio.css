@@ -730,7 +730,7 @@ body {
     margin-top: 2rem;
   }
   .comment__creator {
-    width: 7rem;
+    width: 100%;
     margin: 0;
     padding-top: 2rem;
     padding-left: 0.75rem;

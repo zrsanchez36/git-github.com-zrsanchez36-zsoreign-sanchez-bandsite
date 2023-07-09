@@ -118,14 +118,13 @@ let showArray = [{
         //if page 767px or less
        //buildTable(showArray);
         buildShowCards();
-        return;
+        
         // buildShowCards();
     }
 
     else{
         //if the page is more 768px
         //return buildShowCards();
-        showContainer.removeChild(cards);
         buildTable(showArray);
         //
         
@@ -149,7 +148,7 @@ let showArray = [{
   //query.addEventListner('change', (pageInitialize));
 
 
-function buildShows (P, H3, P2, H4, P3, H42) {
+function buildShows (P, H3, P2, H4, P3, H42, ticketButton) {
     const outerDiv = document.createElement("div");
     outerDiv.classList.add('outerDiv');
   
@@ -162,6 +161,12 @@ function buildShows (P, H3, P2, H4, P3, H42) {
     const dateVal = document.createElement("h3");
     const venueVal = document.createElement("h4");
     const locationVal = document.createElement("h4");
+    const buyTicket = document.createElement("button");
+
+
+    buyTicket.setAttribute('id', 'dom__ticket--button');
+    buyTicket.textContent = 'BUY TICKETS';
+    buyTicket.classList.add('shows__button');
     // const p = document.createElement("p");
   
     //const showContainer = document.getElementById('show__section--selector');
@@ -175,6 +180,9 @@ function buildShows (P, H3, P2, H4, P3, H42) {
     venueVal.innerText = H4;
     locationText.innerText = P3;
     locationVal.innerText = H42;
+    buyTicket.innerText = 'BUY TICKETS'
+
+    ticketButton.innerText = 'BUY TICKETS';
 
     // img.setAttribute("alt", alt);
   
@@ -184,13 +192,13 @@ function buildShows (P, H3, P2, H4, P3, H42) {
     innerDiv.appendChild(venueVal);
     innerDiv.appendChild(locationText);
     innerDiv.appendChild(locationVal);
-  
+    innerDiv.appendChild(buyTicket);
     outerDiv.appendChild(innerDiv);
   
     
-    innerDiv.appendChild(ticketButton);
     
-
+    
+    
 
 
     return outerDiv;
@@ -200,12 +208,12 @@ function buildShows (P, H3, P2, H4, P3, H42) {
 function  buildShowCards() {
   //const cards = document.querySelector(".shows__container");
   
-  const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA");
-  const card2 = buildShows("DATE", "Tue Sept 21 2021", "VENUE", "Pier 3 East", "LOCATION", "San Francisco, CA");
-  const card3 = buildShows("DATE", "Fri Oct 15 2021", "VENUE", "View Lounge", "LOCATION", "San Francisco, CA");
-  const card4 = buildShows("DATE", "Sat Nov 06 2021", "VENUE", "Hyatt Agency", "LOCATION", "San Francisco, CA");
-  const card5 = buildShows("DATE", "Fri Nov 26 2021", "VENUE", "Moscow Center", "LOCATION", "San Francisco, CA");
-  const card6 = buildShows("DATE", "Wed Dec 15 2021", "VENUE", "Press Club", "LOCATION", "San Francisco, CA");
+  const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA", ticketButton);
+  const card2 = buildShows("DATE", "Tue Sept 21 2021", "VENUE", "Pier 3 East", "LOCATION", "San Francisco, CA", ticketButton);
+  const card3 = buildShows("DATE", "Fri Oct 15 2021", "VENUE", "View Lounge", "LOCATION", "San Francisco, CA", ticketButton);
+  const card4 = buildShows("DATE", "Sat Nov 06 2021", "VENUE", "Hyatt Agency", "LOCATION", "San Francisco, CA", ticketButton);
+  const card5 = buildShows("DATE", "Fri Nov 26 2021", "VENUE", "Moscow Center", "LOCATION", "San Francisco, CA", ticketButton);
+  const card6 = buildShows("DATE", "Wed Dec 15 2021", "VENUE", "Press Club", "LOCATION", "San Francisco, CA",ticketButton);
   
   
   cards.appendChild(card1);
