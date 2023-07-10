@@ -117,7 +117,7 @@ let showArray = [{
     if(e.matches) {
         //if page 767px or less
        //buildTable(showArray);
-        buildShowCards();
+        buildShowCards(cards);
         
         // buildShowCards();
     }
@@ -126,6 +126,7 @@ let showArray = [{
         //if the page is more 768px
         //return buildShowCards();
         buildTable(showArray);
+        showContainer.removeChild(cards);
         //
         
          

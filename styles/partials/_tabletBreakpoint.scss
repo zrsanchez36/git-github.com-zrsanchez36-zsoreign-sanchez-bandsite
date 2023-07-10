@@ -69,7 +69,7 @@
         color: map-get($colors , cta__text--active );
         background-image: url(../assets/Images/hero-shows.jpg);
         background-size:cover;
-        height: 60vh;
+        height: 65vh;
         width: 100vw;
         overflow: hidden;
         display: flex;
@@ -173,6 +173,16 @@
         font-weight: 700;
     }
 
+
+    .ticket__button {
+        align-self: center;
+        background-color: map-get($colors , bandSite__black);
+        color: #FFFFFF;
+        height: 2.5rem; /*40px*/
+        width: 100%;
+        border-radius: 0.25rem; /*4px*/
+        border: none;
+    }
                                                        
     /* Footer Section */
 
