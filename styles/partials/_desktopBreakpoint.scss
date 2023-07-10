@@ -75,8 +75,8 @@
         overflow: hidden;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
     }
 
     .hero__img--container h1 {
@@ -96,7 +96,8 @@
         line-height: 2.75rem;
         font-weight:600;
         order:0;
-        right: 40%;
+        padding: 3rem;
+        margin-left: 120px;
     }
 
     .hero__opaque--filter {
