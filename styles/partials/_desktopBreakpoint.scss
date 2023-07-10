@@ -12,21 +12,35 @@
 
     .navsection {
         display: flex;
+        flex-direction: row;
     }
     
     .navsection__title {
         padding: 32px;
         margin-left: 120px;
         justify-content: center;
-        display: inline-block;
-        margin-right: 40px;
+        margin-right: 3rem;
+    }
+
+    .navsection__menu--container {
+        display: flex;
+        flex-direction: row;
     }
 
     .nav__text--container {
-        display: inline-block;
-        padding: 1rem; /*16px */
+        padding-left: 1rem; /*16px */
+        padding-right: 3.5rem;
         justify-content: center;
+        padding-top: 1rem;
     }
+
+    .nav__text--container2 {
+        justify-content: center;
+        padding-top: 1rem;
+        border-bottom:  .3rem solid map-get($colors, cta__text--active);
+    }
+
+
 
     nav a.active {
         text-decoration: underline;
@@ -40,6 +54,7 @@
 
     nav a.inactive {
         color: map-get($colors , cta__text--col );
+        text-decoration: none;
     }
 
     /* Navigation */
@@ -55,27 +70,57 @@
         color: map-get($colors , cta__text--active );
         background-image: url(../assets/Images/hero-bio.jpg);
         background-size:cover;
-        height: 55vw;
+        height: 65vh;
         width: 100vw;
         overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero__img--container h1 {
         position: absolute;
-        top: 47%;
-        left: 35vh;
-        transform: translate(-50%, -50%);
+        //top: 47%;
         font-size: 3.75rem; /* 60px */
-        line-height: 2rem;
+        line-height: 4.25rem;
         font-weight: 600;
+        padding: 3rem;
+        order: 1;
+    }
+
+    .hero__img--container h3 {
+        align-self: flex-start;
+        position: absolute;
+        font-size: 1.5rem;
+        line-height: 2.75rem;
+        font-weight:600;
+        order:0;
+        right: 40%;
     }
 
     .hero__opaque--filter {
         position: absolute ;
         background-color: #323232;
         opacity: 50%;
+        height: 100%;
+        width: 100%;
     }
 
+
+    .soundcloud__container {
+        width: 60%;
+        height: 20%;
+        position:absolute;
+        top: 60%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        order:2;
+    }
+
+    .soundcloud__container iframe {
+        width:50%
+    }
     /* HERO SECTION */
 
 
