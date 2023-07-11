@@ -301,7 +301,11 @@ body {
         display: flex;
         flex-direction: row;
         width: 100%;
-        align-items: flex-start;
+    }
+
+    .add__comment p {
+        width: 2.25rem;
+        height:1.25rem;
     }
 
    .user__icon--container {
