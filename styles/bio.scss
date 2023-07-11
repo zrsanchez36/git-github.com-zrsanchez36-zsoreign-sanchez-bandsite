@@ -44,7 +44,7 @@
 
 
 body {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     border: none;
 }
@@ -296,11 +296,20 @@ body {
         display: flex;
         flex-direction: row;
     }
-//    .user__icon--container {
-//     width: 3rem;
-//     margin: 0px;
-    
-//     }
+
+    .add__comment {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+   .user__icon--container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    //align-self: flex-start;
+    }
 
     .form__username {
         height: 2.25rem;

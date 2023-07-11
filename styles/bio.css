@@ -595,7 +595,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   border: none;
 }
@@ -794,6 +794,17 @@ body {
   .comment__section--container {
     display: flex;
     flex-direction: row;
+  }
+  .add__comment {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .user__icon--container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
   }
   .form__username {
     height: 2.25rem;
