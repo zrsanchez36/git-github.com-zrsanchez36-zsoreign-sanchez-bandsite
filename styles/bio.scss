@@ -186,14 +186,20 @@ body {
     }
     
     .musician__image--container {
-        display: block;
         background-image: url(../assets/Images/band.jpg);
         background-size: cover;
         margin-right: auto;
         margin-left:auto;
         width: 100%;
         height: 14.375rem;/* 422px */
+        overflow: hidden;
+        object-fit: contain;
+        position: relative;
+    }
 
+    .musician__image--container img {
+        width: 100%;
+        object-fit: contain;
     }
 
     .about__section--text h3, h2 {

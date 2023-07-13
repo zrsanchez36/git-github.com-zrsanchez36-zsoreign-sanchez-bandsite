@@ -233,11 +233,10 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        //justify-content: space-evenly;
         padding-left: 3rem;
         padding-right: 3rem;
         overflow: hidden;
-        gap: 1rem;
         //padding: 3rem;
     }
 
@@ -249,9 +248,9 @@
 
 
     .gallery__container img {
-        display: inline-block;
-        width: 23rem;
+        width: 20rem;
         height: 12.5rem;
+        padding: .5rem;
     }
 
     // .gallery__title h1 {
