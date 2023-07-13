@@ -522,6 +522,63 @@
     padding: 0.5rem;
   }
   /*gallery Section */
+  /* comment Section */
+  .comment__section--container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .user__icon--blank {
+    background-color: #E1E1E1;
+    opacity: 50%;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0.25rem solid black;
+  }
+  .user__icon--container {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 28%;
+    padding: 2rem;
+  }
+  .user__icon {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .comment__section h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    padding-left: 3rem;
+  }
+  .add__comment {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .form__container {
+    width: 100%;
+    padding-right: 3rem;
+  }
+  .form__username {
+    height: 3rem;
+    width: 100%;
+    position: inherit;
+  }
+  .form__username--input {
+    width: 100%;
+  }
+  .comment__textbox {
+    width: 100%;
+  }
+  /*comment section*/
   /* SHOWS Section */
   .shows__section {
     display: flex;
