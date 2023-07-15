@@ -311,6 +311,7 @@ body {
         flex-direction: row;
         width:100%;
         position:relative;
+        border-bottom: 1px solid map-get($colors, divider__line);
     }
 
     .add__comment p {
@@ -363,6 +364,12 @@ body {
         margin-left: .75rem;
         margin-top: 1rem;
         border-radius: 4px;
+        margin-bottom: 3rem;
+       
+       
+        &:hover {
+            background-color: #000000;
+        }
     }
 
     // .form__username--input {
@@ -410,6 +417,12 @@ body {
         border-bottom: 1px solid map-get($colors, divider__line);
         
     }
+
+    .saved__comment--container {
+        display: flex;
+    }
+
+
     
     .user__icon--blank {
         background-color: #E1E1E1;
@@ -418,17 +431,19 @@ body {
         width: 2.25rem;
         height: 2.25rem;
         margin-top: 2rem;
-        
+        order: 0;
     }
 
     .comment__creator {
         margin: 0;
         padding-top: 2rem;
         padding-left: .75rem;
+        order: 1;
     }
 
     .comment__text {
         padding-left: 3rem;
+        order: 3;
     }
 
     .date__text {
@@ -440,6 +455,9 @@ body {
         color: map-get($colors, cta__text--col);
         font-size: 0.813rem; /*13px*/
         padding-top: 2rem;
+        float: right;
+        order: 2;
+        position: absolute;
     }
 
     

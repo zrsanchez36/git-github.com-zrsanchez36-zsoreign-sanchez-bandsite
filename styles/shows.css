@@ -337,6 +337,15 @@
 }
 /* Tablet breakpoint*/
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  * {
+    font-family: "avenir_next_lt_proregular", sans-serif;
+    font-size: 16px;
+  }
+  body {
+    margin: 0px;
+    padding: 0;
+    border: none;
+  }
   /* Navigation*/
   nav {
     width: 100%;
@@ -534,17 +543,19 @@
     background-color: #E1E1E1;
     opacity: 50%;
     border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
-    border: 0.25rem solid black;
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
   }
   .user__icon--container {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     position: relative;
     bottom: 28%;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
   }
   .user__icon {
     height: 4rem;
@@ -598,12 +609,16 @@
   }
   .comment__button {
     height: 40px;
-    width: 100%;
+    width: 150px;
     color: white;
     background-color: #323232;
     margin-left: 0.75rem;
     margin-top: 1rem;
     border-radius: 4px;
+    float: right;
+  }
+  .comment__button:hover {
+    background-color: #000000;
   }
   /*comment section*/
   /* SHOWS Section */
