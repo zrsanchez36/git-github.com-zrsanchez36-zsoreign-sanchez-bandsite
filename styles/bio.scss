@@ -317,6 +317,8 @@ body {
         width: 2.25rem;
         height:1.25rem;
         padding-left: 1rem;
+        color: map-get($colors , cta__text--col );
+        padding-bottom: 4px;;
     }
 
     .form__container {
@@ -331,6 +333,17 @@ body {
     .comment__textbox {
         margin-left: 0.75rem;
         width: 100%;
+        border: 1px solid map-get($colors, divider__line );
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
     }
 
    .user__icon--container {
@@ -360,7 +373,21 @@ body {
         height: 2.25rem;
         width: 100%;
         border-radius: 4px;
-        margin: 0.75rem;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        margin-bottom: 0.75rem;
+        border: 1px solid map-get($colors, divider__line );
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+
     }
 
 

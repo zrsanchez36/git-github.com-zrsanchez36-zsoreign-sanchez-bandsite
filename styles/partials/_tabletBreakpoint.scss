@@ -322,9 +322,20 @@
     }
 
     .form__username {
-        height: 3rem;
+        height: 48px;
         width: 100%;
         position: inherit;
+        border: 1px solid map-get($colors, divider__line );
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
     }
 
     .form__username--input {
@@ -333,6 +344,27 @@
 
     .comment__textbox {
         width: 100%;
+        border: 1px solid map-get($colors, divider__line );
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+    }
+
+    .comment__button {
+        height: 40px;
+        width: 100%;
+        color: white;
+        background-color: map-get($colors , bandSite__black );
+        margin-left: .75rem;
+        margin-top: 1rem;
+        border-radius: 4px;
     }
 
 

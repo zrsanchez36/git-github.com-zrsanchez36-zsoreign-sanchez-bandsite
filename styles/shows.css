@@ -568,15 +568,42 @@
     padding-right: 3rem;
   }
   .form__username {
-    height: 3rem;
+    height: 48px;
     width: 100%;
     position: inherit;
+    border: 1px solid #E1E1E1;
+  }
+  .form__username:active, .form__username:focus {
+    border: 1px solid #323232;
+    outline: none;
+    background-color: #ffffff;
+  }
+  .form__username:invalid {
+    border: 1px solid red;
   }
   .form__username--input {
     width: 100%;
   }
   .comment__textbox {
     width: 100%;
+    border: 1px solid #E1E1E1;
+  }
+  .comment__textbox:active, .comment__textbox:focus {
+    border: 1px solid #323232;
+    outline: none;
+    background-color: #ffffff;
+  }
+  .comment__textbox:invalid {
+    border: 1px solid red;
+  }
+  .comment__button {
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: #323232;
+    margin-left: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 4px;
   }
   /*comment section*/
   /* SHOWS Section */
