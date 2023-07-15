@@ -951,20 +951,42 @@ body {
   .comment__section--container {
     border-bottom: 1px solid #E1E1E1;
     padding-bottom: 1rem;
+    width: 100%;
   }
   .add__comment {
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: relative;
   }
   .add__comment p {
     width: 2.25rem;
     height: 1.25rem;
+    padding-left: 1rem;
+  }
+  .form__container {
+    width: 100%;
+    padding-right: 1.5rem;
+  }
+  .comment__textbox {
+    margin-left: 0.75rem;
+    width: 100%;
   }
   .user__icon--container {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+  }
+  .comment__button {
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color: #323232;
+    margin-left: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 4px;
   }
   .form__username {
     height: 2.25rem;

@@ -303,24 +303,53 @@ body {
         // flex-direction: row;
         border-bottom: 1px solid map-get($colors, divider__line);
         padding-bottom: 1rem;
+        width: 100%;
     }
 
     .add__comment {
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width:100%;
+        position:relative;
     }
 
     .add__comment p {
         width: 2.25rem;
         height:1.25rem;
+        padding-left: 1rem;
+    }
+
+    .form__container {
+        width: 100%;
+        padding-right: 1.5rem;
+    }
+
+    // .comment__form {
+    //     width: 100%;
+    // }
+
+    .comment__textbox {
+        margin-left: 0.75rem;
+        width: 100%;
     }
 
    .user__icon--container {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    padding-right: 1rem;
+    padding-top: 1.5rem
     //align-self: flex-start;
+    }
+
+    .comment__button {
+        height: 40px;
+        width: 100%;
+        color: white;
+        background-color: map-get($colors , bandSite__black );
+        margin-left: .75rem;
+        margin-top: 1rem;
+        border-radius: 4px;
     }
 
     // .form__username--input {
