@@ -301,7 +301,7 @@ body {
     .comment__section--container {
         // display: flex;
         // flex-direction: row;
-        border-bottom: 1px solid map-get($colors, divider__line);
+        //border-bottom: 1px solid map-get($colors, divider__line);
         padding-bottom: 1rem;
         width: 100%;
     }
@@ -430,13 +430,13 @@ body {
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
         order: 0;
     }
 
     .comment__creator {
         margin: 0;
-        padding-top: 2rem;
+        padding-top: 1rem;
         padding-left: .75rem;
         order: 1;
     }
@@ -444,6 +444,7 @@ body {
     .comment__text {
         padding-left: 3rem;
         order: 3;
+        padding-bottom: 1rem;
     }
 
     .date__text {
@@ -454,10 +455,9 @@ body {
         height: 2rem;
         color: map-get($colors, cta__text--col);
         font-size: 0.813rem; /*13px*/
-        padding-top: 2rem;
+        padding-top: 1rem;
         float: right;
         order: 2;
-        position: absolute;
     }
 
     
