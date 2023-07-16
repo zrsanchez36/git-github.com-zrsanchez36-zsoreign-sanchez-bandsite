@@ -335,6 +335,8 @@ body {
         margin-left: 0.75rem;
         width: 100%;
         border: 1px solid map-get($colors, divider__line );
+        padding: 1rem;
+        box-sizing: border-box;
 
         &:active, &:focus { // I think you said you wanted focus as well
             border: 1px solid map-get($colors , bandSite__black );
@@ -384,6 +386,8 @@ body {
         margin-right: 0.75rem;
         margin-bottom: 0.75rem;
         border: 1px solid map-get($colors, divider__line );
+        padding: 1rem;
+        box-sizing: border-box;
 
         &:active, &:focus { // I think you said you wanted focus as well
             border: 1px solid map-get($colors , bandSite__black );
