@@ -11,7 +11,7 @@ const buyButton = "<button class='ticket__button'>BUY TICKETS</button>";
 
 const showContainer = document.getElementById('show__section--selector');
 const cards = document.querySelector(".shows__container");
-
+const showTable = document.querySelector('.table__container');
 
 
 
@@ -25,7 +25,8 @@ const cards = document.querySelector(".shows__container");
 
 
 
-let showArray = [{
+let showArray = [
+  {
   date: 'Mon Sept 06 2021',
   venue: 'Ronald Lane' ,
   location: 'San Francisco, CA',
@@ -118,7 +119,7 @@ let showArray = [{
         //if page 767px or less
        //buildTable(showArray);
         buildShowCards(cards);
-        
+        showContainer.removeChild(showTable);
         // buildShowCards();
     }
 
