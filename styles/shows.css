@@ -835,12 +835,13 @@ body {
   .footer__container {
     display: flex;
     background-color: #323232;
-    padding: 3rem;
+    padding: 2.25rem;
     flex-wrap: wrap;
     color: #FFFFFF;
     flex-direction: row;
     height: 32rem;
-    align-content: flex-start;
+    justify-content: space-between;
+    margin: auto;
   }
   .footer__container h1 {
     color: #FFFFFF;
@@ -848,7 +849,7 @@ body {
     line-height: 2.75rem; /*44px */
     font-weight: 700;
     order: 1;
-    width: 18rem; /* 340 px */
+    width: 17rem; /* 340 px */
     height: 3rem; /* 148px */
     margin: 0;
     align-self: flex-start;
@@ -866,71 +867,80 @@ body {
   }
   .footer__logo--container {
     display: flex;
-    padding-right: 3rem;
+    order: 3;
+    right: 0;
+    margin-left: 6rem;
+    position: relative;
+    float: right;
   }
   .site__logo {
-    order: 3;
     height: 20px;
     width: 120px;
     flex-shrink: 0;
-    padding: 1rem;
-    margin-left: 14rem;
   }
   .footer__title {
     order: 4;
-    color: #FFFFFF;
-    flex: 0 0 33.333333%;
-    width: 288px;
-    text-align: left;
-    margin: 0;
-    position: relative;
+    width: 14rem;
+    height: 2.5rem;
+    position: static;
+    flex: 0 0 33.3333%;
   }
-  .footer__title h3 {
-    max-width: 288px;
-    margin: 0;
+  .footer__title2 {
+    order: 5;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
   .footer__title--extended {
-    order: 4;
-    color: #FFFFFF;
-    flex: 0 0 33.333333%;
+    order: 6;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
   .footer__paragraph {
-    order: 5;
-    color: #FFFFFF;
-    width: 100px;
-    height: 25px;
-    flex: 0 0 33.333333%;
-    position: relative;
-    margin-top: 1rem;
+    order: 7;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
+  }
+  .footer__paragraph2 {
+    order: 8;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
   .footer__paragraph--extended {
-    order: 5;
-    color: #FFFFFF;
-    width: 100px;
-    height: 25px;
-    flex: 0 0 33.333333%;
+    order: 9;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
   .footer__email1 {
-    order: 6;
-    width: 100px;
-    height: 25px;
-    flex: 0 0 33.333333%;
+    order: 10;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
   .footer__email2 {
-    order: 6;
-    width: 100px;
-    height: 25px;
-    flex: 0 0 33.333333%;
+    order: 11;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
   .footer__email3 {
-    order: 6;
-    width: 100px;
-    height: 25px;
-    flex: 0 0 33.333333%;
+    order: 12;
+    width: 14rem;
+    height: 2.5rem;
+    flex: 0 0 33.3333%;
   }
-  .footer_copyright {
-    order: 7;
-    color: #FFFFFF;
+  .copyright__container {
+    order: 13;
+    width: 100%;
+  }
+  .footer__copyright {
+    order: 13;
+    width: 100%;
+    height: 2.5rem;
   }
   /*Footer Section */
 }
@@ -1152,24 +1162,71 @@ body {
   /*shows section*/
   .footer__container {
     background-color: #323232;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
   }
   .footer__container h1 {
     color: #FFFFFF;
     font-size: 1.5rem; /*24px */
     line-height: 2rem;
     font-weight: 700;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    order: 1;
+  }
+  .footer__column1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title {
+    padding-bottom: 1rem;
+    order: 3;
+  }
+  .footer__paragraph {
+    padding-bottom: 1rem;
+    order: 3;
+  }
+  .footer__email1 {
+    padding-bottom: 1rem;
+    order: 4;
+  }
+  .footer__title2 {
+    order: 5;
+    padding-bottom: 1rem;
+  }
+  .footer__paragraph2 {
+    order: 6;
+    padding-bottom: 1rem;
+  }
+  .footer__email2 {
+    order: 7;
+    padding-bottom: 1rem;
+  }
+  .footer__column2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title--extended {
+    order: 8;
+    padding-bottom: 1rem;
+  }
+  .footer__paragraph--extended {
+    order: 9;
+    padding-bottom: 1rem;
+  }
+  .footer__email3 {
+    order: 10;
+    padding-bottom: 1rem;
   }
   .footer__socialicons {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
-    margin: auto;
+    margin: 0;
+    order: 2;
+    width: 12rem;
   }
   .footer__socialicons img {
     width: 1.5rem;
@@ -1186,5 +1243,13 @@ body {
   }
   .footer__logo--container {
     margin-top: 3rem;
+    order: 11;
+  }
+  .copyright__container {
+    order: 12;
+    width: 100%;
+  }
+  .footer_copyright {
+    order: 12;
   }
 }/*# sourceMappingURL=shows.css.map */
