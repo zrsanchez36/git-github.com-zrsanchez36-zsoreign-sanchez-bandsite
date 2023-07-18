@@ -3,6 +3,11 @@ const submittedCommentsContainer = document.createElement('div');
 submittedCommentsContainer.setAttribute('id', 'commentHolder');
 submittedCommentsContainer.classList.add('submitted__comment--dom');
 
+
+// Get the default instance
+const axios = require('axios');
+
+
 let comments = [
 {
     name: 'Connor Walton',
