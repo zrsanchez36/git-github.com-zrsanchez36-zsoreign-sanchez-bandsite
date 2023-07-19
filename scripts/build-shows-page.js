@@ -1,157 +1,62 @@
-//Variable declaration------------------------------------------------------------------------------------
-                                                                                                      // |
-                                                                                                      // |
-//Create ticket button                                                                                // |
-const ticketButton = document.createElement('button');                                                   
+const ticketButton = document.createElement('button');
 ticketButton.setAttribute('id', 'dom__ticket--button');
 ticketButton.textContent = 'BUY TICKETS';
 ticketButton.classList.add('shows__button');
 const buyButton = "<button class='ticket__button'>BUY TICKETS</button>";
 
-
 const showContainer = document.getElementById('show__section--selector');
-const cards = document.querySelector(".shows__container");
+const cards = document.querySelector('.shows__container');
 const showTable = document.querySelector('.table__container');
-
-
-
-
-
-//showContainer.appendChild(ticketButton);
-
-                                                                                                      //  |
-                                                                                                      //  |
-//Variable declaration -----------------------------------------------------------------------------------|
-
-
 
 let showArray = [
   {
-  date: 'Mon Sept 06 2021',
-  venue: 'Ronald Lane' ,
-  location: 'San Francisco, CA',
-  button : buyButton
-},
+    date: 'Mon Sept 06 2021',
+    venue: 'Ronald Lane' ,
+    location: 'San Francisco, CA',
+    button : buyButton
+  },
+  
+  {
+    date: 'Tue Sept 21 2021',
+    venue: 'Pier 3 East',
+    location: 'San Francisco, CA',
+    button : buyButton
+  },
+  
+  {
+    date: 'Fri Oct 15 2021',
+    venue: 'View Lounge',
+    location: 'San Francisco, CA',
+    button : buyButton
+  },
+  
+  {
+    date: 'Mon Sat Nov 06 2021',
+    venue: 'Hyatt Agency',
+    location: 'San Francisco, CA',
+    button : buyButton
+  },
+  
+  {
+    date: 'Fri Nov 26 2021',
+    venue: 'Moscow Center',
+    location:'San Francisco, CA',
+    button : buyButton
+  },
+  
+  {
+    date: 'Wed Dec 15 2021',
+    venue: 'Press Club',
+    location: 'San Francisco, CA',
+    button : buyButton
+  },
+];
 
-{
-  date: 'Tue Sept 21 2021',
-  venue: 'Pier 3 East',
-  location: 'San Francisco, CA',
-  button : buyButton
-},
+let showCardsCreated = false; // Flag to keep track of show cards creation
+let tableCreated = false; // Flag to keep track of table creation
 
-{
-  date: 'Fri Oct 15 2021',
-  venue: 'View Lounge',
-  location: 'San Francisco, CA',
-  button : buyButton
-},
-
-{
-  date: 'Mon Sat Nov 06 2021',
-  venue: 'Hyatt Agency',
-  location: 'San Francisco, CA',
-  button : buyButton
-},
-
-{
-  date: 'Fri Nov 26 2021',
-  venue: 'Moscow Center',
-  location:'San Francisco, CA',
-  button : buyButton
-},
-
-{
-  date: 'Wed Dec 15 2021',
-  venue: 'Press Club',
-  location: 'San Francisco, CA',
-  button : buyButton
-},
-]
-
-
-// //ronald lane show data(0bj1)
-// const showLocation = showObj1.location;
-// const rlDate = showObj1.date;
-// const rlVenue = showObj1.venue;
-
-// //e show data(0bj2)
-
-// const p3Date = showObj2.date;
-// const p3Venue = showObj2.venue;
-
-
-// // show data(0bj3)
-
-// const vLDate = showObj3.date;
-// const vLVenue = showObj3.venue;
-
-
-// // show data(0bj4)
-
-// const hAaDate = showObj4.date;
-// const hAVenue = showObj4.venue;
-
-
-// // show data(0bj5)
-
-// const mClDate = showObj5.date;
-// const mCVenue = showObj5.venue;
-
-
-// // show data(0bj6)
-
-// const pCDate = showObj6.date;
-// const pCVenue = showObj6.venue;
-
-
-    
-
-
-
-
-  const query = window.matchMedia('(max-width: 767px)');
-  // const handler = function(ev){ //..
-  // } 
-
-  const handler = function pageInitialize(e) { 
-    if(e.matches) {
-        //if page 767px or less
-       //buildTable(showArray);
-        buildShowCards(cards);
-        showContainer.removeChild(showTable);
-        // buildShowCards();
-    }
-
-    else{
-        //if the page is more 768px
-        //return buildShowCards();
-        buildTable(showArray);
-        showContainer.removeChild(cards);
-        //
-        
-         
-    }
-  }
-
-
-
-  if (query?.addEventListener) {
-    query.addEventListener('change', handler);
-  } else {
-    query.addEventListener(handler);
-}
-
-
- 
- 
- 
-
-  //query.addEventListner('change', (pageInitialize));
-
-
-function buildShows (P, H3, P2, H4, P3, H42, ticketButton) {
-    const outerDiv = document.createElement("div");
+function buildShows(P, H3, P2, H4, P3, H42, ticketButton) {
+  const outerDiv = document.createElement("div");
     outerDiv.classList.add('outerDiv');
   
     const innerDiv = document.createElement("div");
@@ -204,12 +109,11 @@ function buildShows (P, H3, P2, H4, P3, H42, ticketButton) {
 
 
     return outerDiv;
-  };
-  
 
-function  buildShowCards() {
-  //const cards = document.querySelector(".shows__container");
   
+};
+
+function buildShowCards() {
   const card1 = buildShows("DATE", "Mon Sept 06 2021", "VENUE", "Ronald Lane", "LOCATION", "San Francisco, CA", ticketButton);
   const card2 = buildShows("DATE", "Tue Sept 21 2021", "VENUE", "Pier 3 East", "LOCATION", "San Francisco, CA", ticketButton);
   const card3 = buildShows("DATE", "Fri Oct 15 2021", "VENUE", "View Lounge", "LOCATION", "San Francisco, CA", ticketButton);
@@ -226,16 +130,9 @@ function  buildShowCards() {
   cards.appendChild(card6);
   
   return buildShowCards;
-  };
+}
 
-  
-  
-
-
-  
- function buildTable(data) {
-
-
+function buildTable(data) {
   //create table div
   const tableDiv = document.createElement('div');
   tableDiv.classList.add('table__container');
@@ -300,7 +197,32 @@ function  buildShowCards() {
                   tableBody.innerHTML += row;
    }
    return buildTable;
+}
+
+function pageInitialize(e) {
+  if (e.matches) {
+    // If page width is 767px or less
+    if (!showCardsCreated) {
+      buildShowCards();
+      showCardsCreated = true;
+    }
+    if (tableCreated) {
+      showContainer.removeChild(showTable);
+      tableCreated = false;
+    }
+  } else {
+    // If page width is more than 767px
+    if (!tableCreated) {
+      buildTable(showArray);
+      tableCreated = true;
+    }
+    if (showCardsCreated) {
+      showContainer.removeChild(cards);
+      showCardsCreated = false;
+    }
   }
+}
 
-
-
+const query = window.matchMedia('(max-width: 767px)');
+query.addEventListener('change', pageInitialize);
+pageInitialize(query);
