@@ -490,21 +490,13 @@
         color: map-get($colors ,cta__text--col);
     }
 
-    .show__table tr {
-        padding: 1rem;
+    .shows__container {
+        display: none;
     }
 
-    .table__row {
-        border-bottom: 2px solid map-get($colors , divider__line);
-        padding-bottom: 1rem;
+    .table__container {
+        display: block;
     }
- 
-    .table__data--date {
-        font-size: .875rem;
-        line-height: 2rem;
-        font-weight: 700;
-    }
-
 
     .ticket__button {
         align-self: center;

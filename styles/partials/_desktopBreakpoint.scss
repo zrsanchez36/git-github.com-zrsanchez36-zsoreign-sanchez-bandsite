@@ -261,8 +261,12 @@ body {
         flex-direction: column;
     }
 
+    .shows__container {
+        display: none;
+    }
+
     .table__container {
-        width: 100%;
+        display: block;
     }
 
     .show__table {

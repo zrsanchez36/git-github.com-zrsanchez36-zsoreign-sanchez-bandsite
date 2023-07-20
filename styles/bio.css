@@ -207,8 +207,11 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
   }
+  .shows__container {
+    display: none;
+  }
   .table__container {
-    width: 100%;
+    display: block;
   }
   .show__table {
     width: 100%;
@@ -828,17 +831,11 @@ body {
     text-align: left;
     color: #AFAFAF;
   }
-  .show__table tr {
-    padding: 1rem;
+  .shows__container {
+    display: none;
   }
-  .table__row {
-    border-bottom: 2px solid #E1E1E1;
-    padding-bottom: 1rem;
-  }
-  .table__data--date {
-    font-size: 0.875rem;
-    line-height: 2rem;
-    font-weight: 700;
+  .table__container {
+    display: block;
   }
   .ticket__button {
     align-self: center;
