@@ -423,15 +423,17 @@ body {
     order: 3;
     right: 0;
     position: sticky;
-    float: right;
     padding: 2.25rem;
     height: -moz-max-content;
     height: max-content;
     width: -moz-max-content;
     width: max-content;
-    margin-left: 15rem;
+    margin-left: 12rem;
+    margin-right: 3rem;
     padding-top: 3rem;
-    width: 28rem;
+    width: 30rem;
+    height: -moz-fit-content;
+    height: fit-content;
     justify-content: flex-end;
     float: right;
   }
