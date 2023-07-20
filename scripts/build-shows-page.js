@@ -3,41 +3,41 @@ const showArray = [
     date: 'Mon Sept 06 2021',
     venue: 'Ronald Lane',
     location: 'San Francisco, CA',
-    button: "<button class='ticket__button'>BUY TICKETS</button>"
+    button: "BUY TICKETS"
   },
   {
       date: 'Tue Sept 21 2021',
       venue: 'Pier 3 East',
       location: 'San Francisco, CA',
-      button : "<button class='ticket__button'>BUY TICKETS</button>"
+      button : "BUY TICKETS"
   },
     
   {
       date: 'Fri Oct 15 2021',
       venue: 'View Lounge',
       location: 'San Francisco, CA',
-      button : "<button class='ticket__button'>BUY TICKETS</button>"
+      button : "BUY TICKETS"
   },
     
   {
       date: 'Mon Sat Nov 06 2021',
       venue: 'Hyatt Agency',
       location: 'San Francisco, CA',
-      button : "<button class='ticket__button'>BUY TICKETS</button>"
+      button : "BUY TICKETS"
   },
     
   {
       date: 'Fri Nov 26 2021',
       venue: 'Moscow Center',
       location:'San Francisco, CA',
-      button : "<button class='ticket__button'>BUY TICKETS</button>"
+      button : "BUY TICKETS"
   },
     
   {
       date: 'Wed Dec 15 2021',
       venue: 'Press Club',
       location: 'San Francisco, CA',
-      button : "<button class='ticket__button'>BUY TICKETS</button>"
+      button : "BUY TICKETS"
   },
     
 ];
@@ -56,7 +56,9 @@ function buildShowCard(show) {
   const dateVal = document.createElement('h3');
   const venueVal = document.createElement('h4');
   const locationVal = document.createElement('h4');
+  
   const buyTicket = document.createElement('button');
+  buyTicket.classList.add('ticket__buy--button');
 
   date.innerText = 'DATE';
   dateVal.innerText = show.date;
@@ -79,22 +81,33 @@ function buildShowCard(show) {
 }
 
 function buildTableRow(show) {
+
+  const buyTicket = document.createElement('button');
+  buyTicket.classList.add('ticket__buy--button');
+  buyTicket.innerHTML = show.button;
+
   // Build a table row with show data
   const row = document.createElement('tr');
+  row.classList.add('shows__table--row');
+ 
   const dateCell = document.createElement('td');
+  dateCell.classList.add('table__data--date');
   const venueCell = document.createElement('td');
   const locationCell = document.createElement('td');
   const buttonCell = document.createElement('td');
 
+
+
   dateCell.textContent = show.date;
   venueCell.textContent = show.venue;
   locationCell.textContent = show.location;
-  buttonCell.innerHTML = show.button;
+  //buttonCell.innerHTML = show.button;
 
   row.appendChild(dateCell);
   row.appendChild(venueCell);
   row.appendChild(locationCell);
   row.appendChild(buttonCell);
+  buttonCell.appendChild(buyTicket);
 
   return row;
 }

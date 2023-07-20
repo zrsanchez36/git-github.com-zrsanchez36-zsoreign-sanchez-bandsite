@@ -255,10 +255,15 @@ body {
 
     .shows__section {
         display: flex;
-        padding: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         //border-bottom: .3rem solid map-get($colors , cta__text--col );
         flex-wrap: wrap;
         flex-direction: column;
+        height: 35rem;
+        justify-content:space-around;
     }
 
     .shows__container {
@@ -267,6 +272,11 @@ body {
 
     .table__container {
         display: block;
+        justify-self: flex-end;
+        width: 70%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
     }
 
     .show__table {
@@ -279,6 +289,12 @@ body {
         font-size: 3.75rem; /* 60px */
         line-height: 4.25rem; /* 68px */ 
         font-weight: 700;
+        height: 100%;
+        width: fit-content;
+        justify-self: flex-start;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: 1rem;
     }
 
     .table__container th {
@@ -293,11 +309,20 @@ body {
         padding: 1rem;
     }
 
-    .table__row {
-        border-bottom: 2px solid map-get($colors , divider__line);
+    .shows__table--row  {
+        border-bottom: 1px solid map-get($colors , divider__line);
         padding-bottom: 1rem;
     }
  
+    .shows__table--row td {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .table__data--date {
+        font-weight: 800;
+    }
+    
     .table__data--date {
         font-size: .875rem;
         line-height: 2rem;
@@ -305,14 +330,15 @@ body {
     }
 
 
-    .ticket__button {
+    .ticket__buy--button {
         align-self: center;
         background-color: map-get($colors , bandSite__black);
         color: #FFFFFF;
         height: 2.5rem; /*40px*/
-        width: 100%;
+        min-width: 150px;
         border-radius: 0.25rem; /*4px*/
         border: none;
+        font-weight: 800;
     }
                                          
 
@@ -480,7 +506,9 @@ body {
     .footer__container {
         display: flex;
         background-color: map-get($colors, bandSite__black );
-        padding: 2.25rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
         flex-wrap: wrap;
         color: #FFFFFF;
         flex-direction: row;
@@ -500,6 +528,7 @@ body {
         height: 3rem; /* 148px */
         margin: 0;
         align-self: flex-start;
+        padding-top: 3rem;
     }
 
     .footer__socialicons {
@@ -507,6 +536,7 @@ body {
         order: 2;
         height: 32px;
         width: 192px;
+        padding-top: 3rem;
     }
 
     .footer__socialicons img {
@@ -525,6 +555,7 @@ body {
         height: max-content;
         width: max-content;
         margin-right: 9rem;
+        padding-top: 3rem;
     }
 
     .site__logo {

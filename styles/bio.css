@@ -203,15 +203,25 @@ body {
   /*Shows Section */
   .shows__section {
     display: flex;
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     flex-wrap: wrap;
     flex-direction: column;
+    height: 35rem;
+    justify-content: space-around;
   }
   .shows__container {
     display: none;
   }
   .table__container {
     display: block;
+    justify-self: flex-end;
+    width: 70%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
   }
   .show__table {
     width: 100%;
@@ -222,6 +232,13 @@ body {
     font-size: 3.75rem; /* 60px */
     line-height: 4.25rem; /* 68px */
     font-weight: 700;
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-self: flex-start;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: 1rem;
   }
   .table__container th {
     font-size: 0.875rem; /*14px*/
@@ -233,23 +250,31 @@ body {
   .show__table tr {
     padding: 1rem;
   }
-  .table__row {
-    border-bottom: 2px solid #E1E1E1;
+  .shows__table--row {
+    border-bottom: 1px solid #E1E1E1;
     padding-bottom: 1rem;
+  }
+  .shows__table--row td {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .table__data--date {
+    font-weight: 800;
   }
   .table__data--date {
     font-size: 0.875rem;
     line-height: 2rem;
     font-weight: 700;
   }
-  .ticket__button {
+  .ticket__buy--button {
     align-self: center;
     background-color: #323232;
     color: #FFFFFF;
     height: 2.5rem; /*40px*/
-    width: 100%;
+    min-width: 150px;
     border-radius: 0.25rem; /*4px*/
     border: none;
+    font-weight: 800;
   }
   /*Shows Section */
   /*comment section*/
@@ -359,7 +384,9 @@ body {
   .footer__container {
     display: flex;
     background-color: #323232;
-    padding: 2.25rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
     flex-wrap: wrap;
     color: #FFFFFF;
     flex-direction: row;
@@ -377,12 +404,14 @@ body {
     height: 3rem; /* 148px */
     margin: 0;
     align-self: flex-start;
+    padding-top: 3rem;
   }
   .footer__socialicons {
     display: flex;
     order: 2;
     height: 32px;
     width: 192px;
+    padding-top: 3rem;
   }
   .footer__socialicons img {
     align-items: center;
@@ -402,6 +431,7 @@ body {
     width: -moz-max-content;
     width: max-content;
     margin-right: 9rem;
+    padding-top: 3rem;
   }
   .site__logo {
     height: 20px;
@@ -837,7 +867,7 @@ body {
   .table__container {
     display: block;
   }
-  .ticket__button {
+  .ticket__buy--button {
     align-self: center;
     background-color: #323232;
     color: #FFFFFF;
@@ -845,6 +875,18 @@ body {
     width: 100%;
     border-radius: 0.25rem; /*4px*/
     border: none;
+    font-weight: 800;
+  }
+  .shows__table--row {
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 1rem;
+  }
+  .shows__table--row td {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .table__data--date {
+    font-weight: 800;
   }
   /* Footer Section */
   .footer__container {
@@ -859,7 +901,8 @@ body {
     justify-content: space-between;
     height: -moz-max-content;
     height: max-content;
-    width: 100vw;
+    max-width: 1279px;
+    white-space-collapse: discard;
   }
   .footer__container h1 {
     color: #FFFFFF;
@@ -893,12 +936,12 @@ body {
     display: flex;
     order: 3;
     right: 0;
-    margin-left: 10rem;
-    position: relative;
+    position: sticky;
     float: right;
     padding: 2.25rem;
-    margin-right: 10rem;
     left: 10rem;
+    width: 14rem;
+    justify-content: flex-end;
   }
   .site__logo {
     height: 20px;
