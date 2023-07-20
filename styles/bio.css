@@ -35,11 +35,11 @@ body {
     padding-left: 1rem; /*16px */
     padding-right: 3.5rem;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
   .nav__text--container2 {
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 2rem;
     border-bottom: 0.3rem solid #FFFFFF;
   }
   nav a.active {
@@ -422,7 +422,6 @@ body {
     display: flex;
     order: 3;
     right: 0;
-    margin-left: 4rem;
     position: sticky;
     float: right;
     padding: 2.25rem;
@@ -430,8 +429,11 @@ body {
     height: max-content;
     width: -moz-max-content;
     width: max-content;
-    margin-right: 9rem;
+    margin-left: 15rem;
     padding-top: 3rem;
+    width: 28rem;
+    justify-content: flex-end;
+    float: right;
   }
   .site__logo {
     height: 20px;
@@ -534,11 +536,11 @@ body {
     padding-left: 1rem; /*16px */
     padding-right: 3.5rem; /*56px */
     justify-content: center;
-    padding-top: 0.5rem;
+    padding-top: 1.5rem;
   }
   .nav__text--container2 {
     justify-content: center;
-    padding-top: 0.5rem;
+    padding-top: 1.5rem;
     border-bottom: 0.3rem solid #FFFFFF;
   }
   nav a.active {
@@ -938,7 +940,7 @@ body {
     position: sticky;
     float: right;
     padding: 2.25rem;
-    left: 10rem;
+    margin-right: 3rem;
     width: 14rem;
     justify-content: flex-end;
   }

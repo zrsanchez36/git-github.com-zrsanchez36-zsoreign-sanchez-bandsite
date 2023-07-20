@@ -43,12 +43,12 @@
         padding-left: 1rem; /*16px */
         padding-right: 3.5rem; /*56px */
         justify-content: center;
-        padding-top: .5rem;
+        padding-top: 1.5rem;
     }
 
     .nav__text--container2 {
         justify-content: center;
-        padding-top: .5rem;
+        padding-top: 1.5rem;
         border-bottom: .3rem solid map-get($colors , cta__text--active );
     }
     
@@ -578,8 +578,8 @@
         position: sticky;
         float: right;
         padding: 2.25rem;
-        //margin-right: 10rem;
-        left: 10rem;
+        margin-right: 3rem;
+        //left: 10rem;
         width: 14rem;
         justify-content: flex-end;
     }
