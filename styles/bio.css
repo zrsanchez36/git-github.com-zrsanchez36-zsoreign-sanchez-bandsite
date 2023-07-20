@@ -902,7 +902,6 @@ body {
     height: -moz-max-content;
     height: max-content;
     max-width: 1279px;
-    white-space-collapse: discard;
   }
   .footer__container h1 {
     color: #FFFFFF;
