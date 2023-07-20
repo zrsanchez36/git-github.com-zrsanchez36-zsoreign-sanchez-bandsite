@@ -45,10 +45,10 @@ const showArray = [
 function buildShowCard(show) {
   // Your original buildShows function code here
   const outerDiv = document.createElement('div');
-  outerDiv.classList.add('outerDiv');
+  outerDiv.classList.add('outer__div');
 
   const innerDiv = document.createElement('div');
-  innerDiv.classList.add('inner_div');
+  innerDiv.classList.add('inner__div');
 
   const date = document.createElement('p');
   const venueText = document.createElement('p');

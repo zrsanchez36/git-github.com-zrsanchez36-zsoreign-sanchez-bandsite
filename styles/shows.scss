@@ -287,11 +287,17 @@ body {
         
     }
 
-    .outerDiv {
+    .outer__div {
         border-bottom: 0.063rem solid map-get($colors , cta__text--col );
         padding-bottom: 1rem;
     }
-    .shows__button {
+
+    .inner__div h4 {
+        padding-bottom: 1rem;
+    }
+
+
+    .ticket__buy--button {
         align-self: center;
         background-color: map-get($colors , bandSite__black);
         color: #FFFFFF;

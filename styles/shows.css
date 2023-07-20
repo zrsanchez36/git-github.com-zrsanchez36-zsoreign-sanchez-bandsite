@@ -1183,11 +1183,14 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .outerDiv {
+  .outer__div {
     border-bottom: 0.063rem solid #AFAFAF;
     padding-bottom: 1rem;
   }
-  .shows__button {
+  .inner__div h4 {
+    padding-bottom: 1rem;
+  }
+  .ticket__buy--button {
     align-self: center;
     background-color: #323232;
     color: #FFFFFF;
