@@ -1,133 +1,132 @@
+// Global variable to store the API key
+let apiKey = null;
 
-const submittedCommentsContainer = document.createElement('div');
-submittedCommentsContainer.setAttribute('id', 'commentHolder');
-submittedCommentsContainer.classList.add('submitted__comment--dom');
+// Function to register and get the API key
+function registerAndGetApiKey() {
+  const registerUrl = '//project-1-api.herokuapp.com/register';
 
-
-
-
-let comments = [
-{
-    name: 'Connor Walton',
-    text: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-    timeStamp: '02/17/2021'
-
-},
-
-{
-    name: 'Emilie Beach',
-    text: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-    timeStamp: '01/09/2021'
-
-},
-
-{
-    name: 'Miles Acosta',
-    text: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    timeStamp: '12/20/2020'
-
-}
-];
-
-
-
-
-//Show already created comments on load
-window.addEventListener('load', allComments);
-
-
-function displayComment(comment) {
-
-    //Create comment section div
-    //const commentSectionParent = document.getElementById('commentDOMSection');
-    const commentCard = document.getElementById("commentCard");
-    
-
-    const savedCommtDiv = document.createElement('div');
-    savedCommtDiv.classList.add('saved__comment--container');
-    submittedCommentsContainer.appendChild(savedCommtDiv);
-
-
-    let circleContainer = document.createElement('div');
-    circleContainer.classList.add('user__icon--blank'); //Blank user icon constructor
-    circleContainer.setAttribute('id', 'circle');
-    savedCommtDiv.appendChild(circleContainer);
-
-     //create default comment username html
-    let nameContainer = document.createElement('h3');
-    nameContainer.classList.add('comment__creator');
-    nameContainer.setAttribute('id', 'userComment');
-    nameContainer.textContent = comment.name;
-     //create default comment username html
-
-    //create default date in HTML
-    let dateContainer = document.createElement('p');
-    dateContainer.classList.add('date__text');
-    dateContainer.setAttribute('id', 'commentDate');
-    dateContainer.textContent = comment.timeStamp;
-    //create default date in HTML
-
-
-
-    //create default comment in html
-    let commentContainer = document.createElement('p');
-    commentContainer.classList.add('comment__text');
-    commentContainer.setAttribute('id', 'commentText');
-    commentContainer.textContent = comment.text;
-    //create default comment in html
-
-    
-    savedCommtDiv.appendChild(circleContainer);
-    savedCommtDiv.appendChild(nameContainer);
-    savedCommtDiv.appendChild(dateContainer);
-    savedCommtDiv.appendChild(commentContainer);
-
-
-    commentCard.appendChild(savedCommtDiv);
-
-
-}
-
-
-
-
-function allComments() {
-    const commentCard = document.getElementById("commentCard");
-    commentCard.innerHTML = '';
-
-    comments.forEach(comment =>{
-        displayComment(comment);
+  fetch(registerUrl, {
+    method: 'GET',
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Assuming the API returns the key in the "api_key" field of the response
+      apiKey = data.api_key;
+      console.log('API Key:', apiKey);
+    })
+    .catch(error => {
+      console.error('Error registering and getting API key:', error);
     });
 }
 
+// Call the function to register and get the API key
+registerAndGetApiKey();
 
 
-function formSubmissionHandler(event) {
-    event.preventDefault();
-
-    const newUserInput = document.getElementById('userName');
-    const userComment = document.getElementById('commentBox');
-
-    const userName = newUserInput.value;
-    const comment = userComment.value;
 
 
-    if (userName && comment) {
-        const newComment = {
-            name: userName,
-            timeStamp: new Date().toLocaleDateString(),
-            text: comment
-        };
-
-        comments.push(newComment);
-
-        allComments();
-
-        newUserInput.value = '';
-        userComment.value = '';
-    }
-}
 
 
-const form = document.getElementById('postComment');
-form.addEventListener('submit', formSubmissionHandler);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const commentCard = document.getElementById("commentCard");
+    const postCommentForm = document.getElementById("postComment");
+    const userNameInput = document.getElementById("userName");
+    const commentBox = document.getElementById("commentBox");
+  
+    const API_URL = "https://project-1-api.herokuapp.com/comments";
+    const API_KEY = "34b9ef80-4eb4-4b2d-a6bc-e00cf821e49c";
+  
+    // Function to fetch comments from the API
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get(`${API_URL}?api_key=${API_KEY}`);
+        const comments = response.data;
+        displayComments(comments);
+      } catch (error) {
+        console.error("Error fetching comments:", error);
+      }
+    };
+  
+    // Function to display comments on the page
+    const displayComments = (comments) => {
+      commentCard.innerHTML = "";
+      comments.forEach((comment) => {
+        const commentElement = createCommentElement(comment);
+        commentCard.appendChild(commentElement);
+      });
+    };
+  
+    // Function to create a comment element
+    const createCommentElement = (comment) => {
+      const commentElement = document.createElement("div");
+      commentElement.classList.add("comment__card--item");
+  
+      const userIcon = document.createElement("div");
+      userIcon.classList.add("user__icon--blank");
+      commentElement.appendChild(userIcon);
+  
+      const commentContent = document.createElement("div");
+      commentContent.classList.add("comment__content");
+  
+      const userName = document.createElement("p");
+      userName.classList.add("user__name");
+      userName.textContent = comment.name;
+      commentContent.appendChild(userName);
+  
+      const timestamp = document.createElement("p");
+      timestamp.classList.add("timestamp");
+      const date = new Date(comment.timestamp);
+      timestamp.textContent = date.toLocaleDateString();
+      commentContent.appendChild(timestamp);
+  
+      const commentText = document.createElement("p");
+      commentText.classList.add("comment__text");
+      commentText.textContent = comment.comment;
+      commentContent.appendChild(commentText);
+  
+      commentElement.appendChild(commentContent);
+  
+      return commentElement;
+    };
+  
+    // Function to handle form submission and add a new comment
+    const addComment = async (event) => {
+      event.preventDefault();
+  
+      const name = userNameInput.value.trim();
+      const comment = commentBox.value.trim();
+  
+      if (name === "" || comment === "") {
+        alert("Please fill in all fields");
+        return;
+      }
+  
+      try {
+        const response = await axios.post(`${API_URL}?api_key=${API_KEY}`, {
+          name: name,
+          comment: comment,
+        });
+        const newComment = response.data;
+        displayNewComment(newComment);
+        userNameInput.value = "";
+        commentBox.value = "";
+      } catch (error) {
+        console.error("Error adding comment:", error);
+      }
+    };
+  
+    // Function to display a newly added comment
+    const displayNewComment = (comment) => {
+      const commentElement = createCommentElement(comment);
+      commentCard.insertBefore(commentElement, commentCard.firstChild);
+    };
+  
+    // Event listener to fetch and display comments on page load
+    fetchComments();
+  
+    // Event listener for form submission to add a new comment
+    postCommentForm.addEventListener("submit", addComment);
+  });
+  
