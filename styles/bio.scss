@@ -415,18 +415,6 @@ body {
     }
 
 
-    .saved__comment--container {
-        display: flex ;
-        flex-wrap: wrap;
-        border-bottom: 1px solid map-get($colors, divider__line);
-        
-    }
-
-    .saved__comment--container {
-        display: flex;
-    }
-
-
     
     .user__icon--blank {
         background-color: #E1E1E1;
@@ -434,24 +422,37 @@ body {
         border-radius: 50%;
         width: 2.25rem;
         height: 2.25rem;
+        margin: 0;
+        order: 1;
         margin-top: 1rem;
-        order: 0;
+    }
+    
+    .comment__card--item {
+        border-bottom: 1px solid map-get($colors, divider__line);;
     }
 
-    .comment__creator {
+    .comment__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        //padding-left: 1rem;
+    }
+
+    .user__name {
         margin: 0;
         padding-top: 1rem;
         padding-left: .75rem;
-        order: 1;
+        order: 2;
     }
 
     .comment__text {
         padding-left: 3rem;
-        order: 3;
+        order: 4;
         padding-bottom: 1rem;
     }
 
-    .date__text {
+    .timestamp {
         flex: 2 1 auto;
         justify-self: right;
         text-align: right;
@@ -461,7 +462,7 @@ body {
         font-size: 0.813rem; /*13px*/
         padding-top: 1rem;
         float: right;
-        order: 2;
+        order: 3;
     }
 
     

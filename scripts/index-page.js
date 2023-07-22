@@ -63,12 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const commentElement = document.createElement("div");
       commentElement.classList.add("comment__card--item");
   
-      const userIcon = document.createElement("div");
-      userIcon.classList.add("user__icon--blank");
-      commentElement.appendChild(userIcon);
+      
   
       const commentContent = document.createElement("div");
       commentContent.classList.add("comment__content");
+
+      const userIcon = document.createElement("div");
+      userIcon.classList.add("user__icon--blank");
+      commentContent.appendChild(userIcon);
   
       const userName = document.createElement("p");
       userName.classList.add("user__name");
