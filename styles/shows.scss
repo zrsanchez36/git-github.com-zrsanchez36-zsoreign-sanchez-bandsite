@@ -1,0 +1,439 @@
+
+@use './partials/desktopBreakpoint' as *;
+@use './partials/tabletBreakpoint' as *;
+@use './partials/variables' as *;
+
+@font-face {
+    font-family: 'avenir_next_lt_probold';
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff') format('woff');
+    font-weight:bold;
+    font-style:normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_next_lt_prodemi';
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff') format('woff');
+    font-weight:600;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'avenir_next_lt_proregular';
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    font-family:  'avenir_next_lt_proregular', sans-serif;
+    font-size: 16px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.navsection {
+    background-color: map-get($colors, bandSite__black );
+    color: map-get($colors, cta__text--active );
+    width: 100vw;
+}
+
+.table__container {
+    display: none;
+}
+
+/* MOBILE BREAKPOINT */
+
+
+@media screen and (max-width: 767px){ /*767px*/
+    .navsection__title {
+        margin: auto;
+        width: 100%;
+        padding: 0.5rem; /*8px*/
+        text-align: center;
+    }
+    
+    .navsection__menu--container {
+        display: flex;
+        width: 100vw;
+        //text-align: center;
+    }
+
+    .nav__text--container {
+        width: 50vw;
+        text-align: center;
+    }
+
+    .nav__text--container2 {
+        width: 50vw;
+        height: 4vh;
+        text-align: center;
+        border-bottom: .3rem solid map-get($colors , cta__text--active );
+    }
+
+    .nav__text--container h2 {
+        font-size: 1.5rem;/*24px*/
+        line-height: 2rem;/*36px*/
+        font-weight: 700;
+    }
+    h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+    h1 {
+        margin: 0%;
+        margin-top: 0%;
+        margin-inline-start: 0%;
+    }
+
+    h3 {/*subheader*/
+        font-size: 0.875rem ;/*14px*/
+        line-height: 1.375rem;/*22px*/
+        font-weight: 600;
+        margin: 0;
+    }
+    body p {
+        font-size: 0.813rem; /*13px*/
+        line-height: 1.125rem;/*18px*/
+    }
+
+    nav a.active {
+        text-decoration: none;
+        display: inline-block;
+        padding-left: 39%;
+        padding-right: 39%;
+        // border-bottom: .3rem solid map-get($colors , cta__text--active );
+        color: map-get($colors , cta__text--active );
+        font-weight: 700;
+    }
+
+    nav a.inactive {
+        color: map-get($colors , cta__text--col );
+        text-decoration: none;
+    }
+
+    footer {
+        font-size: 0.813rem; /*13px*/
+        line-height: 1.125rem;/*18px*/
+    }
+    /*labels and buttons
+    text size: 10px | line height 20px | text weight bold 700*/
+
+
+ /* HERO SECTION */
+
+    .hero__section {
+        width: 100vw;
+        //background-color: #323232;
+    }
+    .hero__img--container {
+        position: relative;
+        color: map-get($colors , cta__text--active );
+        background-image: url(../assets/Images/hero-shows.jpg);
+        background-size:cover;
+        height: 40vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__img--container h1 {
+        position: absolute;
+        top: 20%;
+        padding-left: 1rem;
+        //transform: translate(-50%, -50%);
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */ 
+        font-weight: 700;
+        text-align: left;
+        order: 1;
+    }
+    
+    .hero__img--container h3 {
+        position: absolute;
+        top: 10%;
+        padding-left: 1rem;
+        font-size: .875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+        order:0
+    }
+
+    .hero__opaque--filter {
+        position: absolute ;
+        background-color: #323232;
+        opacity: 50%;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .soundcloud__container {
+        width: 90%;
+        height:20%;
+        position: absolute;
+        top: 45%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
+    }
+
+    /* HERO SECTION */
+
+    
+    /*Comments Section */
+
+
+    .user__icon--blank {
+        background-color: #E1E1E1;
+        opacity: 50%;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        border: .25rem solid black;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*comments Section*/
+
+
+    /*Shows Section */
+
+    .shows__section {
+        display: flex;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        flex-direction: column;
+        border-bottom: .3rem solid map-get($colors , cta__text--col );
+    }
+
+    .shows__section h1 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    .shows__section h3 {
+        font-size: 0.875rem; /*13px*/
+        line-height: 1.375rem; /*22px*/
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .shows__section h4 {
+        font-size: 0.875rem; /*13px*/
+        line-height: 1.125rem; /*18px*/
+        font-weight: 500;
+        color: map-get($colors, cta__hover );
+        margin-top: 0;
+    }
+
+    .shows__section p {
+        color: map-get($colors, cta__text--col );
+        font-size: 0.813rem; /*13px*/
+        line-height: 1.375rem; /*22px*/
+        font-weight: 600;
+        margin: 0;
+    }
+
+
+    .shows__container {
+        padding-left: 1rem;
+        padding-right:1rem;
+        
+    }
+
+    .outer__div {
+        border-bottom: 0.063rem solid map-get($colors , cta__text--col );
+        padding-bottom: 1rem;
+    }
+
+    .inner__div h4 {
+        padding-bottom: 1rem;
+    }
+
+
+    .ticket__buy--button {
+        align-self: center;
+        background-color: map-get($colors , bandSite__black);
+        color: #FFFFFF;
+        height: 2.5rem; /*40px*/
+        width: 100%;
+        border-radius: 0.25rem; /*4px*/
+        border: none;
+
+        
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    
+
+    /*shows section*/
+
+
+    .footer__container {
+        background-color: map-get($colors, bandSite__black );
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__container h1 {
+        color:#FFFFFF;
+        font-size: 1.5rem; /*24px */
+        line-height: 2rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        order: 1;
+    }
+
+    .footer__column1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__title {
+        padding-bottom: 1rem;
+        order: 3;
+    }
+
+
+
+    .footer__paragraph {
+        padding-bottom: 1rem;
+        order: 3;
+    }
+
+    .footer__email1 {
+        padding-bottom: 1rem;
+        order: 4;
+    }
+
+    .footer__title2 {
+        order: 5;
+        padding-bottom: 1rem;
+    }
+
+    .footer__paragraph2 {
+        order: 6;
+        padding-bottom: 1rem;
+    }
+
+    .footer__email2 {
+        order: 7;
+        padding-bottom: 1rem;
+    }
+
+    .footer__column2 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .footer__title--extended {
+        order: 8;
+        padding-bottom: 1rem;
+
+    }
+
+    .footer__paragraph--extended {
+        order: 9;
+        padding-bottom: 1rem;
+    }
+
+    .footer__email3 {
+        order: 10;
+        padding-bottom: 1rem;
+    }
+    
+    .footer__socialicons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin: 0;
+        order: 2;
+        width: 12rem;
+    }
+
+    
+    .footer__socialicons img {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    
+    
+    .footer__container h3 {
+        color:#FFFFFF;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+
+    .footer__container P {
+        color: #FFFFFF;
+    }
+
+    
+    .footer__logo--container {
+        margin-top: 3rem;
+        order: 11;
+    }
+    .copyright__container {
+        order: 12;
+        width: 100%;
+    }
+    .footer_copyright {
+        order: 12;
+    }
+   
+}

@@ -6,456 +6,6 @@ body {
   margin: 0;
 }
 
-<<<<<<< HEAD
-/* MOBILE BREAKPOINT */
-@media screen and (min-width: 360px) and (max-width: 767px) { /*767px*/
-  .navsection__title {
-    margin: auto;
-    width: 100%;
-    padding: 0.5rem; /*8px*/
-    text-align: center;
-  }
-  .navsection__menu--container {
-    display: flex;
-    width: 100vw;
-    text-align: center;
-  }
-  .nav__text--container {
-    width: 50vw;
-    padding: 0;
-  }
-  .nav__text--container h2 {
-    font-size: 1.5rem; /*24px*/
-    line-height: 2rem; /*36px*/
-  }
-  h1 h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-  }
-  h1 {
-    margin: 0%;
-    margin-top: 0%;
-    -webkit-margin-start: 0%;
-            margin-inline-start: 0%;
-  }
-  h3 { /*subheader*/
-    font-size: 0.875rem; /*14px*/
-    line-height: 1.375rem; /*22px*/
-    font-weight: 600;
-  }
-  body p {
-    font-size: 0.813rem; /*13px*/
-    line-height: 1.125rem; /*18px*/
-  }
-  nav a.active {
-    text-decoration: none;
-    display: inline-block;
-    border: -1rem solid #323232;
-    padding-left: 39%;
-    padding-right: 39%;
-    border-bottom: 0.3rem solid #FFFFFF;
-    color: #FFFFFF;
-    font-weight: 700;
-  }
-  nav a.inactive {
-    color: #AFAFAF;
-  }
-  footer {
-    font-size: 0.813rem; /*13px*/
-    line-height: 1.125rem; /*18px*/
-  }
-  /*labels and buttons
-  text size: 10px | line height 20px | text weight bold 700*/
-  /* HERO SECTION */
-  .hero__section {
-    width: 100vw;
-    background-color: #323232;
-    opacity: 50%;
-  }
-  .hero__img--container {
-    position: relative;
-    text-align: center;
-    color: #FFFFFF;
-    background-image: url(../assets/Images/hero-bio.jpg);
-    background-size: cover;
-    height: 55vw;
-    width: 100vw;
-    overflow: hidden;
-  }
-  .hero__img--container h1 {
-    position: absolute;
-    top: 50%;
-    left: 17svh;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem; /* 24px */
-    line-height: 2rem; /* 32px */
-    font-weight: 700;
-  }
-  /* HERO SECTION */
-  /*ABOUT SECTION */
-  .about__section h1 {
-    color: #323232;
-    font-size: 1.5rem; /* 24px */
-    line-height: 2rem; /* 32px */
-    font-weight: 700;
-    padding-bottom: 1rem;
-  }
-  .about__section {
-    padding: 1rem;
-  }
-  .musician__image--container {
-    display: block;
-    background-image: url(../assets/Images/band.jpg);
-    background-size: cover;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    height: 14.375rem; /* 422px */
-  }
-  .about__section--text h3, h2 {
-    font-size: 0.875em; /*36x*/
-    line-height: 1.375rem; /*22px */
-    font-weight: 600;
-  }
-  .about__section--text h4 {
-    font-size: 0.875rem;
-    line-height: 2rem; /*22px */
-    font-weight: 600;
-  }
-  .about__section--text p {
-    font-size: 0.813rem; /*12px*/
-    line-height: 1.125rem; /*1 8px */
-    font-weight: 400;
-  }
-  /*ABOUT SECTION */
-  /* Photo Gallery */
-  .gallery__section {
-    display: flex;
-    background-color: #FAFAFA;
-    justify-content: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .gallery__title {
-    background-color: #FAFAFA;
-  }
-  .gallery__title h1 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    padding: 1.2rem;
-  }
-  .gallery__container {
-    display: flex;
-    max-width: 75rem;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1rem;
-  }
-  .gallery__container img {
-    width: 22rem;
-    height: 12.5rem;
-  }
-  .img__container {
-    display: inline-block;
-  }
-  /* Photo Gallery */
-  /* Footer Section */
-  .footer__container {
-    background-color: #323232;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-  }
-  .footer__container h1 {
-    color: #FFFFFF;
-    font-size: 1.5rem; /*24px */
-    line-height: 2rem;
-    font-weight: 700;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .footer__socialicons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 2rem;
-  }
-  .footer__socialicons img {
-    width: 1.5rem;
-    height: 1.5rem;
-    padding-bottom: 1rem;
-  }
-  .footer__container h3 {
-    color: #FFFFFF;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  .footer__container P {
-    color: #FFFFFF;
-  }
-  .footer__logo--container {
-    margin-top: 3rem;
-  }
-  /* Footer Section */
-}
-/* MOBILE BREAKPOINT */
-/*---------------------------------------------------------------------------------------- */
-/* Tablet breakpoint*/
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  /* Navigation*/
-  nav {
-    width: 100%;
-  }
-  .navsection {
-    display: flex;
-  }
-  .navsection__title {
-    padding: 24px;
-    justify-content: center;
-    display: inline-block;
-  }
-  .nav__text--container {
-    display: inline-block;
-    padding-left: 1rem; /*16px */
-    padding-right: 3.5rem; /*56px */
-    margin: 0%;
-    justify-content: center;
-    padding-top: 0.5rem;
-  }
-  nav a.active {
-    text-decoration: underline;
-    display: inline-block;
-    text-underline-offset: 1.75rem; /*28px */
-    text-decoration-color: #FFFFFF;
-    text-decoration-thickness: 0.313rem; /*5px */
-    color: #FFFFFF;
-  }
-  nav a.inactive {
-    color: #AFAFAF;
-  }
-  /* Navigation*/
-  /* HERO SECTION */
-  .hero__section {
-    width: 100vw;
-    background-color: #323232;
-    opacity: 50%;
-  }
-  .hero__img--container {
-    position: relative;
-    text-align: center;
-    color: #FFFFFF;
-    background-image: url(../assets/Images/hero-bio.jpg);
-    background-size: cover;
-    height: 55vw;
-    width: 100vw;
-    overflow: hidden;
-  }
-  .hero__img--container h1 {
-    position: absolute;
-    top: 50%;
-    left: 22dvh;
-    transform: translate(-50%, -50%);
-    font-size: 3.75rem; /* 60px */
-    line-height: 4.25rem; /* 68px */
-    font-weight: 600;
-  }
-  /* HERO SECTION */
-  /*ABOUT SECTION */
-  .about__section h1, .gallery__title h1 {
-    color: #323232;
-    font-size: 3.75rem; /* 60px */
-    line-height: 4.25rem; /* 32px */
-    font-weight: 700;
-    margin: 0;
-  }
-  .about__section {
-    padding: 3rem;
-  }
-  .musician__image--container {
-    display: block;
-    background-image: url(../assets/Images/band.jpg);
-    background-size: cover;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 3rem;
-    width: 80%;
-    height: 26.375rem; /* 422px */
-  }
-  .about__section--text h2 {
-    font-size: 1.5rem; /*36px*/
-    line-height: 2.75rem; /*44px */
-    font-weight: 700;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-  .about__section--text h3 {
-    font-size: 1.5rem; /*24px*/
-    line-height: 2rem; /*32px */
-    font-weight: 600;
-    padding-left: 3rem; /*36px*/
-    margin-left: 2rem;
-  }
-  .about__section--text h4 {
-    padding-left: 3rem;
-    margin-left: 2.25rem; /* 2.25 */
-    margin-bottom: 0;
-    font-size: 2.25rem; /* 36px */
-    line-height: 2rem;
-    font-weight: 700;
-  }
-  .about__section--text p {
-    font-size: 1.5rem; /*14px*/
-    line-height: 2rem; /* 22px */
-    font-weight: 400;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .about__body--container {
-    display: flex;
-    padding-left: 3rem; /*36px*/
-    padding-right: 3rem; /*36px*/
-  }
-  .about__body--paragraph {
-    margin: 1rem;
-  }
-  /*ABOUT SECTION */
-  /* Photo Gallery */
-  .gallery__section {
-    display: flex;
-    background-color: #FAFAFA;
-    justify-content: center;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 3rem;
-  }
-  .gallery__title {
-    padding: 3rem;
-    background-color: #FAFAFA;
-    margin: 0;
-  }
-  .gallery__container {
-    display: flex;
-    max-width: 80rem;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1.25rem;
-  }
-  .gallery__container img {
-    width: 20rem;
-    height: 11rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: bottom;
-       object-position: bottom;
-  }
-  /*gallery Section */
-  /* Footer Section */
-  .footer__container {
-    display: flex;
-    width: 100%;
-    background-color: #323232;
-    padding-left: 3rem;
-    padding-bottom: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    color: #FFFFFF;
-  }
-  .footer__container h1 {
-    color: #FFFFFF;
-    font-size: 2.75rem; /*60px*/
-    line-height: 2.75rem; /*44px */
-    font-weight: 700;
-    padding-top: 3rem;
-    padding-left: 2rem;
-    padding-right: 3.25rem;
-    order: 0;
-    width: 18rem; /* 340 px */
-    height: 1rem; /* 148px */
-    text-align: center;
-  }
-  .footer__socialicons {
-    display: flex;
-    padding-top: 4.75rem;
-    padding-bottom: 4.75rem;
-    padding-right: 4.75rem;
-    order: 1;
-    width: 20rem;
-    align-items: center;
-  }
-  .footer__socialicons img {
-    align-items: center;
-    width: 4rem;
-    height: 2rem;
-  }
-  .footer__logo--container {
-    order: 3;
-    margin-right: 3rem;
-    width: 8rem;
-    height: 2rem;
-    margin-top: 5rem;
-    margin-left: 3rem;
-  }
-  .footer__title {
-    order: 4;
-    color: #FFFFFF;
-    padding-left: 3rem;
-    width: 18rem;
-  }
-  .footer__title--extended {
-    order: 5;
-    color: #FFFFFF;
-    padding-left: 3rem;
-    width: 18rem;
-  }
-  .footer__paragraph {
-    order: 6;
-    width: 18rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .footer__paragraph--extended {
-    order: 7;
-    width: 18rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .footer__email1 {
-    order: 8;
-    width: 18rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .footer__email2 {
-    order: 9;
-    width: 18rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .footer__email3 {
-    order: 10;
-    width: 18rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  .footer_copyright {
-    order: 11;
-    color: #FFFFFF;
-    width: 28rem;
-    text-align: left;
-    padding-left: 3rem;
-  }
-  /*Footer Section */
-}
-/*TABLET BREAKPOINT */
-/*----------------------------------------------------------------------------------------*/
-/* DESKTOP BREAKPOINT*/
-=======
->>>>>>> sprint-3
 @media screen and (min-width: 1280px) {
   /* Navigation */
   nav {
@@ -641,9 +191,6 @@ body {
   .gallery__title {
     padding: 3rem;
     background-color: #FAFAFA;
-  }
-  .gallery__title h1 {
-    font-weight: 700;
   }
   .gallery__container {
     display: flex;
@@ -918,14 +465,10 @@ body {
     padding-top: 3rem;
     flex-wrap: wrap;
     color: #FFFFFF;
-<<<<<<< HEAD
-    padding-right: 1rem;
-=======
     flex-direction: row;
     height: 32rem;
     justify-content: space-between;
     width: 100%;
->>>>>>> sprint-3
   }
   .footer__container h1 {
     color: #FFFFFF;
@@ -955,13 +498,6 @@ body {
   .footer__logo--container {
     display: flex;
     order: 3;
-<<<<<<< HEAD
-    width: 8rem;
-    height: 2rem;
-    margin-top: 5rem;
-    margin-left: 3rem;
-    justify-content: right;
-=======
     right: 0;
     position: sticky;
     padding: 2.25rem;
@@ -982,7 +518,6 @@ body {
     height: 20px;
     width: 120px;
     flex-shrink: 0;
->>>>>>> sprint-3
   }
   .footer__title {
     order: 4;
@@ -1016,18 +551,10 @@ body {
     flex: 0 0 33.3333%;
   }
   .footer__paragraph--extended {
-<<<<<<< HEAD
-    order: 7;
-    width: 27rem;
-    text-align: left;
-    padding-left: 3rem;
-    margin-right: 5rem;
-=======
     order: 9;
     width: 14rem;
     height: 2.5rem;
     flex: 0 0 33.3333%;
->>>>>>> sprint-3
   }
   .footer__email1 {
     order: 10;
@@ -1629,7 +1156,7 @@ body {
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -1638,6 +1165,10 @@ body {
   background-color: #323232;
   color: #FFFFFF;
   width: 100vw;
+}
+
+.table__container {
+  display: none;
 }
 
 /* MOBILE BREAKPOINT */
@@ -1651,7 +1182,6 @@ body {
   .navsection__menu--container {
     display: flex;
     width: 100vw;
-    text-align: center;
   }
   .nav__text--container {
     width: 50vw;
@@ -1661,12 +1191,14 @@ body {
     width: 50vw;
     height: 4vh;
     text-align: center;
+    border-bottom: 0.3rem solid #FFFFFF;
   }
   .nav__text--container h2 {
     font-size: 1.5rem; /*24px*/
     line-height: 2rem; /*36px*/
+    font-weight: 700;
   }
-  h1 h2 {
+  h1 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -1680,6 +1212,7 @@ body {
     font-size: 0.875rem; /*14px*/
     line-height: 1.375rem; /*22px*/
     font-weight: 600;
+    margin: 0;
   }
   body p {
     font-size: 0.813rem; /*13px*/
@@ -1688,10 +1221,8 @@ body {
   nav a.active {
     text-decoration: none;
     display: inline-block;
-    border: -1rem solid #323232;
-    padding-left: 28%;
-    padding-right: 38%;
-    border-bottom: 0.3rem solid #FFFFFF;
+    padding-left: 39%;
+    padding-right: 39%;
     color: #FFFFFF;
     font-weight: 700;
   }
@@ -1711,272 +1242,186 @@ body {
   }
   .hero__img--container {
     position: relative;
-    text-align: center;
     color: #FFFFFF;
-    background-image: url(../assets/Images/hero-bio.jpg);
+    background-image: url(../assets/Images/hero-shows.jpg);
     background-size: cover;
-    height: 55vw;
+    height: 40vh;
     width: 100vw;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
   .hero__img--container h1 {
     position: absolute;
-    top: 50%;
-    left: 17svh;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    padding-left: 1rem;
     font-size: 1.5rem; /* 24px */
     line-height: 2rem; /* 32px */
     font-weight: 700;
+    text-align: left;
+    order: 1;
+  }
+  .hero__img--container h3 {
+    position: absolute;
+    top: 10%;
+    padding-left: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    order: 0;
   }
   .hero__opaque--filter {
     position: absolute;
     background-color: #323232;
     opacity: 50%;
+    height: 100%;
+    width: 100%;
+  }
+  .soundcloud__container {
+    width: 90%;
+    height: 20%;
+    position: absolute;
+    top: 45%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   /* HERO SECTION */
-  /*ABOUT SECTION */
-  .about__section h1 {
-    color: #323232;
-    font-size: 1.5rem; /* 24px */
-    line-height: 2rem; /* 32px */
-    font-weight: 700;
-    padding-bottom: 1rem;
-  }
-  .about__section {
-    padding: 1rem;
-  }
-  .musician__image--container {
-    background-image: url(../assets/Images/band.jpg);
-    background-size: cover;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    height: 14.375rem; /* 422px */
-    overflow: hidden;
-    -o-object-fit: contain;
-       object-fit: contain;
-    position: relative;
-  }
-  .musician__image--container img {
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .about__section--text h3, h2 {
-    font-size: 0.875em; /*36x*/
-    line-height: 1.375rem; /*22px */
-    font-weight: 600;
-  }
-  .about__section--text h4 {
-    font-size: 0.875rem;
-    line-height: 2rem; /*22px */
-    font-weight: 600;
-  }
-  .about__section--text p {
-    font-size: 0.813rem; /*12px*/
-    line-height: 1.125rem; /*1 8px */
-    font-weight: 400;
-  }
-  /*ABOUT SECTION */
-  /* Photo Gallery */
-  .gallery__section {
-    display: flex;
-    background-color: #FAFAFA;
-    justify-content: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-  .gallery__title {
-    background-color: #FAFAFA;
-  }
-  .gallery__title h1 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    padding: 1.2rem;
-  }
-  .gallery__container {
-    display: flex;
-    max-width: 75rem;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1rem;
-  }
-  .gallery__container img {
-    width: 21rem;
-    height: 12.5rem;
-  }
-  .img__container {
-    display: inline-block;
-  }
-  /* Photo Gallery */
-  /*------------------------------------------------------------------------------------------------------------------------ */
-  /*Comment Section */
-  .comment__section {
-    justify-content: left;
-    align-items: center;
-    padding-bottom: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  .comment__section h1 {
-    font-size: 1.5rem; /*24px */
-    line-height: 2rem;
-    font-weight: 700;
-    padding-bottom: 1.5rem;
-    padding-right: 1.5rem;
-    width: 100%;
-  }
-  .comment__section p {
-    margin: 0rem;
-  }
-  .comment__section--container {
-    padding-bottom: 1rem;
-    width: 100%;
-  }
-  .add__comment {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid #E1E1E1;
-  }
-  .add__comment p {
-    width: 2.25rem;
-    height: 1.25rem;
-    padding-left: 1rem;
-    color: #AFAFAF;
-    padding-bottom: 4px;
-  }
-  .form__container {
-    width: 100%;
-    padding-right: 1.5rem;
-  }
-  .comment__textbox {
-    margin-left: 0.75rem;
-    width: 100%;
-    border: 1px solid #E1E1E1;
-    padding: 1rem;
-    box-sizing: border-box;
-    background-color: #FAFAFA;
-  }
-  .comment__textbox:active, .comment__textbox:focus {
-    border: 1px solid #323232;
-    outline: none;
-    background-color: #ffffff;
-  }
-  .comment__textbox:invalid {
-    border: 1px solid red;
-  }
-  .user__icon--container {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    padding-right: 1rem;
-    padding-top: 1.5rem;
-  }
-  .comment__button {
-    height: 40px;
-    width: 100%;
-    color: white;
-    background-color: #323232;
-    margin-left: 0.75rem;
-    margin-top: 1rem;
-    border-radius: 4px;
-    margin-bottom: 3rem;
-    font-weight: 600;
-  }
-  .comment__button:hover {
-    background-color: #000000;
-  }
-  .form__username {
-    height: 2.25rem;
-    width: 100%;
-    border-radius: 4px;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-    margin-bottom: 0.75rem;
-    border: 1px solid #E1E1E1;
-    padding: 1rem;
-    box-sizing: border-box;
-    background-color: #FAFAFA;
-  }
-  .form__username:active, .form__username:focus {
-    border: 1px solid #323232;
-    outline: none;
-    background-color: #ffffff;
-  }
-  .form__username:invalid {
-    border: 1px solid red;
-  }
-  .user__icon {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-  }
+  /*Comments Section */
   .user__icon--blank {
     background-color: #E1E1E1;
     opacity: 50%;
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
-    margin: 0;
-    order: 1;
-    margin-top: 1rem;
+    border: 0.25rem solid black;
   }
-  .comment__card--item {
-    border-bottom: 1px solid #E1E1E1;
-  }
-  .comment__content {
+  /*comments Section*/
+  /*Shows Section */
+  .shows__section {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    flex-direction: column;
+    border-bottom: 0.3rem solid #AFAFAF;
   }
-  .user__name {
-    margin: 0;
-    padding-top: 1rem;
-    padding-left: 0.75rem;
-    order: 2;
-  }
-  .comment__text {
-    padding-left: 3rem;
-    order: 4;
+  .shows__section h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
     padding-bottom: 1rem;
+    padding-left: 1rem;
   }
-  .timestamp {
-    flex: 2 1 auto;
-    justify-self: right;
-    text-align: right;
-    width: 2rem;
-    height: 2rem;
+  .shows__section h3 {
+    font-size: 0.875rem; /*13px*/
+    line-height: 1.375rem; /*22px*/
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .shows__section h4 {
+    font-size: 0.875rem; /*13px*/
+    line-height: 1.125rem; /*18px*/
+    font-weight: 500;
+    color: #000000;
+    margin-top: 0;
+  }
+  .shows__section p {
     color: #AFAFAF;
     font-size: 0.813rem; /*13px*/
-    padding-top: 1rem;
-    float: right;
-    order: 3;
+    line-height: 1.375rem; /*22px*/
+    font-weight: 600;
+    margin: 0;
   }
-  /*Comment Section */
-  /* Footer Section */
+  .shows__container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .outer__div {
+    border-bottom: 0.063rem solid #AFAFAF;
+    padding-bottom: 1rem;
+  }
+  .inner__div h4 {
+    padding-bottom: 1rem;
+  }
+  .ticket__buy--button {
+    align-self: center;
+    background-color: #323232;
+    color: #FFFFFF;
+    height: 2.5rem; /*40px*/
+    width: 100%;
+    border-radius: 0.25rem; /*4px*/
+    border: none;
+  }
+  .ticket__buy--button:hover {
+    background-color: #000000;
+  }
+  /*shows section*/
   .footer__container {
     background-color: #323232;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
   }
   .footer__container h1 {
     color: #FFFFFF;
     font-size: 1.5rem; /*24px */
     line-height: 2rem;
     font-weight: 700;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    order: 1;
+  }
+  .footer__column1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title {
+    padding-bottom: 1rem;
+    order: 3;
+  }
+  .footer__paragraph {
+    padding-bottom: 1rem;
+    order: 3;
+  }
+  .footer__email1 {
+    padding-bottom: 1rem;
+    order: 4;
+  }
+  .footer__title2 {
+    order: 5;
+    padding-bottom: 1rem;
+  }
+  .footer__paragraph2 {
+    order: 6;
+    padding-bottom: 1rem;
+  }
+  .footer__email2 {
+    order: 7;
+    padding-bottom: 1rem;
+  }
+  .footer__column2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__title--extended {
+    order: 8;
+    padding-bottom: 1rem;
+  }
+  .footer__paragraph--extended {
+    order: 9;
+    padding-bottom: 1rem;
+  }
+  .footer__email3 {
+    order: 10;
+    padding-bottom: 1rem;
   }
   .footer__socialicons {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
+    margin: 0;
+    order: 2;
+    width: 12rem;
   }
   .footer__socialicons img {
     width: 1.5rem;
@@ -1993,8 +1438,13 @@ body {
   }
   .footer__logo--container {
     margin-top: 3rem;
+    order: 11;
   }
-  /* Footer Section */
-}
-/* MOBILE BREAKPOINT */
-/*---------------------------------------------------------------------------------------- *//*# sourceMappingURL=bio.css.map */
+  .copyright__container {
+    order: 12;
+    width: 100%;
+  }
+  .footer_copyright {
+    order: 12;
+  }
+}/*# sourceMappingURL=shows.css.map */

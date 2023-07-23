@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="stylesheet" href="/styles/bio.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
     <title>Band Website</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
                         <a href="#index.html" class="active"><h3>Biography</h3></a>
                     </div>
                     <div class="nav__text--container">
-                        <a href="#" ></a><h3>Shows</h3></a>
+                        <a href="./pages/shows.html" class="inactive" ><h3>Shows</h3></a>
                     </div>
                 </div>
         </div>
@@ -27,7 +28,7 @@
 
     <div class="hero__section">
         <div class="hero__img--container">
-            
+            <div class="hero__opaque--filter"></div>
                 <h1>The Bees Knees</h1>
         </div>
     </div>
@@ -81,65 +82,102 @@
                             <div class="img__container"><img src="assets/Images/Photo-gallery-9.jpg" alt="Confetti fallong"></div>
                         </div>
                 </div>
+                <section class="comment__section" id="commentDOMSection">
+                    <h1>Join the Conversation</h1>
 
+                    <div class="comment__section--container">
+                        <div class="add__comment">
+                            <div class= "user__icon--container">
+                                <img class="user__icon" src="/assets/3.0 - Assets/Images/Mohan-muruge.jpg">
+                            </div>
+                            <div class="form__container">
+                                <div class="form__username--input">
+                                <p>NAME</p>
+                                <form class="comment__form" id="postComment" action="./scripts/index-page.js">
+                                    <input type="text" name="name" id="userName" class="form__username" placeholder="Enter your name" required>
+                                </div>
+                                <p>COMMENT</p>
+                                    <textarea id="commentBox" class="comment__textbox" rows="10" placeholder="Add a new comment" required></textarea>
+                                    <input id="submit__button" type="submit" value="COMMENT" class="comment__button"></input>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="comment__card" id="commentCard"></div>
+                    </div>
+                </section>
             <footer class="footer__container">
+            <!-- <div class="footer__column1"> -->
                 <h1>Get in Touch</h1>
 
-                <div class="footer__socialicons">
-                    <div class="footer__socialicon--container"><img src="assets/Icons/SVG/Icon-instagram.svg" alt="Instagram Logo"></div>
-                    <div class="footer__socialicon--container"><img src="assets/Icons/SVG/Icon-facebook.svg" alt="Facebook Logo"></div>
-                    <div class="footer__socialicon--container"><img src="assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></div>
-                </div>
                 
+                <div class="footer__socialicons">
+                    <div class="footer__socialicon--container"><img src="../assets/Icons/SVG/Icon-instagram.svg" alt="Instagram Logo"></div>
+                    <div class="footer__socialicon--container"><img src="../assets/Icons/SVG/Icon-facebook.svg" alt="Facebook Logo"></div>
+                    <div class="footer__socialicon--container"><img src="../assets/Icons/SVG/Icon-twitter.svg" alt="Twitter Logo"></div>
+                </div>
+
                 <div class="footer__title">
                     <h3>Cam Adams</h3>
                     <h3>The Bees knees Management</h3>
                  </div>
-                
-                <div class="footer__paragraph">
+
+                 <div class="footer__paragraph">
                     <p>503 Broadway Penthouse,<br> New York, NY 10012, USA</p>
                 </div>
+                
 
                 <div class="footer__email1">
                     <P>info@thebeesknees.com</P>
                 </div>
 
-                <div class="footer__title">
+            <!-- </div> -->
+
+            
+                
+                <div class="footer__title2">
                     <h3>Pearl Gregg</h3>
                     <h3>Limitless Artist Group</h3>
                 </div>
-
-                <div class="footer__paragraph">
+                
+                <div class="footer__paragraph2">
                     <p>Booking Agent for <br> US / South America / Japan</p>
                 </div>
 
-                <div class="footer__paragraph--extended">
-                    <p>Booking Agent for<br> UK / EU /AU</p>
-                </div>
 
+                <div class="footer__email2">
+                    <p>pearl.gregg@limitlessag.com</p>
+                </div>
+            </div>
+               
+
+            <!-- <div class="footer__column2"> -->
 
                 <div class="footer__title--extended">
                     <h3>Carson Whyte</h3>
                     <h3>Arch Enterotainment</h3>
                 </div>
 
-                <div class="footer__email2">
-                    <p>pearl.gregg@limitlessag.com</p>
+                <div class="footer__paragraph--extended">
+                    <p>Booking Agent for<br> UK / EU /AU</p>
                 </div>
+
+                
 
                 <div class="footer__email3">
                     <P>cwhyte@archentertainment</P>
                 </div>
-
-                <div class="footer__logo--container">
-                    <img src="assets/Logo/Logo-bandsite.svg" alt="Bandsite logo" class="logo">
+            <!-- </div> -->
+            
+            <div class="footer__logo--container">
+                <img src="../assets/Logo/Logo-bandsite.svg" alt="Bandsite logo" class="site__logo">
+            </div>
+            <div class="copyright__container">
+                <div class="footer__copyright">
+                <p>Copyright The Bees Knees &#169; 2021 All Rights Reserved</p>
                 </div>
-
-                <div class="footer_copyright">
-                <p>Copyright The Bees Knees © 2021 All Rights Reserved</p>
-                </div>
+            </div>
             </footer>
     
-    
+    <script src="./scripts/index-page.js"></script>
 </body>
 </html>

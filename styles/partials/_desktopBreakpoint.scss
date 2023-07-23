@@ -1,0 +1,738 @@
+@use './variables' as *;
+
+body {
+    margin: 0;
+}
+
+* {
+    margin: 0;
+}
+
+
+@media screen and (min-width: 1280px) {
+    
+    /* Navigation */
+    nav {
+        width: 100%;
+    }
+    
+    body {
+        margin: 0;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    .navsection {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navsection__title {
+        padding: 32px;
+        margin-left: 120px;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+
+    .navsection__menu--container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav__text--container {
+        padding-left: 1rem; /*16px */
+        padding-right: 3.5rem;
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
+    .nav__text--container2 {
+        justify-content: center;
+        padding-top: 2rem;
+        border-bottom:  .3rem solid map-get($colors, cta__text--active);
+    }
+
+
+
+    nav a.active {
+        text-decoration: underline;
+        display: inline-block;
+        text-underline-offset: 2.25rem; /*36px */
+        text-decoration-color: map-get($colors , cta__text--active );
+        text-decoration-thickness: 0.313rem; /*5px */
+        color: map-get($colors , cta__text--active );
+    }
+
+
+    nav a.inactive {
+        color: map-get($colors , cta__text--col );
+        text-decoration: none;
+    }
+
+    /* Navigation */
+
+    /* HERO SECTION */
+    .hero__section {
+        width: 100vw;
+    }
+    
+    .hero__img--container {
+        //position: relative;
+        text-align: center;
+        color: map-get($colors , cta__text--active );
+        background-image: url(../assets/Images/hero-shows.jpg);
+        background-size:cover;
+        height: 100vh;
+        //width: 100vw;
+        //overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+    }
+
+    .hero__img--container img {
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    .hero__img--container h1 {
+        position: absolute;
+        //top: 47%;
+        font-size: 3.75rem; /* 60px */
+        line-height: 4.25rem;
+        font-weight: 600;
+        order: 2;
+        margin-left: auto;
+        margin-right: auto;
+        top: 50%;
+        padding-left: 10rem;
+    }
+
+    .hero__img--container h3 {
+        align-self: flex-start;
+        position: absolute;
+        font-size: 1.5rem;
+        line-height: 2.75rem;
+        font-weight:600;
+        order:1;
+        padding: 3rem;
+        margin-left: 120px;
+        top: 35%;
+    }
+
+    .hero__opaque--filter {
+        position: absolute ;
+        background-color: #323232;
+        opacity: 50%;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .soundcloud__container {
+        width: 40%;
+        height: 20%;
+        position:absolute;
+        top: 50%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        order:3;
+        margin-left: auto;
+        margin-right: auto;
+        left: 50%;
+    }
+
+    .soundcloud__container iframe {
+        width:100%;
+        height:100%;
+    }
+    /* HERO SECTION */
+
+
+
+     /*ABOUT SECTION */
+
+     .about__section h1, .gallery__title h1 {
+        color: map-get($colors, bandSite__black );
+        font-size:  2.25rem; /* 60px */
+        line-height: 2.75rem; /* 32px */ 
+        font-weight: 700;
+        padding-left: 3rem;
+        margin-left: 4rem;
+    }
+
+    .about__section {
+        padding: 3rem;
+    }
+    
+    .musician__image--container {
+        display: block;
+        background-image: url(../assets/Images/band.jpg);
+        background-size: cover;
+        margin-right: auto;
+        margin-left:auto;
+        margin-top: 3rem;
+        width: 68vw;
+        height: 60vh/* 550px */
+
+    }
+
+    .about__section--text h2 {
+        font-size: 1.5rem; /*24px*/
+        line-height: 2rem; /*32px */
+        font-weight:700;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+        margin-left: 9.5vw;
+        margin-right: 28vw;
+        margin-top: 2rem;
+    } 
+
+    .about__section--text h3 {
+        font-size: 0.875rem; /*14px*/
+        line-height: 2rem; /*32px */
+        font-weight:600;
+        padding-left: 2.5vw; /*36px*/
+        margin-left: 9vw;
+    }
+
+    .about__section--text h4 {
+        padding-left: 3rem; /* 48px */
+        font-size: 1.5rem; /* 24px */
+        line-height: 2.75rem; /*44px */
+        margin-bottom: 0;
+        margin-left: 10rem;
+    }
+
+    .about__section--text p {
+        font-size: 0.875rem; /*14px*/
+        line-height: 1.375rem; /* 22px */
+        font-weight: 400;
+    }
+
+    .about__body--container {
+        display: flex;
+        padding-left: 2rem; /*36px*/
+        padding-right: 3rem; /*36px*/
+        margin-left: 10rem;
+        margin-right: 9rem;
+    }
+
+    .about__body--paragraph {
+        margin: 1rem;
+    }
+    /*ABOUT SECTION */
+
+
+    /* Gallery Section */
+
+    .gallery__section {
+        display: flex;
+        background-color: #FAFAFA;
+        justify-content: center;
+        padding-bottom: 3rem;
+       
+    }
+    
+    .gallery__title {
+        padding:3rem;
+        background-color: #FAFAFA;
+    }
+
+    .gallery__container {
+        display: flex;
+        max-width: 75rem;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+
+    .gallery__container img {
+        width: 23rem;
+        height: 12.5rem;
+    }
+
+
+    .img__container {
+        display: inline-block;
+        width: 23rem;
+        height: 12.5rem;
+    }
+    /*gallery Section */
+
+    /*Shows Section */
+
+    .shows__section {
+        display: flex;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        //border-bottom: .3rem solid map-get($colors , cta__text--col );
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 35rem;
+        justify-content:space-around;
+    }
+
+    .shows__container {
+        display: none;
+    }
+
+    .table__container {
+        display: block;
+        justify-self: flex-end;
+        width: 70%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+    }
+
+    .show__table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    .show__table tr:hover {
+        background-color: map-get($colors , bg__alt--col );
+        cursor: pointer;
+        &:active {
+            background-color: map-get($colors , bg__alt--col );
+        }
+    }
+
+    .shows__section h1 {
+        font-size: 3.75rem; /* 60px */
+        line-height: 4.25rem; /* 68px */ 
+        font-weight: 700;
+        height: 100%;
+        width: fit-content;
+        justify-self: flex-start;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: 1rem;
+    }
+
+    .table__container th {
+        font-size: .875rem; /*14px*/
+        line-height: 1.375rem;
+        font-weight: 600;
+        text-align: left;
+        color: map-get($colors ,cta__text--col);
+    }
+
+    .show__table tr {
+        padding: 1rem;
+    }
+
+    .shows__table--row  {
+        border-bottom: 1px solid map-get($colors , divider__line);
+        padding-bottom: 1rem;
+    }
+ 
+    .shows__table--row td {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    .table__data--date {
+        font-weight: 800;
+    }
+    
+    .table__data--date {
+        font-size: .875rem;
+        line-height: 2rem;
+        font-weight: 700;
+    }
+
+
+    .ticket__buy--button {
+        align-self: center;
+        background-color: map-get($colors , bandSite__black);
+        color: #FFFFFF;
+        height: 2.5rem; /*40px*/
+        min-width: 150px;
+        border-radius: 0.25rem; /*4px*/
+        border: none;
+        font-weight: 800;
+        cursor: pointer;
+
+        
+        &:hover {
+            background-color: #000000;
+        }
+    }
+                                         
+
+
+
+    
+    
+    
+    
+    
+    
+    /*Shows Section */
+
+    /*comment section*/
+
+    .add__comment {
+        display: flex;
+        justify-content: center;
+        width: 40rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid map-get($colors, divider__line);
+    }
+
+    .add__comment p {
+        margin-bottom: 4px;
+        color: #AFAFAF;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 400;
+    }
+
+
+    .comment__section h1 {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        font-weight: 700;
+        padding-left: 3rem;
+    }
+
+    .user__icon--container {
+        border-radius: 50%;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        padding-top: 2.5rem;
+    }
+
+    .user__icon {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        
+        
+    }
+
+    .form__container {
+        width: 33rem;
+    }
+
+    .form__username {
+        height: 48px;
+        border-radius: 4px;
+        width: 100%;
+        position: inherit;
+        border: 1px solid map-get($colors, divider__line );
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
+
+        &:active, &:focus { 
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+    }
+
+    
+    .comment__textbox {
+        width: 100%;
+        border: 1px solid map-get($colors, divider__line );
+        height: 96px;
+        border-radius: 4px;
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
+
+        &:active, &:focus { 
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+    }
+
+
+    .comment__button {
+        height: 40px;
+        width: 150px;
+        color: white;
+        background-color: #323232;
+        margin-left: 0.75rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        float: right;
+        font-weight: 600;
+
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    .comment__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: row;
+        height: 8rem;
+    }
+
+    .user__icon--blank {
+        background-color: #E1E1E1;
+        opacity: 50%;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        margin: 0;
+        order: 1;
+        box-sizing: border-box;
+        position: relative;
+        top: 2.25rem;
+    }
+
+    .comment__card {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 33rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-right: auto;
+        margin-left: auto;
+        height: 30rem;
+        
+    }
+
+    .comment__card--item {
+        border-bottom: 1px solid map-get($colors, divider__line);
+        padding-bottom: 1.25rem;
+    }
+
+    .saved__comment--container {
+        width: 100%;
+        margin: 0;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .user__name {
+        order: 2;
+        margin: 0;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        padding-left: 1rem;
+        width: 12rem;
+        height: 2rem;
+        padding-top: 2.25rem;
+    }
+
+    .timestamp {
+        flex: 2 1 auto;
+        text-align: right;
+        width: 4rem;
+        height: 1rem;
+        color: map-get($colors, cta__text--col);
+        font-size: 0.875rem; /*13px*/
+        float: right;
+        order: 3;
+        margin: 0;
+        font-weight: 400;
+        line-height: 18px;
+        position: relative;
+        padding-top: 2.25rem;
+    }
+
+    .comment__text {
+        padding-left: 4rem;
+        order: 4;
+        margin: 0;
+        font-weight: 400;
+        
+    }
+
+
+    /*comment section*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*footer section */
+
+    .footer__container {
+        display: flex;
+        background-color: map-get($colors, bandSite__black );
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3rem;
+        flex-wrap: wrap;
+        color: #FFFFFF;
+        flex-direction: row;
+        height: 32rem;
+        // align-content: flex-start;
+        justify-content: space-between;
+        // margin: auto;
+        width: 100%;
+    }
+
+    .footer__container h1 {
+        color: #FFFFFF;
+        font-size: 2.75rem; /*60px*/
+        line-height: 2.75rem; /*44px */
+        font-weight:700;
+        order: 1;
+        width: 17rem; /* 340 px */
+        height: 3rem; /* 148px */
+        margin: 0;
+        align-self: flex-start;
+        padding-top: 3rem;
+    }
+
+    .footer__socialicons {
+        display: flex;
+        order: 2;
+        height: 32px;
+        width: 192px;
+        padding-top: 3rem;
+        padding-left: 9rem;
+    }
+
+    .footer__socialicons img {
+        align-items: center;
+        width: 4rem;
+        height: 2rem;
+    }
+    .footer__logo--container {
+        display: flex;
+        order: 3;
+        right: 0;
+        position: sticky;
+        padding: 2.25rem;
+        height: max-content;
+        width: max-content;
+        //margin-right: 25rem;
+        margin-left: 6rem;
+        margin-right: 1rem;
+        padding-top: 3rem;
+        width: 30rem;
+        height: fit-content;
+        justify-content: flex-end;
+        float: right;
+    }
+
+    .site__logo {
+        height: 20px;
+        width: 120px;
+        flex-shrink: 0;
+    }
+
+    .footer__title {
+        order: 4;
+        width: 14rem;
+        height: 2.50rem;
+        position: static;
+        flex: 0 0 33.3333%;
+
+    }
+
+    .footer__title2 {
+        order: 5;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .footer__title--extended {
+        order: 6;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .footer__paragraph {
+        order: 7;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .footer__paragraph2 {
+        order: 8;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .footer__paragraph--extended {
+        order: 9;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+    
+    .footer__email1 {
+        order: 10;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .footer__email2 {
+        order: 11;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .footer__email3 {
+        order: 12;
+        width: 14rem;
+        height: 2.50rem;
+        flex: 0 0 33.3333%;
+    }
+
+    .copyright__container {
+        order: 13;
+        width: 100%;
+    }
+
+    .footer__copyright {
+        order: 13;
+        width: 100%;
+        height: 2.50rem;
+    }
+
+
+}

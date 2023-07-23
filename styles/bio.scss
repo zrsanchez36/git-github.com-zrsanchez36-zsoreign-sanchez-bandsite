@@ -1,17 +1,13 @@
-$colors: (
-    bandSite__black: #323232, /*Primary text color for dark on light bg*/
-    cta__text--col: #AFAFAF,/*Seconday text color. Inactive CTA text color.*/
-    cta__text--active: #FFFFFF,/*Primary text color for light on dark bg. Light bg color. Active CTA text color.*/
-    cta__hover: #000000,/*CTA hover state*/
-    divider__line: #E1E1E1,/*Divider line. Form field outline.*/
-    bg__alt--col: #FAFAFA,/*Primary text color for light on dark bg. Light bg color. Active CTA text color.*/
 
-);
+
+@use './partials/desktopBreakpoint' as *;
+@use './partials/tabletBreakpoint' as *;
+@use './partials/variables' as *;
 
 @font-face {
     font-family: 'avenir_next_lt_probold';
-    src: url('/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2') format('woff2'),
-         url('/assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff') format('woff');
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-bold-webfont.woff') format('woff');
     font-weight:bold;
     font-style:normal;
 
@@ -22,8 +18,8 @@ $colors: (
 
 @font-face {
     font-family: 'avenir_next_lt_prodemi';
-    src: url('/assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2') format('woff2'),
-         url('/assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff') format('woff');
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-demi-webfont.woff') format('woff');
     font-weight:600;
     font-style: normal;
 
@@ -34,8 +30,8 @@ $colors: (
 
 @font-face {
     font-family: 'avenir_next_lt_proregular';
-    src: url('/assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2') format('woff2'),
-         url('/assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff') format('woff');
+    src: url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff2') format('woff2'),
+         url('../assets/Font/FontsConverted/avenirnextltpro-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -48,7 +44,7 @@ $colors: (
 
 
 body {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     border: none;
 }
@@ -62,7 +58,7 @@ body {
 
 /* MOBILE BREAKPOINT */
 
-@media screen and (min-width: 360px) and (max-width: 767px){ /*767px*/
+@media screen and (max-width: 767px){ /*767px*/
     .navsection__title {
         margin: auto;
         width: 100%;
@@ -78,7 +74,13 @@ body {
 
     .nav__text--container {
         width: 50vw;
-        padding: 0;
+        text-align: center;
+    }
+
+    .nav__text--container2 {
+        width: 50vw;
+        height: 4vh;
+        text-align: center;
     }
 
     .nav__text--container h2 {
@@ -110,9 +112,9 @@ body {
     nav a.active {
         text-decoration: none;
         display: inline-block;
-        border: -1rem solid map-get($colors , bandSite__black);
-        padding-left: 39%;
-        padding-right: 39%;
+        border: -1rem solid map-get($colors ,  bandSite__black);
+        padding-left: 28%;
+        padding-right: 38%;
         border-bottom: .3rem solid map-get($colors , cta__text--active );
         color: map-get($colors , cta__text--active );
         font-weight: 700;
@@ -121,6 +123,7 @@ body {
 
     nav a.inactive {
         color: map-get($colors , cta__text--col );
+        text-decoration: none;
     }
 
     footer {
@@ -135,8 +138,7 @@ body {
 
     .hero__section {
         width: 100vw;
-        background-color: #323232;
-        opacity: 50%;
+        //background-color: #323232;
     }
     .hero__img--container {
         position: relative;
@@ -159,6 +161,12 @@ body {
         font-weight: 700;
         
     }
+    
+    .hero__opaque--filter {
+        position: absolute ;
+        background-color: #323232;
+        opacity: 50%;
+    }
 
     /* HERO SECTION */
 
@@ -178,14 +186,20 @@ body {
     }
     
     .musician__image--container {
-        display: block;
         background-image: url(../assets/Images/band.jpg);
         background-size: cover;
         margin-right: auto;
         margin-left:auto;
         width: 100%;
         height: 14.375rem;/* 422px */
+        overflow: hidden;
+        object-fit: contain;
+        position: relative;
+    }
 
+    .musician__image--container img {
+        width: 100%;
+        object-fit: contain;
     }
 
     .about__section--text h3, h2 {
@@ -257,6 +271,221 @@ body {
     }
 
     /* Photo Gallery */
+
+/*------------------------------------------------------------------------------------------------------------------------ */
+
+
+    /*Comment Section */
+
+    .comment__section {
+        justify-content:left;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .comment__section h1 {
+        font-size: 1.5rem; /*24px */
+        line-height: 2rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+        padding-right: 1.5rem;
+        width: 100%;
+    }
+
+    .comment__section p {
+        margin: 0rem;
+    }
+
+    .comment__section--container {
+        // display: flex;
+        // flex-direction: row;
+        //border-bottom: 1px solid map-get($colors, divider__line);
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    .add__comment {
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        position:relative;
+        border-bottom: 1px solid map-get($colors, divider__line);
+    }
+
+    .add__comment p {
+        width: 2.25rem;
+        height:1.25rem;
+        padding-left: 1rem;
+        color: map-get($colors , cta__text--col );
+        padding-bottom: 4px;;
+    }
+
+    .form__container {
+        width: 100%;
+        padding-right: 1.5rem;
+    }
+
+    // .comment__form {
+    //     width: 100%;
+    // }
+
+    .comment__textbox {
+        margin-left: 0.75rem;
+        width: 100%;
+        border: 1px solid map-get($colors, divider__line );
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+    }
+
+   .user__icon--container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding-right: 1rem;
+    padding-top: 1.5rem
+    //align-self: flex-start;
+    }
+
+    .comment__button {
+        height: 40px;
+        width: 100%;
+        color: white;
+        background-color: map-get($colors , bandSite__black );
+        margin-left: .75rem;
+        margin-top: 1rem;
+        border-radius: 4px;
+        margin-bottom: 3rem;
+        font-weight: 600;
+       
+       
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    // .form__username--input {
+
+    // }
+
+    .form__username {
+        height: 2.25rem;
+        width: 100%;
+        border-radius: 4px;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        margin-bottom: 0.75rem;
+        border: 1px solid map-get($colors, divider__line );
+        padding: 1rem;
+        box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
+
+        &:active, &:focus { // I think you said you wanted focus as well
+            border: 1px solid map-get($colors , bandSite__black );
+            outline: none; // add this
+            background-color: #ffffff;
+          }
+
+          &:invalid {
+            border: 1px solid red;
+          }
+
+    }
+
+
+    // .comment__form {
+    //     // border-bottom-color: map-get($colors, divider__line);
+    //     border-bottom: 1px solid map-get($colors, divider__line);
+    //     padding-bottom: 1rem;
+    // }
+    
+    .user__icon {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+    }
+
+
+    
+    .user__icon--blank {
+        background-color: #E1E1E1;
+        opacity: 50%;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 0;
+        order: 1;
+        margin-top: 1rem;
+    }
+    
+    .comment__card--item {
+        border-bottom: 1px solid map-get($colors, divider__line);;
+    }
+
+    .comment__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        //padding-left: 1rem;
+    }
+
+    .user__name {
+        margin: 0;
+        padding-top: 1rem;
+        padding-left: .75rem;
+        order: 2;
+    }
+
+    .comment__text {
+        padding-left: 3rem;
+        order: 4;
+        padding-bottom: 1rem;
+    }
+
+    .timestamp {
+        flex: 2 1 auto;
+        justify-self: right;
+        text-align: right;
+        width: 2rem;
+        height: 2rem;
+        color: map-get($colors, cta__text--col);
+        font-size: 0.813rem; /*13px*/
+        padding-top: 1rem;
+        float: right;
+        order: 3;
+    }
+
+    
+        // .comment_text {
+
+        // }
+
+    // .form__comment {
+    //    margin: 2rem; 
+    // }
+
+   
+
+
+
+    /*Comment Section */
+
+
+
+
 
 
     /* Footer Section */
@@ -334,105 +563,18 @@ body {
 
 
 
-/* Tablet breakpoint*/
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-    /* Navigation*/
-    nav {
-        width: 100%;
-    }
-    
-    .navsection {
-        display: flex;
-    }
-    
-    .navsection__title {
-        padding: 24px;
-        justify-content: center;
-        display: inline-block;
-    }
-    
-    .nav__text--container {
-        display: inline-block;
-        padding-left: 1rem; /*16px */
-        padding-right: 3.5rem; /*56px */
-        margin: 0%;
-        justify-content: center;
-        padding-top: .5rem;
-    }
 
-    nav a.active {
-        text-decoration: underline;
-        display: inline-block;
-        text-underline-offset: 1.75rem; /*28px */
-        text-decoration-color: map-get($colors , cta__text--active );
-        text-decoration-thickness: 0.313rem; /*5px */
-        color: map-get($colors , cta__text--active );
-    }
 
-    nav a.inactive {
-        color: map-get($colors , cta__text--col );
-    }
 
-    /* Navigation*/
 
-    /* HERO SECTION */
 
-    .hero__section {
-        width: 100vw;
-        background-color: #323232;
-        opacity: 50%;
-    }
 
-    .hero__img--container {
-        position: relative;
-        text-align: center;
-        color: map-get($colors , cta__text--active );
-        background-image: url(../assets/Images/hero-bio.jpg);
-        background-size:cover;
-        height: 55vw;
-        width: 100vw;
-        overflow: hidden;
-    }
 
-    .hero__img--container h1 {
-        position: absolute;
-        top: 50%;
-        left: 22dvh;
-        transform: translate(-50%, -50%);
-        font-size: 3.75rem; /* 60px */
-        line-height: 4.25rem; /* 68px */ 
-        font-weight: 600;
-    }
 
-    /* HERO SECTION */
-    
-    
-    /*ABOUT SECTION */
 
-    .about__section h1, .gallery__title h1 {
-        color: map-get($colors, bandSite__black );
-        font-size: 3.75rem; /* 60px */
-        line-height: 4.25rem; /* 32px */ 
-        font-weight: 700;
-        margin: 0;
-        
-    }
 
-    .about__section {
-        padding: 3rem;
-    }
-    
-    
-    .musician__image--container {
-        display: block;
-        background-image: url(../assets/Images/band.jpg);
-        background-size: cover;
-        margin-right: auto;
-        margin-left:auto;
-        margin-top: 3rem;
-        width: 80%;
-        height: 26.375rem;/* 422px */
 
+<<<<<<< HEAD
     }
 
     
@@ -986,3 +1128,5 @@ body {
 
 
 }
+=======
+>>>>>>> sprint-3

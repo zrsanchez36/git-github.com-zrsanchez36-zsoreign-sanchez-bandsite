@@ -1,0 +1,16 @@
+ const rlDateDom = document.createElement('h3');
+    const rlVenueDom = document.createElement('h4');
+    const locationDom = document.createElement('h4');
+
+    rlDateDom.innerText = showObj1.location;
+    rlVenueDom.innerText = showObj1.date;
+    locationDom.innerText = showObj1.venue;
+
+    row2.appendChild(rlDateDom);
+    row2.appendChild(rlVenueDom);
+    row2.appendChild(locationDom);
+
+    
+    
+    
+    console.log(rlDate, rlVenue);
