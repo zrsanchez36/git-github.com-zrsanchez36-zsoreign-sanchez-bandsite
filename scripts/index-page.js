@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       userIcon.classList.add("user__icon--blank");
       commentContent.appendChild(userIcon);
   
-      const userName = document.createElement("p");
+      const userName = document.createElement("h3");
       userName.classList.add("user__name");
       userName.textContent = comment.name;
       commentContent.appendChild(userName);

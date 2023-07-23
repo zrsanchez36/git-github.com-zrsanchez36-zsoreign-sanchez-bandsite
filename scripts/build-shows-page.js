@@ -43,7 +43,6 @@ const showArray = [
 ];
 
 function buildShowCard(show) {
-  // Your original buildShows function code here
   const outerDiv = document.createElement('div');
   outerDiv.classList.add('outer__div');
 

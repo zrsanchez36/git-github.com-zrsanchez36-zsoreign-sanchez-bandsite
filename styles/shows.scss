@@ -305,6 +305,11 @@ body {
         width: 100%;
         border-radius: 0.25rem; /*4px*/
         border: none;
+
+        
+        &:hover {
+            background-color: #000000;
+        }
     }
 
     

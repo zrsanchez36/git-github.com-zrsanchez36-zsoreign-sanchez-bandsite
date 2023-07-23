@@ -337,6 +337,7 @@ body {
         border: 1px solid map-get($colors, divider__line );
         padding: 1rem;
         box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
 
         &:active, &:focus { // I think you said you wanted focus as well
             border: 1px solid map-get($colors , bandSite__black );
@@ -367,6 +368,7 @@ body {
         margin-top: 1rem;
         border-radius: 4px;
         margin-bottom: 3rem;
+        font-weight: 600;
        
        
         &:hover {
@@ -388,6 +390,7 @@ body {
         border: 1px solid map-get($colors, divider__line );
         padding: 1rem;
         box-sizing: border-box;
+        background-color:  map-get($colors , bg__alt--col);
 
         &:active, &:focus { // I think you said you wanted focus as well
             border: 1px solid map-get($colors , bandSite__black );
